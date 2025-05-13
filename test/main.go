@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	logtomanagementapi "github.com/bllli/logto-management-api"
-	"github.com/bllli/logto-management-api/internal/tokenmanager"
+	"github.com/bllli/logto-management-api/tokenmanager"
 )
 
 func main() {
@@ -17,7 +17,7 @@ func main() {
 		Scope:     "all", // Do not forget to grant the m2m client the LogtoManagementAPI scope
 	}
 
-	client := logtomanagementapi.NewLogtoTokenManagerWithClient(config)
+	client := logtomanagementapi.NewLogtoClientWithTokenManager(config)
 	ctx := context.Background()
 
 	orgs, err := client.Organizations.List(ctx, nil, nil, nil, nil)
