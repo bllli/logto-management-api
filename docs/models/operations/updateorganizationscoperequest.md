@@ -1,0 +1,9 @@
+# UpdateOrganizationScopeRequest
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                                           | *string*                                                                                                       | :heavy_check_mark:                                                                                             | The unique identifier of the organization scope.                                                               |
+| `RequestBody`                                                                                                  | [operations.UpdateOrganizationScopeRequestBody](../../models/operations/updateorganizationscoperequestbody.md) | :heavy_check_mark:                                                                                             | N/A                                                                                                            |

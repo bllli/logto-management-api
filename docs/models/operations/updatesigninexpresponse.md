@@ -1,0 +1,9 @@
+# UpdateSignInExpResponse
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `Object`                                                                                          | [*operations.UpdateSignInExpResponseBody](../../models/operations/updatesigninexpresponsebody.md) | :heavy_minus_sign:                                                                                | Updated default sign-in experience settings.                                                      |

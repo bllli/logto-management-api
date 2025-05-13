@@ -1,0 +1,9 @@
+# GetProfileDetail
+
+arbitrary
+
+
+## Fields
+
+| Field       | Type        | Required    | Description |
+| ----------- | ----------- | ----------- | ----------- |

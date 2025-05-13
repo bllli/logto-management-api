@@ -1,0 +1,11 @@
+# CreateWebAuthnRegistrationVerificationResponseBody
+
+WebAuthn registration successfully created.
+
+
+## Fields
+
+| Field                                                                                                                               | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `VerificationID`                                                                                                                    | *string*                                                                                                                            | :heavy_check_mark:                                                                                                                  | The unique verification ID for the WebAuthn registration record. This ID is required to verify the WebAuthn registration challenge. |
+| `RegistrationOptions`                                                                                                               | [operations.RegistrationOptions](../../models/operations/registrationoptions.md)                                                    | :heavy_check_mark:                                                                                                                  | The WebAuthn registration options that the user needs to create a new WebAuthn credential.                                          |

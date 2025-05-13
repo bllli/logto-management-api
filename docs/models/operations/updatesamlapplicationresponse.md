@@ -1,0 +1,9 @@
+# UpdateSamlApplicationResponse
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                    | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                            | :heavy_check_mark:                                                                                            | N/A                                                                                                           |
+| `Object`                                                                                                      | [*operations.UpdateSamlApplicationResponseBody](../../models/operations/updatesamlapplicationresponsebody.md) | :heavy_minus_sign:                                                                                            | The SAML application was updated successfully.                                                                |

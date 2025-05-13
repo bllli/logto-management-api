@@ -1,0 +1,13 @@
+# CreateConnectorMetadataRequest
+
+Custom connector metadata, will be used to overwrite the default connector factory metadata.
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `Target`                                                                                        | **string*                                                                                       | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `Name`                                                                                          | [*operations.CreateConnectorNameRequest](../../models/operations/createconnectornamerequest.md) | :heavy_minus_sign:                                                                              | Validator function                                                                              |
+| `Logo`                                                                                          | **string*                                                                                       | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `LogoDark`                                                                                      | **string*                                                                                       | :heavy_minus_sign:                                                                              | N/A                                                                                             |

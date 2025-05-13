@@ -1,0 +1,12 @@
+# CreateTotpSecretResponseBody
+
+TOTP secret successfully generated.
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `VerificationID`                                                                                                | *string*                                                                                                        | :heavy_check_mark:                                                                                              | The unique verification ID for the TOTP record. This ID is required to verify the TOTP code.                    |
+| `Secret`                                                                                                        | *string*                                                                                                        | :heavy_check_mark:                                                                                              | The newly generated TOTP secret.                                                                                |
+| `SecretQrCode`                                                                                                  | *string*                                                                                                        | :heavy_check_mark:                                                                                              | A QR code image data URL for the TOTP secret. The user can scan this QR code with their TOTP authenticator app. |

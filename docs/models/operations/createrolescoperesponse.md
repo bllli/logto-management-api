@@ -1,0 +1,9 @@
+# CreateRoleScopeResponse
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                         | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                 | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `ResponseBodies`                                                                                   | [][operations.CreateRoleScopeResponseBody](../../models/operations/createrolescoperesponsebody.md) | :heavy_minus_sign:                                                                                 | Created                                                                                            |

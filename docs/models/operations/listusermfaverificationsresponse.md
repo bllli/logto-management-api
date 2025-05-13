@@ -1,0 +1,9 @@
+# ListUserMfaVerificationsResponse
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                           | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                                   | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `ResponseBodies`                                                                                                     | [][operations.ListUserMfaVerificationsResponseBody](../../models/operations/listusermfaverificationsresponsebody.md) | :heavy_minus_sign:                                                                                                   | An array of MFA verifications for the user.                                                                          |

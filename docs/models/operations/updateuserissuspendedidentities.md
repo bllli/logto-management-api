@@ -1,0 +1,9 @@
+# UpdateUserIsSuspendedIdentities
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `UserID`                                                                                            | *string*                                                                                            | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `Details`                                                                                           | [*operations.UpdateUserIsSuspendedDetails](../../models/operations/updateuserissuspendeddetails.md) | :heavy_minus_sign:                                                                                  | arbitrary                                                                                           |

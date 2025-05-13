@@ -1,0 +1,9 @@
+# ListOrganizationUsersIdentities
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `UserID`                                                                                            | *string*                                                                                            | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `Details`                                                                                           | [*operations.ListOrganizationUsersDetails](../../models/operations/listorganizationusersdetails.md) | :heavy_minus_sign:                                                                                  | arbitrary                                                                                           |

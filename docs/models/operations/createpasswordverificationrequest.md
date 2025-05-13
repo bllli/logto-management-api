@@ -1,0 +1,9 @@
+# CreatePasswordVerificationRequest
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `Identifier`                                                                                                       | [operations.CreatePasswordVerificationIdentifier](../../models/operations/createpasswordverificationidentifier.md) | :heavy_check_mark:                                                                                                 | The unique identifier of the user that will be used to identify the user along with the provided password.         |
+| `Password`                                                                                                         | *string*                                                                                                           | :heavy_check_mark:                                                                                                 | The user password.                                                                                                 |

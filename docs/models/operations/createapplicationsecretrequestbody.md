@@ -1,0 +1,9 @@
+# CreateApplicationSecretRequestBody
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `Name`                                                                                                     | *string*                                                                                                   | :heavy_check_mark:                                                                                         | The secret name. Must be unique within the application.                                                    |
+| `ExpiresAt`                                                                                                | **float64*                                                                                                 | :heavy_minus_sign:                                                                                         | The epoch time in milliseconds when the secret will expire. If not provided, the secret will never expire. |

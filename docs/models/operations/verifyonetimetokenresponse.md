@@ -1,0 +1,9 @@
+# VerifyOneTimeTokenResponse
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                              | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                      | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
+| `Object`                                                                                                | [*operations.VerifyOneTimeTokenResponseBody](../../models/operations/verifyonetimetokenresponsebody.md) | :heavy_minus_sign:                                                                                      | The one-time token was verified successfully.                                                           |

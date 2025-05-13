@@ -1,0 +1,9 @@
+# CreateApplicationSecretRequest
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                                           | *string*                                                                                                       | :heavy_check_mark:                                                                                             | The unique identifier of the application.                                                                      |
+| `RequestBody`                                                                                                  | [operations.CreateApplicationSecretRequestBody](../../models/operations/createapplicationsecretrequestbody.md) | :heavy_check_mark:                                                                                             | N/A                                                                                                            |

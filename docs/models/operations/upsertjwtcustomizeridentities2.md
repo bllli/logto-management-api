@@ -1,0 +1,9 @@
+# UpsertJwtCustomizerIdentities2
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `UserID`                                                                                          | *string*                                                                                          | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `Details`                                                                                         | [*operations.UpsertJwtCustomizerDetails2](../../models/operations/upsertjwtcustomizerdetails2.md) | :heavy_minus_sign:                                                                                | arbitrary                                                                                         |

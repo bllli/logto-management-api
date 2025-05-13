@@ -1,0 +1,9 @@
+# CreateSubjectTokenResponse
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                              | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                      | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
+| `Object`                                                                                                | [*operations.CreateSubjectTokenResponseBody](../../models/operations/createsubjecttokenresponsebody.md) | :heavy_minus_sign:                                                                                      | The subject token has been created successfully.                                                        |

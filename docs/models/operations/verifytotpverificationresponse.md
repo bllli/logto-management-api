@@ -1,0 +1,9 @@
+# VerifyTotpVerificationResponse
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                              | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| `Object`                                                                                                        | [*operations.VerifyTotpVerificationResponseBody](../../models/operations/verifytotpverificationresponsebody.md) | :heavy_minus_sign:                                                                                              | The TOTP code has been successfully verified.                                                                   |

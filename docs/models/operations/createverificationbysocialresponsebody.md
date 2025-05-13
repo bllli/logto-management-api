@@ -1,0 +1,12 @@
+# CreateVerificationBySocialResponseBody
+
+Successfully created the social verification record and returned the authorization URI.
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `VerificationRecordID`                                                                                               | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | The ID of the verification record.                                                                                   |
+| `AuthorizationURI`                                                                                                   | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | The authorization URI to navigate to for authentication and authorization in the connected social identity provider. |
+| `ExpiresAt`                                                                                                          | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | The expiration date and time of the verification record.                                                             |

@@ -1,0 +1,9 @@
+# AssignApplicationRolesRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ApplicationID`                                                                                              | *string*                                                                                                     | :heavy_check_mark:                                                                                           | The unique identifier of the application.                                                                    |
+| `RequestBody`                                                                                                | [operations.AssignApplicationRolesRequestBody](../../models/operations/assignapplicationrolesrequestbody.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

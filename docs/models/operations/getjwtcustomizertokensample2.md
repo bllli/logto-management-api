@@ -1,0 +1,12 @@
+# GetJwtCustomizerTokenSample2
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `Jti`                                                                               | **string*                                                                           | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `Aud`                                                                               | [*operations.GetJwtCustomizerAud2](../../models/operations/getjwtcustomizeraud2.md) | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `Scope`                                                                             | **string*                                                                           | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `ClientID`                                                                          | **string*                                                                           | :heavy_minus_sign:                                                                  | N/A                                                                                 |
+| `Kind`                                                                              | **string*                                                                           | :heavy_minus_sign:                                                                  | N/A                                                                                 |

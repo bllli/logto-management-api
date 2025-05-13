@@ -1,0 +1,2658 @@
+overlay: 1.0.0
+x-speakeasy-jsonpath: rfc9535
+info:
+  title: Speakeasy Modifications
+  version: 0.0.2
+  x-speakeasy-metadata:
+    after: ""
+    before: ""
+    type: speakeasy-modifications
+actions:
+  - target: $["paths"]["/api/roles/{id}/scopes/{scopeId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteScope
+    x-speakeasy-metadata:
+      after: sdk.roles.deleteScope()
+      before: sdk.Roles.DeleteRoleScope()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/my-account/primary-phone"]["delete"]
+    update:
+      x-speakeasy-group: myAccount
+    x-speakeasy-metadata:
+      after: sdk.myAccount.deletePrimaryPhone()
+      before: sdk.My account.DeletePrimaryPhone()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/secrets"]["post"]
+    update:
+      x-speakeasy-name-override: addSecret
+    x-speakeasy-metadata:
+      after: sdk.applications.addSecret()
+      before: sdk.Applications.CreateApplicationSecret()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}/applications"]["post"]
+    update:
+      x-speakeasy-name-override: assignApplications
+    x-speakeasy-metadata:
+      after: sdk.roles.assignApplications()
+      before: sdk.Roles.CreateRoleApplication()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}/scopes/{organizationScopeId}"]["delete"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: deleteScope
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.deleteScope()
+      before: sdk.Organization roles.DeleteOrganizationRoleScope()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/personal-access-tokens/{name}"]["patch"]
+    update:
+      x-speakeasy-name-override: updatePersonalAccessToken
+    x-speakeasy-metadata:
+      after: sdk.users.updatePersonalAccessToken()
+      before: sdk.Users.UpdateUserPersonalAccessToken()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-scopes/{id}"]["delete"]
+    update:
+      x-speakeasy-group: organizationScopes
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.organizationScopes.delete()
+      before: sdk.Organization scopes.DeleteOrganizationScope()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sign-in-exp/default/custom-ui-assets"]["post"]
+    update:
+      x-speakeasy-group: signInExperience
+    x-speakeasy-metadata:
+      after: sdk.signInExperience.uploadCustomUiAssets()
+      before: sdk.Sign-in experience.UploadCustomUiAssets()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.organizations.update()
+      before: sdk.Organizations.UpdateOrganization()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/email-templates/{id}"]["delete"]
+    update:
+      x-speakeasy-group: emailTemplates
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.emailTemplates.delete()
+      before: sdk.Email templates.DeleteEmailTemplate()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/mfa-verifications"]["post"]
+    update:
+      x-speakeasy-name-override: createMfaVerification
+    x-speakeasy-metadata:
+      after: sdk.users.createMfaVerification()
+      before: sdk.Users.CreateUserMfaVerification()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/saml-applications"]["post"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.create()
+      before: sdk.SAML applications.CreateSamlApplication()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/my-account/identities/{target}"]["delete"]
+    update:
+      x-speakeasy-group: myAccount
+    x-speakeasy-metadata:
+      after: sdk.myAccount.deleteIdentity()
+      before: sdk.My account.DeleteIdentity()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/profile"]["patch"]
+    update:
+      x-speakeasy-name-override: patchProfile
+    x-speakeasy-metadata:
+      after: sdk.interaction.patchProfile()
+      before: sdk.Interaction.patch_/api/interaction/profile()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/connectors/{connectorId}/authorization-uri"]["post"]
+    update:
+      x-speakeasy-name-override: createAuthorizationUri
+    x-speakeasy-metadata:
+      after: sdk.connectors.createAuthorizationUri()
+      before: sdk.Connectors.CreateConnectorAuthorizationUri()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sentinel-activities/delete"]["post"]
+    update:
+      x-speakeasy-group: sentinelActivities
+      x-speakeasy-name-override: bulkDelete
+    x-speakeasy-metadata:
+      after: sdk.sentinelActivities.bulkDelete()
+      before: sdk.Sentinel activities.DeleteSentinelActivities()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/roles"]["put"]
+    update:
+      x-speakeasy-name-override: replaceJitRoles
+    x-speakeasy-metadata:
+      after: sdk.organizations.replaceJitRoles()
+      before: sdk.Organizations.ReplaceOrganizationJitRoles()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/connectors/{id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.connectors.update()
+      before: sdk.Connectors.UpdateConnector()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/resources"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.resources.list()
+      before: sdk.Resources.ListResources()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/email-templates"]["get"]
+    update:
+      x-speakeasy-group: emailTemplates
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.emailTemplates.list()
+      before: sdk.Email templates.ListEmailTemplates()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sso-connectors/{id}"]["patch"]
+    update:
+      x-speakeasy-group: ssoConnectors
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.ssoConnectors.update()
+      before: sdk.SSO connectors.UpdateSsoConnector()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/applications"]["put"]
+    update:
+      x-speakeasy-name-override: replaceApplications
+    x-speakeasy-metadata:
+      after: sdk.organizations.replaceApplications()
+      before: sdk.Organizations.ReplaceOrganizationApplications()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/users/{userId}/consent-organizations"]["post"]
+    update:
+      x-speakeasy-name-override: grantUserConsent
+    x-speakeasy-metadata:
+      after: sdk.applications.grantUserConsent()
+      before: sdk.Applications.CreateApplicationUserConsentOrganization()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/sign-in-experience"]["get"]
+    update:
+      x-speakeasy-name-override: getSignInExperience
+    x-speakeasy-metadata:
+      after: sdk.applications.getSignInExperience()
+      before: sdk.Applications.GetApplicationSignInExperience()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/connectors/{factoryId}/test"]["post"]
+    update:
+      x-speakeasy-name-override: test
+    x-speakeasy-metadata:
+      after: sdk.connectors.test()
+      before: sdk.Connectors.CreateConnectorTest()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/resources/{resourceId}/scopes/{scopeId}"]["patch"]
+    update:
+      x-speakeasy-name-override: updateScope
+    x-speakeasy-metadata:
+      after: sdk.resources.updateScope()
+      before: sdk.Resources.UpdateResourceScope()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/organizations"]["get"]
+    update:
+      x-speakeasy-name-override: listOrganizations
+    x-speakeasy-metadata:
+      after: sdk.users.listOrganizations()
+      before: sdk.Users.ListUserOrganizations()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/verification/social-authorization-uri"]["post"]
+    update:
+      x-speakeasy-group: interactions
+      x-speakeasy-name-override: verifySocialAuthorizationUri
+    x-speakeasy-metadata:
+      after: sdk.interactions.verifySocialAuthorizationUri()
+      before: sdk.Interaction.post_/api/interaction/verification/social-authorization-uri()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/my-account/identities"]["post"]
+    update:
+      x-speakeasy-group: myAccount
+    x-speakeasy-metadata:
+      after: sdk.myAccount.addUserIdentities()
+      before: sdk.My account.AddUserIdentities()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/experience/profile/password"]["put"]
+    update:
+      x-speakeasy-name-override: resetPassword
+    x-speakeasy-metadata:
+      after: sdk.experience.resetPassword()
+      before: sdk.Experience.ResetUserPassword()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/personal-access-tokens/{name}"]["delete"]
+    update:
+      x-speakeasy-name-override: deletePersonalAccessToken
+    x-speakeasy-metadata:
+      after: sdk.users.deletePersonalAccessToken()
+      before: sdk.Users.DeleteUserPersonalAccessToken()
+      created_at: 1747108895537
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/configs/admin-console"]["patch"]
+    update:
+      x-speakeasy-name-override: updateAdminConsole
+    x-speakeasy-metadata:
+      after: sdk.configs.updateAdminConsole()
+      before: sdk.Configs.UpdateAdminConsoleConfig()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/domains"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.domains.create()
+      before: sdk.Domains.CreateDomain()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/domains/{id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.domains.get()
+      before: sdk.Domains.GetDomain()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/user-assets/service-status"]["get"]
+    update:
+      x-speakeasy-group: userAssets
+      x-speakeasy-name-override: getServiceStatus
+    x-speakeasy-metadata:
+      after: sdk.userAssets.getServiceStatus()
+      before: sdk.User assets.GetUserAssetServiceStatus()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/hooks/{id}/signing-key"]["patch"]
+    update:
+      x-speakeasy-name-override: updateSigningKey
+    x-speakeasy-metadata:
+      after: sdk.hooks.updateSigningKey()
+      before: sdk.Hooks.UpdateHookSigningKey()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/.well-known/management.openapi.json"]["get"]
+    update:
+      x-speakeasy-group: wellKnown
+      x-speakeasy-name-override: getManagementOpenapiJson
+    x-speakeasy-metadata:
+      after: sdk.wellKnown.getManagementOpenapiJson()
+      before: sdk.Well-known.GetWellKnownManagementOpenapiJson()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-roles"]["post"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.create()
+      before: sdk.Organization roles.CreateOrganizationRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/user-consent-scopes"]["post"]
+    update:
+      x-speakeasy-name-override: createUserConsentScope
+    x-speakeasy-metadata:
+      after: sdk.applications.createUserConsentScope()
+      before: sdk.Applications.CreateApplicationUserConsentScope()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}/users"]["get"]
+    update:
+      x-speakeasy-name-override: listUsers
+    x-speakeasy-metadata:
+      after: sdk.roles.listUsers()
+      before: sdk.Roles.ListRoleUsers()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.applications.delete()
+      before: sdk.Applications.DeleteApplication()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users"]["post"]
+    update:
+      x-speakeasy-name-override: addUsers
+    x-speakeasy-metadata:
+      after: sdk.organizations.addUsers()
+      before: sdk.Organizations.AddOrganizationUsers()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sso-connectors/{id}"]["delete"]
+    update:
+      x-speakeasy-group: ssoConnectors
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.ssoConnectors.delete()
+      before: sdk.SSO connectors.DeleteSsoConnector()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/configs/admin-console"]["get"]
+    update:
+      x-speakeasy-name-override: getAdminConsole
+    x-speakeasy-metadata:
+      after: sdk.configs.getAdminConsole()
+      before: sdk.Configs.GetAdminConsoleConfig()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/verifications/social/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifyBySocial
+    x-speakeasy-metadata:
+      after: sdk.verifications.verifyBySocial()
+      before: sdk.Verifications.VerifyVerificationBySocial()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.roles.delete()
+      before: sdk.Roles.DeleteRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/identities/{target}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteIdentity
+    x-speakeasy-metadata:
+      after: sdk.users.deleteIdentity()
+      before: sdk.Users.DeleteUserIdentity()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/roles"]["post"]
+    update:
+      x-speakeasy-name-override: assignRoles
+    x-speakeasy-metadata:
+      after: sdk.applications.assignRoles()
+      before: sdk.Applications.AssignApplicationRoles()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/email-templates/{id}/details"]["patch"]
+    update:
+      x-speakeasy-group: emailTemplates
+      x-speakeasy-name-override: updateDetails
+    x-speakeasy-metadata:
+      after: sdk.emailTemplates.updateDetails()
+      before: sdk.Email templates.UpdateEmailTemplateDetails()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-invitations/{id}/status"]["put"]
+    update:
+      x-speakeasy-group: organizationInvitations
+      x-speakeasy-name-override: replaceStatus
+    x-speakeasy-metadata:
+      after: sdk.organizationInvitations.replaceStatus()
+      before: sdk.Organization invitations.ReplaceOrganizationInvitationStatus()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/user-consent-scopes/{scopeType}/{scopeId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteUserConsentScope
+    x-speakeasy-metadata:
+      after: sdk.applications.deleteUserConsentScope()
+      before: sdk.Applications.DeleteApplicationUserConsentScope()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/hooks/{id}/recent-logs"]["get"]
+    update:
+      x-speakeasy-name-override: listRecentLogs
+    x-speakeasy-metadata:
+      after: sdk.hooks.listRecentLogs()
+      before: sdk.Hooks.ListHookRecentLogs()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}/applications"]["get"]
+    update:
+      x-speakeasy-name-override: listApplications
+    x-speakeasy-metadata:
+      after: sdk.roles.listApplications()
+      before: sdk.Roles.ListRoleApplications()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/custom-data"]["patch"]
+    update:
+      x-speakeasy-name-override: updateCustomData
+    x-speakeasy-metadata:
+      after: sdk.users.updateCustomData()
+      before: sdk.Users.UpdateUserCustomData()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.applications.update()
+      before: sdk.Applications.UpdateApplication()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.users.get()
+      before: sdk.Users.GetUser()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/one-time-tokens"]["get"]
+    update:
+      x-speakeasy-group: oneTimeTokens
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.oneTimeTokens.list()
+      before: sdk.One-time tokens.ListOneTimeTokens()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/users/{userId}/consent-organizations"]["get"]
+    update:
+      x-speakeasy-name-override: listUserConsentOrganizations
+    x-speakeasy-metadata:
+      after: sdk.applications.listUserConsentOrganizations()
+      before: sdk.Applications.ListApplicationUserConsentOrganizations()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/mfa"]["put"]
+    update:
+      x-speakeasy-name-override: updateMfa
+    x-speakeasy-metadata:
+      after: sdk.interaction.updateMfa()
+      before: sdk.Interaction.put_/api/interaction/mfa()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/saml/{id}/authn"]["post"]
+    update:
+      x-speakeasy-group: samlApplicationsAuthFlow
+      x-speakeasy-name-override: createAuthn
+    x-speakeasy-metadata:
+      after: sdk.samlApplicationsAuthFlow.createAuthn()
+      before: sdk.SAML applications auth flow.CreateSamlAuthn()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-invitations"]["get"]
+    update:
+      x-speakeasy-group: organizationInvitations
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.organizationInvitations.get()
+      before: sdk.Organization invitations.ListOrganizationInvitations()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sso-connectors/{id}"]["get"]
+    update:
+      x-speakeasy-group: ssoConnectors
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.ssoConnectors.get()
+      before: sdk.SSO connectors.GetSsoConnector()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/roles"]["get"]
+    update:
+      x-speakeasy-name-override: listJitRoles
+    x-speakeasy-metadata:
+      after: sdk.organizations.listJitRoles()
+      before: sdk.Organizations.ListOrganizationJitRoles()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/resources/{id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.resources.update()
+      before: sdk.Resources.UpdateResource()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/identifiers"]["patch"]
+    update:
+      x-speakeasy-name-override: patchIdentifiers
+    x-speakeasy-metadata:
+      after: sdk.interaction.patchIdentifiers()
+      before: sdk.Interaction.patch_/api/interaction/identifiers()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/organizations"]["get"]
+    update:
+      x-speakeasy-name-override: listOrganizations
+    x-speakeasy-metadata:
+      after: sdk.applications.listOrganizations()
+      before: sdk.Applications.ListApplicationOrganizations()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/verification/webauthn-authentication"]["post"]
+    update:
+      x-speakeasy-name-override: webauthnAuthentication
+    x-speakeasy-metadata:
+      after: sdk.interaction.webauthnAuthentication()
+      before: sdk.Interaction.post_/api/interaction/verification/webauthn-authentication()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/subject-tokens"]["post"]
+    update:
+      x-speakeasy-group: subjectTokens
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.subjectTokens.create()
+      before: sdk.Subject tokens.CreateSubjectToken()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.organizations.get()
+      before: sdk.Organizations.GetOrganization()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/my-account/primary-email"]["post"]
+    update:
+      x-speakeasy-group: myAccount
+    x-speakeasy-metadata:
+      after: sdk.myAccount.updatePrimaryEmail()
+      before: sdk.My account.UpdatePrimaryEmail()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/.well-known/experience"]["get"]
+    update:
+      x-speakeasy-group: wellKnown
+      x-speakeasy-name-override: getExperience
+    x-speakeasy-metadata:
+      after: sdk.wellKnown.getExperience()
+      before: sdk.Well-known.GetWellKnownExperience()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/legacy-secret"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteLegacySecret
+    x-speakeasy-metadata:
+      after: sdk.applications.deleteLegacySecret()
+      before: sdk.Applications.DeleteApplicationLegacySecret()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/secrets/{name}"]["patch"]
+    update:
+      x-speakeasy-name-override: updateSecret
+    x-speakeasy-metadata:
+      after: sdk.applications.updateSecret()
+      before: sdk.Applications.UpdateApplicationSecret()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/personal-access-tokens"]["get"]
+    update:
+      x-speakeasy-name-override: listPersonalAccessTokens
+    x-speakeasy-metadata:
+      after: sdk.users.listPersonalAccessTokens()
+      before: sdk.Users.ListUserPersonalAccessTokens()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sign-in-exp/default/check-password"]["post"]
+    update:
+      x-speakeasy-group: signInExperiences
+      x-speakeasy-name-override: checkPassword
+    x-speakeasy-metadata:
+      after: sdk.signInExperiences.checkPassword()
+      before: sdk.Sign-in experience.CheckPasswordWithDefaultSignInExperience()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/mfa-verifications/{verificationId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteMfaVerification
+    x-speakeasy-metadata:
+      after: sdk.users.deleteMfaVerification()
+      before: sdk.Users.DeleteUserMfaVerification()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-invitations/{id}/message"]["post"]
+    update:
+      x-speakeasy-group: organizationInvitations
+      x-speakeasy-name-override: resendMessage
+    x-speakeasy-metadata:
+      after: sdk.organizationInvitations.resendMessage()
+      before: sdk.Organization invitations.CreateOrganizationInvitationMessage()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/verifications/verification-code"]["post"]
+    update:
+      x-speakeasy-name-override: createByVerificationCode
+    x-speakeasy-metadata:
+      after: sdk.verifications.createByVerificationCode()
+      before: sdk.Verifications.CreateVerificationByVerificationCode()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}"]["delete"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.delete()
+      before: sdk.Organization roles.DeleteOrganizationRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sso-connectors"]["post"]
+    update:
+      x-speakeasy-group: ssoConnectors
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.ssoConnectors.create()
+      before: sdk.SSO connectors.CreateSsoConnector()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/logs/{id}"]["get"]
+    update:
+      x-speakeasy-group: auditLogs
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.auditLogs.get()
+      before: sdk.Audit logs.GetLog()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/sso-connectors"]["post"]
+    update:
+      x-speakeasy-name-override: addJitSsoConnector
+    x-speakeasy-metadata:
+      after: sdk.organizations.addJitSsoConnector()
+      before: sdk.Organizations.CreateOrganizationJitSsoConnector()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/roles/{roleId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteRole
+    x-speakeasy-metadata:
+      after: sdk.applications.deleteRole()
+      before: sdk.Applications.DeleteApplicationRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/roles"]["post"]
+    update:
+      x-speakeasy-name-override: assignRoles
+    x-speakeasy-metadata:
+      after: sdk.users.assignRoles()
+      before: sdk.Users.AssignUserRoles()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}/resource-scopes/{scopeId}"]["delete"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: deleteResourceScope
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.deleteResourceScope()
+      before: sdk.Organization roles.DeleteOrganizationRoleResourceScope()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/systems/application"]["get"]
+    update:
+      x-speakeasy-name-override: getApplicationConfig
+    x-speakeasy-metadata:
+      after: sdk.systems.getApplicationConfig()
+      before: sdk.Systems.GetSystemApplicationConfig()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.roles.create()
+      before: sdk.Roles.CreateRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.organizations.list()
+      before: sdk.Organizations.ListOrganizations()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/.well-known/user.openapi.json"]["get"]
+    update:
+      x-speakeasy-group: wellKnown
+      x-speakeasy-name-override: getUserOpenapiJson
+    x-speakeasy-metadata:
+      after: sdk.wellKnown.getUserOpenapiJson()
+      before: sdk.Well-known.GetWellKnownUserOpenapiJson()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/account-center"]["get"]
+    update:
+      x-speakeasy-group: accountCenter
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.accountCenter.get()
+      before: sdk.Account center.GetAccountCenterSettings()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/resources/{resourceId}/scopes"]["post"]
+    update:
+      x-speakeasy-name-override: createScope
+    x-speakeasy-metadata:
+      after: sdk.resources.createScope()
+      before: sdk.Resources.CreateResourceScope()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/resources/{id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.resources.delete()
+      before: sdk.Resources.DeleteResource()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/one-time-tokens/{id}"]["delete"]
+    update:
+      x-speakeasy-group: oneTimeTokens
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.oneTimeTokens.delete()
+      before: sdk.One-time tokens.DeleteOneTimeToken()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-scopes/{id}"]["get"]
+    update:
+      x-speakeasy-group: organizationScopes
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.organizationScopes.get()
+      before: sdk.Organization scopes.GetOrganizationScope()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/verification-codes/verify"]["post"]
+    update:
+      x-speakeasy-group: verificationCodes
+      x-speakeasy-name-override: verify
+    x-speakeasy-metadata:
+      after: sdk.verificationCodes.verify()
+      before: sdk.Verification codes.VerifyVerificationCode()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/user-assets"]["post"]
+    update:
+      x-speakeasy-group: userAssets
+      x-speakeasy-name-override: upload
+    x-speakeasy-metadata:
+      after: sdk.userAssets.upload()
+      before: sdk.User assets.CreateUserAsset()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/mfa-verifications"]["get"]
+    update:
+      x-speakeasy-name-override: listMfaVerifications
+    x-speakeasy-metadata:
+      after: sdk.users.listMfaVerifications()
+      before: sdk.Users.ListUserMfaVerifications()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/email-templates/{id}"]["get"]
+    update:
+      x-speakeasy-group: emailTemplates
+      x-speakeasy-name-override: getById
+    x-speakeasy-metadata:
+      after: sdk.emailTemplates.getById()
+      before: sdk.Email templates.GetEmailTemplate()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/domains/{id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.domains.delete()
+      before: sdk.Domains.DeleteDomain()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/users/{userId}/consent-organizations"]["put"]
+    update:
+      x-speakeasy-name-override: replaceUserConsentOrganizations
+    x-speakeasy-metadata:
+      after: sdk.applications.replaceUserConsentOrganizations()
+      before: sdk.Applications.ReplaceApplicationUserConsentOrganizations()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/protected-app-metadata/custom-domains"]["get"]
+    update:
+      x-speakeasy-name-override: getProtectedAppMetadataCustomDomains
+    x-speakeasy-metadata:
+      after: sdk.applications.getProtectedAppMetadataCustomDomains()
+      before: sdk.Applications.ListApplicationProtectedAppMetadataCustomDomains()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/my-account/primary-phone"]["post"]
+    update:
+      x-speakeasy-group: myAccount
+    x-speakeasy-metadata:
+      after: sdk.myAccount.updatePrimaryPhone()
+      before: sdk.My account.UpdatePrimaryPhone()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.roles.update()
+      before: sdk.Roles.UpdateRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/email-domains/{emailDomain}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteJitEmailDomain
+    x-speakeasy-metadata:
+      after: sdk.organizations.deleteJitEmailDomain()
+      before: sdk.Organizations.DeleteOrganizationJitEmailDomain()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}/scopes"]["post"]
+    update:
+      x-speakeasy-name-override: linkScopes
+    x-speakeasy-metadata:
+      after: sdk.roles.linkScopes()
+      before: sdk.Roles.CreateRoleScope()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-scopes"]["get"]
+    update:
+      x-speakeasy-group: organizationScopes
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.organizationScopes.list()
+      before: sdk.Organization scopes.ListOrganizationScopes()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/saml-applications/{id}/secrets"]["get"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: listSecrets
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.listSecrets()
+      before: sdk.SAML applications.ListSamlApplicationSecrets()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/verification-code/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifyCode
+    x-speakeasy-metadata:
+      after: sdk.experience.verifyCode()
+      before: sdk.Experience.VerifyVerificationCodeVerification()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/my-account"]["patch"]
+    update:
+      x-speakeasy-group: myAccount
+      x-speakeasy-name-override: modify
+    x-speakeasy-metadata:
+      after: sdk.myAccount.modify()
+      before: sdk.My account.UpdateProfile()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/sso-connectors"]["put"]
+    update:
+      x-speakeasy-name-override: replaceJitSsoConnectors
+    x-speakeasy-metadata:
+      after: sdk.organizations.replaceJitSsoConnectors()
+      before: sdk.Organizations.ReplaceOrganizationJitSsoConnectors()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}/scopes"]["get"]
+    update:
+      x-speakeasy-name-override: getScopes
+    x-speakeasy-metadata:
+      after: sdk.roles.getScopes()
+      before: sdk.Roles.ListRoleScopes()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/account-center"]["patch"]
+    update:
+      x-speakeasy-group: accountCenter
+      x-speakeasy-name-override: updateSettings
+    x-speakeasy-metadata:
+      after: sdk.accountCenter.updateSettings()
+      before: sdk.Account center.UpdateAccountCenterSettings()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users"]["get"]
+    update:
+      x-speakeasy-name-override: listUsers
+    x-speakeasy-metadata:
+      after: sdk.organizations.listUsers()
+      before: sdk.Organizations.ListOrganizationUsers()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/verifications/password"]["post"]
+    update:
+      x-speakeasy-name-override: createByPassword
+    x-speakeasy-metadata:
+      after: sdk.verifications.createByPassword()
+      before: sdk.Verifications.CreateVerificationByPassword()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.organizations.create()
+      before: sdk.Organizations.CreateOrganization()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}/resource-scopes"]["put"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: replaceResourceScopes
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.replaceResourceScopes()
+      before: sdk.Organization roles.ReplaceOrganizationRoleResourceScopes()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/custom-phrases/{languageTag}"]["delete"]
+    update:
+      x-speakeasy-group: customPhrases
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.customPhrases.delete()
+      before: sdk.Custom phrases.DeleteCustomPhrase()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/resources/{resourceId}/scopes"]["get"]
+    update:
+      x-speakeasy-name-override: listScopes
+    x-speakeasy-metadata:
+      after: sdk.resources.listScopes()
+      before: sdk.Resources.ListResourceScopes()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/single-sign-on/{connectorId}/authorization-url"]["post"]
+    update:
+      x-speakeasy-group: interaction.sso
+      x-speakeasy-name-override: postAuthorizationUrl
+    x-speakeasy-metadata:
+      after: sdk.interaction.sso.postAuthorizationUrl()
+      before: sdk.Interaction.post_/api/interaction/single-sign-on/{connectorId}/authorization-url()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users/{userId}/roles/{organizationRoleId}"]["delete"]
+    update:
+      x-speakeasy-name-override: removeUserRole
+    x-speakeasy-metadata:
+      after: sdk.organizations.removeUserRole()
+      before: sdk.Organizations.DeleteOrganizationUserRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/email-templates"]["delete"]
+    update:
+      x-speakeasy-group: emailTemplates
+      x-speakeasy-name-override: remove
+    x-speakeasy-metadata:
+      after: sdk.emailTemplates.remove()
+      before: sdk.Email templates.DeleteEmailTemplates()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/roles"]["get"]
+    update:
+      x-speakeasy-name-override: getRoles
+    x-speakeasy-metadata:
+      after: sdk.users.getRoles()
+      before: sdk.Users.ListUserRoles()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/domains"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.domains.list()
+      before: sdk.Domains.ListDomains()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/connector-factories"]["get"]
+    update:
+      x-speakeasy-group: connectorFactories
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.connectorFactories.list()
+      before: sdk.Connector factories.ListConnectorFactories()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/applications/roles"]["post"]
+    update:
+      x-speakeasy-name-override: assignRolesToApplications
+    x-speakeasy-metadata:
+      after: sdk.organizations.assignRolesToApplications()
+      before: sdk.Organizations.AssignOrganizationRolesToApplications()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sign-in-exp"]["get"]
+    update:
+      x-speakeasy-group: signInExperience
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.signInExperience.get()
+      before: sdk.Sign-in experience.GetSignInExp()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}/scopes"]["post"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: assignScope
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.assignScope()
+      before: sdk.Organization roles.CreateOrganizationRoleScope()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.applications.create()
+      before: sdk.Applications.CreateApplication()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users"]["put"]
+    update:
+      x-speakeasy-name-override: replaceUsers
+    x-speakeasy-metadata:
+      after: sdk.organizations.replaceUsers()
+      before: sdk.Organizations.ReplaceOrganizationUsers()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.roles.list()
+      before: sdk.Roles.ListRoles()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/applications/{applicationId}/roles"]["post"]
+    update:
+      x-speakeasy-name-override: assignRoleToApplication
+    x-speakeasy-metadata:
+      after: sdk.organizations.assignRoleToApplication()
+      before: sdk.Organizations.AssignOrganizationRolesToApplication()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/logs"]["get"]
+    update:
+      x-speakeasy-group: auditLogs
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.auditLogs.list()
+      before: sdk.Audit logs.ListLogs()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/one-time-tokens/{id}/status"]["put"]
+    update:
+      x-speakeasy-group: oneTimeTokens
+      x-speakeasy-name-override: updateStatus
+    x-speakeasy-metadata:
+      after: sdk.oneTimeTokens.updateStatus()
+      before: sdk.One-time tokens.ReplaceOneTimeTokenStatus()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-scopes/{id}"]["patch"]
+    update:
+      x-speakeasy-group: organizationScopes
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.organizationScopes.update()
+      before: sdk.Organization scopes.UpdateOrganizationScope()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/profile"]["put"]
+    update:
+      x-speakeasy-name-override: updateProfile
+    x-speakeasy-metadata:
+      after: sdk.interaction.updateProfile()
+      before: sdk.Interaction.put_/api/interaction/profile()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/applications/{applicationId}"]["delete"]
+    update:
+      x-speakeasy-name-override: removeApplication
+    x-speakeasy-metadata:
+      after: sdk.organizations.removeApplication()
+      before: sdk.Organizations.DeleteOrganizationApplication()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/profile"]["patch"]
+    update:
+      x-speakeasy-name-override: updateProfile
+    x-speakeasy-metadata:
+      after: sdk.users.updateProfile()
+      before: sdk.Users.UpdateUserProfile()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/consent"]["get"]
+    update:
+      x-speakeasy-name-override: getConsent
+    x-speakeasy-metadata:
+      after: sdk.interaction.getConsent()
+      before: sdk.Interaction.get_/api/interaction/consent()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/captcha-provider"]["put"]
+    update:
+      x-speakeasy-group: captchaProvider
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.captchaProvider.update()
+      before: sdk.Captcha provider.UpdateCaptchaProvider()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/event"]["put"]
+    update:
+      x-speakeasy-name-override: putEvent
+    x-speakeasy-metadata:
+      after: sdk.interaction.putEvent()
+      before: sdk.Interaction.put_/api/interaction/event()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/status"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.status.get()
+      before: sdk.Status.GetStatus()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/saml-applications/{id}/secrets/{secretId}"]["patch"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: updateSecret
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.updateSecret()
+      before: sdk.SAML applications.UpdateSamlApplicationSecret()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/roles/{roleId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteRole
+    x-speakeasy-metadata:
+      after: sdk.users.deleteRole()
+      before: sdk.Users.DeleteUserRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sso-connector-providers"]["get"]
+    update:
+      x-speakeasy-group: ssoConnectorProviders
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.ssoConnectorProviders.list()
+      before: sdk.SSO connector providers.ListSsoConnectorProviders()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users/{userId}/roles"]["get"]
+    update:
+      x-speakeasy-name-override: listUserRoles
+    x-speakeasy-metadata:
+      after: sdk.organizations.listUserRoles()
+      before: sdk.Organizations.ListOrganizationUserRoles()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/web-authn/authentication/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifyWebAuthnAuthentication
+    x-speakeasy-metadata:
+      after: sdk.experience.verifyWebAuthnAuthentication()
+      before: sdk.Experience.VerifyWebAuthnAuthenticationVerification()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/swagger.json"]["get"]
+    update:
+      x-speakeasy-group: swaggerJson
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.swaggerJson.get()
+      before: sdk.Swagger.json.GetSwaggerJson()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/roles"]["get"]
+    update:
+      x-speakeasy-name-override: listRoles
+    x-speakeasy-metadata:
+      after: sdk.applications.listRoles()
+      before: sdk.Applications.ListApplicationRoles()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}/users"]["post"]
+    update:
+      x-speakeasy-name-override: assignUser
+    x-speakeasy-metadata:
+      after: sdk.roles.assignUser()
+      before: sdk.Roles.CreateRoleUser()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}"]["patch"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.update()
+      before: sdk.Organization roles.UpdateOrganizationRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/.well-known/sign-in-exp"]["get"]
+    update:
+      x-speakeasy-group: wellKnown
+    x-speakeasy-metadata:
+      after: sdk.wellKnown.getSignInExperienceConfig()
+      before: sdk.Well-known.GetSignInExperienceConfig()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.users.create()
+      before: sdk.Users.CreateUser()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-invitations"]["post"]
+    update:
+      x-speakeasy-group: organizationInvitations
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.organizationInvitations.create()
+      before: sdk.Organization invitations.CreateOrganizationInvitation()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/roles"]["put"]
+    update:
+      x-speakeasy-name-override: replaceRoles
+    x-speakeasy-metadata:
+      after: sdk.users.replaceRoles()
+      before: sdk.Users.ReplaceUserRoles()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/captcha-provider"]["get"]
+    update:
+      x-speakeasy-group: captchaProvider
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.captchaProvider.get()
+      before: sdk.Captcha provider.GetCaptchaProvider()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/saml-applications/{id}"]["patch"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.update()
+      before: sdk.SAML applications.UpdateSamlApplication()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-scopes"]["post"]
+    update:
+      x-speakeasy-group: organizationScopes
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.organizationScopes.create()
+      before: sdk.Organization scopes.CreateOrganizationScope()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/web-authn/registration/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifyWebAuthnRegistration
+    x-speakeasy-metadata:
+      after: sdk.experience.verifyWebAuthnRegistration()
+      before: sdk.Experience.VerifyWebAuthnRegistrationVerification()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/has-password"]["get"]
+    update:
+      x-speakeasy-name-override: hasPassword
+    x-speakeasy-metadata:
+      after: sdk.users.hasPassword()
+      before: sdk.Users.GetUserHasPassword()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/experience/submit"]["post"]
+    update:
+      x-speakeasy-name-override: submit
+    x-speakeasy-metadata:
+      after: sdk.experience.submit()
+      before: sdk.Experience.SubmitInteraction()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/bind-mfa"]["post"]
+    update:
+      x-speakeasy-name-override: bindMfa
+    x-speakeasy-metadata:
+      after: sdk.interaction.bindMfa()
+      before: sdk.Interaction.post_/api/interaction/bind-mfa()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users/roles"]["post"]
+    update:
+      x-speakeasy-name-override: assignRolesToUser
+    x-speakeasy-metadata:
+      after: sdk.organizations.assignRolesToUser()
+      before: sdk.Organizations.AssignOrganizationRolesToUsers()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/custom-phrases/{languageTag}"]["get"]
+    update:
+      x-speakeasy-group: customPhrases
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.customPhrases.get()
+      before: sdk.Custom phrases.GetCustomPhrase()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.users.list()
+      before: sdk.Users.ListUsers()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/one-time-tokens/{id}"]["get"]
+    update:
+      x-speakeasy-group: oneTimeTokens
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.oneTimeTokens.get()
+      before: sdk.One-time tokens.GetOneTimeToken()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/connectors"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.connectors.create()
+      before: sdk.Connectors.CreateConnector()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/personal-access-tokens"]["post"]
+    update:
+      x-speakeasy-name-override: createPersonalAccessToken
+    x-speakeasy-metadata:
+      after: sdk.users.createPersonalAccessToken()
+      before: sdk.Users.CreateUserPersonalAccessToken()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}"]["get"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.get()
+      before: sdk.Organization roles.GetOrganizationRole()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/applications/{applicationId}/roles"]["put"]
+    update:
+      x-speakeasy-name-override: replaceApplicationRoles
+    x-speakeasy-metadata:
+      after: sdk.organizations.replaceApplicationRoles()
+      before: sdk.Organizations.ReplaceOrganizationApplicationRoles()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/custom-phrases"]["get"]
+    update:
+      x-speakeasy-group: customPhrases
+      x-speakeasy-name-override: getAll
+    x-speakeasy-metadata:
+      after: sdk.customPhrases.getAll()
+      before: sdk.Custom phrases.ListCustomPhrases()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/user-consent-scopes"]["get"]
+    update:
+      x-speakeasy-name-override: listUserConsentScopes
+    x-speakeasy-metadata:
+      after: sdk.applications.listUserConsentScopes()
+      before: sdk.Applications.ListApplicationUserConsentScopes()
+      created_at: 1747108895538
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-invitations/{id}"]["get"]
+    update:
+      x-speakeasy-group: organizationInvitations
+      x-speakeasy-name-override: fetch
+    x-speakeasy-metadata:
+      after: sdk.organizationInvitations.fetch()
+      before: sdk.Organization invitations.GetOrganizationInvitation()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/sso-connectors/{ssoConnectorId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteJitSsoConnector
+    x-speakeasy-metadata:
+      after: sdk.organizations.deleteJitSsoConnector()
+      before: sdk.Organizations.DeleteOrganizationJitSsoConnector()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/saml-applications/{id}/callback"]["get"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: handleCallback
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.handleCallback()
+      before: sdk.SAML applications.GetSamlApplicationCallback()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.applications.get()
+      before: sdk.Applications.ListApplications()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/protected-app-metadata/custom-domains"]["post"]
+    update:
+      x-speakeasy-name-override: addCustomDomain
+    x-speakeasy-metadata:
+      after: sdk.applications.addCustomDomain()
+      before: sdk.Applications.CreateApplicationProtectedAppMetadataCustomDomain()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction"]["put"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.interaction.update()
+      before: sdk.Interaction.put_/api/interaction()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/identities/{target}"]["put"]
+    update:
+      x-speakeasy-name-override: updateIdentity
+    x-speakeasy-metadata:
+      after: sdk.users.updateIdentity()
+      before: sdk.Users.ReplaceUserIdentity()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/custom-data"]["get"]
+    update:
+      x-speakeasy-name-override: getCustomData
+    x-speakeasy-metadata:
+      after: sdk.users.getCustomData()
+      before: sdk.Users.ListUserCustomData()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/hooks/{id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.hooks.get()
+      before: sdk.Hooks.GetHook()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/verifications/verification-code/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifyByCode
+    x-speakeasy-metadata:
+      after: sdk.verifications.verifyByCode()
+      before: sdk.Verifications.VerifyVerificationByVerificationCode()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/single-sign-on/connectors"]["get"]
+    update:
+      x-speakeasy-name-override: getSingleSignOnConnectors
+    x-speakeasy-metadata:
+      after: sdk.interaction.getSingleSignOnConnectors()
+      before: sdk.Interaction.get_/api/interaction/single-sign-on/connectors()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/resources/{resourceId}/scopes/{scopeId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteScope
+    x-speakeasy-metadata:
+      after: sdk.resources.deleteScope()
+      before: sdk.Resources.DeleteResourceScope()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/connectors/{id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.connectors.delete()
+      before: sdk.Connectors.DeleteConnector()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/resources/{id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.resources.get()
+      before: sdk.Resources.GetResource()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/connectors"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.connectors.list()
+      before: sdk.Connectors.ListConnectors()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/verification-codes"]["post"]
+    update:
+      x-speakeasy-group: verificationCodes
+      x-speakeasy-name-override: request
+    x-speakeasy-metadata:
+      after: sdk.verificationCodes.request()
+      before: sdk.Verification codes.CreateVerificationCode()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/single-sign-on/{connectorId}/registration"]["post"]
+    update:
+      x-speakeasy-name-override: registerSingleSignOn
+    x-speakeasy-metadata:
+      after: sdk.interaction.registerSingleSignOn()
+      before: sdk.Interaction.post_/api/interaction/single-sign-on/{connectorId}/registration()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.interaction.delete()
+      before: sdk.Interaction.delete_/api/interaction()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/mfa-skipped"]["put"]
+    update:
+      x-speakeasy-name-override: skipMfa
+    x-speakeasy-metadata:
+      after: sdk.interaction.skipMfa()
+      before: sdk.Interaction.put_/api/interaction/mfa-skipped()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/submit"]["post"]
+    update:
+      x-speakeasy-name-override: submit
+    x-speakeasy-metadata:
+      after: sdk.interaction.submit()
+      before: sdk.Interaction.post_/api/interaction/submit()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/saml/{id}/authn"]["get"]
+    update:
+      x-speakeasy-group: samlApplicationsAuthFlow
+      x-speakeasy-name-override: handleAuthn
+    x-speakeasy-metadata:
+      after: sdk.samlApplicationsAuthFlow.handleAuthn()
+      before: sdk.SAML applications auth flow.GetSamlAuthn()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/verification/verification-code"]["post"]
+    update:
+      x-speakeasy-name-override: postVerificationCode
+    x-speakeasy-metadata:
+      after: sdk.interaction.postVerificationCode()
+      before: sdk.Interaction.post_/api/interaction/verification/verification-code()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}/applications/{applicationId}"]["delete"]
+    update:
+      x-speakeasy-name-override: removeFromApplication
+    x-speakeasy-metadata:
+      after: sdk.roles.removeFromApplication()
+      before: sdk.Roles.DeleteRoleApplication()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.users.delete()
+      before: sdk.Users.DeleteUser()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/sso-connectors"]["get"]
+    update:
+      x-speakeasy-group: ssoConnectors
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.ssoConnectors.list()
+      before: sdk.SSO connectors.ListSsoConnectors()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/social/{connectorId}/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifySocial
+    x-speakeasy-metadata:
+      after: sdk.experience.verifySocial()
+      before: sdk.Experience.VerifySocialVerification()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/hooks"]["get"]
+    update:
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.hooks.list()
+      before: sdk.Hooks.ListHooks()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/secrets"]["get"]
+    update:
+      x-speakeasy-name-override: getSecrets
+    x-speakeasy-metadata:
+      after: sdk.applications.getSecrets()
+      before: sdk.Applications.ListApplicationSecrets()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}"]["get"]
+    update:
+      x-speakeasy-name-override: fetch
+    x-speakeasy-metadata:
+      after: sdk.applications.fetch()
+      before: sdk.Applications.GetApplication()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/one-time-tokens"]["post"]
+    update:
+      x-speakeasy-group: oneTimeTokens
+      x-speakeasy-name-override: add
+    x-speakeasy-metadata:
+      after: sdk.oneTimeTokens.add()
+      before: sdk.One-time tokens.AddOneTimeTokens()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/password"]["patch"]
+    update:
+      x-speakeasy-name-override: updatePassword
+    x-speakeasy-metadata:
+      after: sdk.users.updatePassword()
+      before: sdk.Users.UpdateUserPassword()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/my-account/profile"]["patch"]
+    update:
+      x-speakeasy-group: myAccount
+      x-speakeasy-name-override: updateProfile
+    x-speakeasy-metadata:
+      after: sdk.myAccount.updateProfile()
+      before: sdk.My account.UpdateOtherProfile()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-invitations/{id}"]["delete"]
+    update:
+      x-speakeasy-group: organizationInvitations
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.organizationInvitations.delete()
+      before: sdk.Organization invitations.DeleteOrganizationInvitation()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/resources"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.resources.create()
+      before: sdk.Resources.CreateResource()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/roles"]["put"]
+    update:
+      x-speakeasy-name-override: replaceRoles
+    x-speakeasy-metadata:
+      after: sdk.applications.replaceRoles()
+      before: sdk.Applications.ReplaceApplicationRoles()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/verification/totp"]["post"]
+    update:
+      x-speakeasy-name-override: postTotp
+    x-speakeasy-metadata:
+      after: sdk.interaction.postTotp()
+      before: sdk.Interaction.post_/api/interaction/verification/totp()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/saml-applications/{id}"]["get"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.get()
+      before: sdk.SAML applications.GetSamlApplication()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/interaction/verification/webauthn-registration"]["post"]
+    update:
+      x-speakeasy-name-override: verifyWebAuthnRegistration
+    x-speakeasy-metadata:
+      after: sdk.interaction.verifyWebAuthnRegistration()
+      before: sdk.Interaction.post_/api/interaction/verification/webauthn-registration()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/saml-applications/{id}/metadata"]["get"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: getMetadata
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.getMetadata()
+      before: sdk.SAML applications.ListSamlApplicationMetadata()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}/resource-scopes"]["post"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: assignResourceScopes
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.assignResourceScopes()
+      before: sdk.Organization roles.CreateOrganizationRoleResourceScope()
+      created_at: 1747108895539
+      reviewed_at: 1747108922283
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/sign-in-experience"]["put"]
+    update:
+      x-speakeasy-name-override: updateSignInExperience
+    x-speakeasy-metadata:
+      after: sdk.applications.updateSignInExperience()
+      before: sdk.Applications.ReplaceApplicationSignInExperience()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/captcha-provider"]["delete"]
+    update:
+      x-speakeasy-group: captchaProviders
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.captchaProviders.delete()
+      before: sdk.Captcha provider.DeleteCaptchaProvider()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/interaction/single-sign-on/{connectorId}/authentication"]["post"]
+    update:
+      x-speakeasy-name-override: authenticateSso
+    x-speakeasy-metadata:
+      after: sdk.interaction.authenticateSso()
+      before: sdk.Interaction.post_/api/interaction/single-sign-on/{connectorId}/authentication()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/identities"]["post"]
+    update:
+      x-speakeasy-name-override: createIdentity
+    x-speakeasy-metadata:
+      after: sdk.users.createIdentity()
+      before: sdk.Users.CreateUserIdentity()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/saml-applications/{id}/secrets/{secretId}"]["delete"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: deleteSecret
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.deleteSecret()
+      before: sdk.SAML applications.DeleteSamlApplicationSecret()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/email-domains"]["post"]
+    update:
+      x-speakeasy-name-override: addJitEmailDomain
+    x-speakeasy-metadata:
+      after: sdk.organizations.addJitEmailDomain()
+      before: sdk.Organizations.CreateOrganizationJitEmailDomain()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/email-domains"]["put"]
+    update:
+      x-speakeasy-name-override: replaceJitEmailDomains
+    x-speakeasy-metadata:
+      after: sdk.organizations.replaceJitEmailDomains()
+      before: sdk.Organizations.ReplaceOrganizationJitEmailDomains()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}/scopes"]["put"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: replaceScopes
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.replaceScopes()
+      before: sdk.Organization roles.ReplaceOrganizationRoleScopes()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/interaction/profile"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteProfile
+    x-speakeasy-metadata:
+      after: sdk.interaction.deleteProfile()
+      before: sdk.Interaction.delete_/api/interaction/profile()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organization-roles"]["get"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: list
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.list()
+      before: sdk.Organization roles.ListOrganizationRoles()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/roles/{organizationRoleId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteJitRole
+    x-speakeasy-metadata:
+      after: sdk.organizations.deleteJitRole()
+      before: sdk.Organizations.DeleteOrganizationJitRole()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users/{userId}/roles"]["post"]
+    update:
+      x-speakeasy-name-override: assignRoles
+    x-speakeasy-metadata:
+      after: sdk.organizations.assignRoles()
+      before: sdk.Organizations.AssignOrganizationRolesToUser()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/one-time-tokens/verify"]["post"]
+    update:
+      x-speakeasy-group: oneTimeTokens
+      x-speakeasy-name-override: verify
+    x-speakeasy-metadata:
+      after: sdk.oneTimeTokens.verify()
+      before: sdk.One-time tokens.VerifyOneTimeToken()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/custom-phrases/{languageTag}"]["put"]
+    update:
+      x-speakeasy-group: customPhrases
+      x-speakeasy-name-override: upsert
+    x-speakeasy-metadata:
+      after: sdk.customPhrases.upsert()
+      before: sdk.Custom phrases.ReplaceCustomPhrase()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/connectors/{id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.connectors.get()
+      before: sdk.Connectors.GetConnector()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/hooks/{id}/test"]["post"]
+    update:
+      x-speakeasy-name-override: test
+    x-speakeasy-metadata:
+      after: sdk.hooks.test()
+      before: sdk.Hooks.CreateHookTest()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/protected-app-metadata/custom-domains/{domain}"]["delete"]
+    update:
+      x-speakeasy-name-override: removeCustomDomain
+    x-speakeasy-metadata:
+      after: sdk.applications.removeCustomDomain()
+      before: sdk.Applications.DeleteApplicationProtectedAppMetadataCustomDomain()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/my-account/primary-email"]["delete"]
+    update:
+      x-speakeasy-group: myAccount
+    x-speakeasy-metadata:
+      after: sdk.myAccount.deletePrimaryEmail()
+      before: sdk.My account.DeletePrimaryEmail()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.users.update()
+      before: sdk.Users.UpdateUser()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/interaction/consent"]["post"]
+    update:
+      x-speakeasy-name-override: createConsent
+    x-speakeasy-metadata:
+      after: sdk.interaction.createConsent()
+      before: sdk.Interaction.post_/api/interaction/consent()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/hooks/{id}"]["patch"]
+    update:
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.hooks.update()
+      before: sdk.Hooks.UpdateHook()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/one-time-token/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifyOneTimeToken
+    x-speakeasy-metadata:
+      after: sdk.experience.verifyOneTimeToken()
+      before: sdk.Experience.VerifyOneTimeTokenVerification()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/secrets/{name}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteSecret
+    x-speakeasy-metadata:
+      after: sdk.applications.deleteSecret()
+      before: sdk.Applications.DeleteApplicationSecret()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/saml-applications/{id}"]["delete"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.delete()
+      before: sdk.SAML applications.DeleteSamlApplication()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}/resource-scopes"]["get"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: listResourceScopes
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.listResourceScopes()
+      before: sdk.Organization roles.ListOrganizationRoleResourceScopes()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/saml-applications/{id}/secrets"]["post"]
+    update:
+      x-speakeasy-group: samlApplications
+      x-speakeasy-name-override: createSecret
+    x-speakeasy-metadata:
+      after: sdk.samlApplications.createSecret()
+      before: sdk.SAML applications.CreateSamlApplicationSecret()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users/{userId}/roles"]["put"]
+    update:
+      x-speakeasy-name-override: updateUserRoles
+    x-speakeasy-metadata:
+      after: sdk.organizations.updateUserRoles()
+      before: sdk.Organizations.ReplaceOrganizationUserRoles()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/applications"]["get"]
+    update:
+      x-speakeasy-name-override: listApplications
+    x-speakeasy-metadata:
+      after: sdk.organizations.listApplications()
+      before: sdk.Organizations.ListOrganizationApplications()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/resources/{id}/is-default"]["patch"]
+    update:
+      x-speakeasy-name-override: setAsDefault
+    x-speakeasy-metadata:
+      after: sdk.resources.setAsDefault()
+      before: sdk.Resources.UpdateResourceIsDefault()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/hooks/{id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.hooks.delete()
+      before: sdk.Hooks.DeleteHook()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/.well-known/experience.openapi.json"]["get"]
+    update:
+      x-speakeasy-group: wellKnown
+      x-speakeasy-name-override: getExperienceOpenapiJson
+    x-speakeasy-metadata:
+      after: sdk.wellKnown.getExperienceOpenapiJson()
+      before: sdk.Well-known.GetWellKnownExperienceOpenapiJson()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/applications/{applicationId}/roles"]["get"]
+    update:
+      x-speakeasy-name-override: getApplicationRoles
+    x-speakeasy-metadata:
+      after: sdk.organizations.getApplicationRoles()
+      before: sdk.Organizations.ListOrganizationApplicationRoles()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/applications/{applicationId}/custom-data"]["patch"]
+    update:
+      x-speakeasy-name-override: updateCustomData
+    x-speakeasy-metadata:
+      after: sdk.applications.updateCustomData()
+      before: sdk.Applications.UpdateApplicationCustomData()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/verifications/social"]["post"]
+    update:
+      x-speakeasy-name-override: createBySocial
+    x-speakeasy-metadata:
+      after: sdk.verifications.createBySocial()
+      before: sdk.Verifications.CreateVerificationBySocial()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users/{userId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteUser
+    x-speakeasy-metadata:
+      after: sdk.organizations.deleteUser()
+      before: sdk.Organizations.DeleteOrganizationUser()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/email-templates"]["put"]
+    update:
+      x-speakeasy-group: emailTemplates
+      x-speakeasy-name-override: replace
+    x-speakeasy-metadata:
+      after: sdk.emailTemplates.replace()
+      before: sdk.Email templates.ReplaceEmailTemplates()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/totp/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifyTotp
+    x-speakeasy-metadata:
+      after: sdk.experience.verifyTotp()
+      before: sdk.Experience.VerifyTotpVerification()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/hooks"]["post"]
+    update:
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.hooks.create()
+      before: sdk.Hooks.CreateHook()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/email-domains"]["get"]
+    update:
+      x-speakeasy-name-override: listJitEmailDomains
+    x-speakeasy-metadata:
+      after: sdk.organizations.listJitEmailDomains()
+      before: sdk.Organizations.ListOrganizationJitEmailDomains()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/applications/{applicationId}/roles/{organizationRoleId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteApplicationRole
+    x-speakeasy-metadata:
+      after: sdk.organizations.deleteApplicationRole()
+      before: sdk.Organizations.DeleteOrganizationApplicationRole()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/sign-in-exp"]["patch"]
+    update:
+      x-speakeasy-group: signInExperience
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.signInExperience.update()
+      before: sdk.Sign-in experience.UpdateSignInExp()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/roles"]["post"]
+    update:
+      x-speakeasy-name-override: createJitRole
+    x-speakeasy-metadata:
+      after: sdk.organizations.createJitRole()
+      before: sdk.Organizations.CreateOrganizationJitRole()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/my-account"]["get"]
+    update:
+      x-speakeasy-group: myAccount
+    x-speakeasy-metadata:
+      after: sdk.myAccount.getProfile()
+      before: sdk.My account.GetProfile()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/jit/sso-connectors"]["get"]
+    update:
+      x-speakeasy-name-override: getJitSsoConnectors
+    x-speakeasy-metadata:
+      after: sdk.organizations.getJitSsoConnectors()
+      before: sdk.Organizations.ListOrganizationJitSsoConnectors()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/sso/{connectorId}/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifyEnterpriseSso
+    x-speakeasy-metadata:
+      after: sdk.experience.verifyEnterpriseSso()
+      before: sdk.Experience.VerifyEnterpriseSsoVerification()
+      created_at: 1747108895539
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/my-account/password"]["post"]
+    update:
+      x-speakeasy-group: myAccount
+    x-speakeasy-metadata:
+      after: sdk.myAccount.updatePassword()
+      before: sdk.My account.UpdatePassword()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organization-roles/{id}/scopes"]["get"]
+    update:
+      x-speakeasy-group: organizationRoles
+      x-speakeasy-name-override: listScopes
+    x-speakeasy-metadata:
+      after: sdk.organizationRoles.listScopes()
+      before: sdk.Organization roles.ListOrganizationRoleScopes()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/applications"]["post"]
+    update:
+      x-speakeasy-name-override: addApplication
+    x-speakeasy-metadata:
+      after: sdk.organizations.addApplication()
+      before: sdk.Organizations.AddOrganizationApplications()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/applications/{id}/users/{userId}/consent-organizations/{organizationId}"]["delete"]
+    update:
+      x-speakeasy-name-override: revokeUserConsent
+    x-speakeasy-metadata:
+      after: sdk.applications.revokeUserConsent()
+      before: sdk.Applications.DeleteApplicationUserConsentOrganization()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}"]["get"]
+    update:
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.roles.get()
+      before: sdk.Roles.GetRole()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/is-suspended"]["patch"]
+    update:
+      x-speakeasy-name-override: updateIsSuspended
+    x-speakeasy-metadata:
+      after: sdk.users.updateIsSuspended()
+      before: sdk.Users.UpdateUserIsSuspended()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/users/{userId}/password/verify"]["post"]
+    update:
+      x-speakeasy-name-override: verifyPassword
+    x-speakeasy-metadata:
+      after: sdk.users.verifyPassword()
+      before: sdk.Users.VerifyUserPassword()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}"]["delete"]
+    update:
+      x-speakeasy-name-override: delete
+    x-speakeasy-metadata:
+      after: sdk.organizations.delete()
+      before: sdk.Organizations.DeleteOrganization()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/organizations/{id}/users/{userId}/scopes"]["get"]
+    update:
+      x-speakeasy-name-override: listUserScopes
+    x-speakeasy-metadata:
+      after: sdk.organizations.listUserScopes()
+      before: sdk.Organizations.ListOrganizationUserScopes()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/connector-factories/{id}"]["get"]
+    update:
+      x-speakeasy-group: connectorFactories
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.connectorFactories.get()
+      before: sdk.Connector factories.GetConnectorFactory()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/roles/{id}/users/{userId}"]["delete"]
+    update:
+      x-speakeasy-name-override: deleteUser
+    x-speakeasy-metadata:
+      after: sdk.roles.deleteUser()
+      before: sdk.Roles.DeleteRoleUser()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/.well-known/phrases"]["get"]
+    update:
+      x-speakeasy-group: wellKnown
+      x-speakeasy-name-override: getPhrases
+    x-speakeasy-metadata:
+      after: sdk.wellKnown.getPhrases()
+      before: sdk.Well-known.GetSignInExperiencePhrases()
+      created_at: 1747108895540
+      reviewed_at: 1747108922284
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/new-password-identity"]["post"]
+    update:
+      x-speakeasy-group: passwordIdentityVerifications
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.passwordIdentityVerifications.create()
+      before: sdk.Experience.CreateNewPasswordIdentityVerification()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/web-authn/authentication"]["post"]
+    update:
+      x-speakeasy-group: webAuthnVerifications
+      x-speakeasy-name-override: createAuthentication
+    x-speakeasy-metadata:
+      after: sdk.webAuthnVerifications.createAuthentication()
+      before: sdk.Experience.CreateWebAuthnAuthenticationVerification()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/experience/identification"]["post"]
+    update:
+      x-speakeasy-group: identifications
+    x-speakeasy-metadata:
+      after: sdk.identifications.identifyUser()
+      before: sdk.Experience.IdentifyUser()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/web-authn/registration"]["post"]
+    update:
+      x-speakeasy-name-override: createWebAuthnRegistration
+    x-speakeasy-metadata:
+      after: sdk.experience.createWebAuthnRegistration()
+      before: sdk.Experience.CreateWebAuthnRegistrationVerification()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/experience/profile/mfa/mfa-skipped"]["post"]
+    update:
+      x-speakeasy-group: mfa
+      x-speakeasy-name-override: skipBinding
+    x-speakeasy-metadata:
+      after: sdk.mfa.skipBinding()
+      before: sdk.Experience.SkipMfaBindingFlow()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/dashboard/users/active"]["get"]
+    update:
+      x-speakeasy-name-override: getActiveUsers
+    x-speakeasy-metadata:
+      after: sdk.dashboard.getActiveUsers()
+      before: sdk.Dashboard.GetActiveUserCounts()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/authn/saml/{connectorId}"]["post"]
+    update:
+      x-speakeasy-group: authnSaml
+      x-speakeasy-name-override: assert
+    x-speakeasy-metadata:
+      after: sdk.authnSaml.assert()
+      before: sdk.Authn.AssertSaml()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/verification-code"]["post"]
+    update:
+      x-speakeasy-group: verificationCodes
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.verificationCodes.create()
+      before: sdk.Experience.CreateAndSendVerificationCode()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/sso/{connectorId}/authorization-uri"]["post"]
+    update:
+      x-speakeasy-group: enterpriseSsoVerifications
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.enterpriseSsoVerifications.create()
+      before: sdk.Experience.CreateEnterpriseSsoVerification()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/dashboard/users/total"]["get"]
+    update:
+      x-speakeasy-group: dashboardUsers
+      x-speakeasy-name-override: getTotalCount
+    x-speakeasy-metadata:
+      after: sdk.dashboardUsers.getTotalCount()
+      before: sdk.Dashboard.GetTotalUserCount()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/experience/sso-connectors"]["get"]
+    update:
+      x-speakeasy-group: ssoConnectors
+      x-speakeasy-name-override: getEnabled
+    x-speakeasy-metadata:
+      after: sdk.ssoConnectors.getEnabled()
+      before: sdk.Experience.GetEnabledSsoConnectors()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/experience/interaction-event"]["put"]
+    update:
+      x-speakeasy-group: interactionEvents
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.interactionEvents.update()
+      before: sdk.Experience.UpdateInteractionEvent()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/authn/hasura"]["get"]
+    update:
+      x-speakeasy-group: authnHasura
+      x-speakeasy-name-override: get
+    x-speakeasy-metadata:
+      after: sdk.authnHasura.get()
+      before: sdk.Authn.GetHasuraAuth()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]
+    update:
+      x-speakeasy-group: jwtCustomizers
+      x-speakeasy-name-override: upsert
+    x-speakeasy-metadata:
+      after: sdk.jwtCustomizers.upsert()
+      before: sdk.Configs.UpsertJwtCustomizer()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["patch"]
+    update:
+      x-speakeasy-group: jwtCustomizers
+      x-speakeasy-name-override: update
+    x-speakeasy-metadata:
+      after: sdk.jwtCustomizers.update()
+      before: sdk.Configs.UpdateJwtCustomizer()
+      created_at: 1747108949621
+      type: method-name
+  - target: $["paths"]["/api/experience/profile"]["post"]
+    update:
+      x-speakeasy-group: profiles
+      x-speakeasy-name-override: add
+    x-speakeasy-metadata:
+      after: sdk.profiles.add()
+      before: sdk.Experience.AddUserProfile()
+      created_at: 1747108949622
+      type: method-name
+  - target: $["paths"]["/api/experience/verification/totp/secret"]["post"]
+    update:
+      x-speakeasy-group: totpSecrets
+      x-speakeasy-name-override: create
+    x-speakeasy-metadata:
+      after: sdk.totpSecrets.create()
+      before: sdk.Experience.CreateTotpSecret()
+      created_at: 1747108949622
+      type: method-name

@@ -1,0 +1,9 @@
+# CreateUserMfaVerificationRequestBody4
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `Type`                                                                                                     | *string*                                                                                                   | :heavy_check_mark:                                                                                         | The type of MFA verification to create.                                                                    |
+| `Codes`                                                                                                    | []*string*                                                                                                 | :heavy_minus_sign:                                                                                         | The backup codes for the MFA verification, if not provided, a new group of backup codes will be generated. |

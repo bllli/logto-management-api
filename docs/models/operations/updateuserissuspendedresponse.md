@@ -1,0 +1,9 @@
+# UpdateUserIsSuspendedResponse
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                    | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                            | :heavy_check_mark:                                                                                            | N/A                                                                                                           |
+| `Object`                                                                                                      | [*operations.UpdateUserIsSuspendedResponseBody](../../models/operations/updateuserissuspendedresponsebody.md) | :heavy_minus_sign:                                                                                            | User suspension status updated successfully.                                                                  |

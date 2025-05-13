@@ -1,0 +1,9 @@
+# CreateUserIdentityResponse
+
+
+## Fields
+
+| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                                | :heavy_check_mark:                                                                                                | N/A                                                                                                               |
+| `Object`                                                                                                          | map[string][operations.CreateUserIdentityResponseBody](../../models/operations/createuseridentityresponsebody.md) | :heavy_minus_sign:                                                                                                | A new identity is linked to the user.                                                                             |

@@ -1,0 +1,9 @@
+# CheckPasswordWithDefaultSignInExperienceRequest
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `Password`                                                                                                    | *string*                                                                                                      | :heavy_check_mark:                                                                                            | The password to check.                                                                                        |
+| `UserID`                                                                                                      | **string*                                                                                                     | :heavy_minus_sign:                                                                                            | The user ID to check the password for. It is required if rejects user info is enabled in the password policy. |

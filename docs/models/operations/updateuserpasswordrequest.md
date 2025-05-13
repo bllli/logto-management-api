@@ -1,0 +1,9 @@
+# UpdateUserPasswordRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `UserID`                                                                                             | *string*                                                                                             | :heavy_check_mark:                                                                                   | The unique identifier of the user.                                                                   |
+| `RequestBody`                                                                                        | [operations.UpdateUserPasswordRequestBody](../../models/operations/updateuserpasswordrequestbody.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |

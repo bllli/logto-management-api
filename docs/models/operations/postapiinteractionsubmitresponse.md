@@ -1,0 +1,9 @@
+# PostAPIInteractionSubmitResponse
+
+
+## Fields
+
+| Field                                                                                                               | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                                  | :heavy_check_mark:                                                                                                  | N/A                                                                                                                 |
+| `Object`                                                                                                            | [*operations.PostAPIInteractionSubmitResponseBody](../../models/operations/postapiinteractionsubmitresponsebody.md) | :heavy_minus_sign:                                                                                                  | OK                                                                                                                  |

@@ -1,0 +1,9 @@
+# ReplaceEmailTemplatesResponse
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                     | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                             | :heavy_check_mark:                                                                                             | N/A                                                                                                            |
+| `ResponseBodies`                                                                                               | [][operations.ReplaceEmailTemplatesResponseBody](../../models/operations/replaceemailtemplatesresponsebody.md) | :heavy_minus_sign:                                                                                             | The list of newly created or replaced email templates.                                                         |

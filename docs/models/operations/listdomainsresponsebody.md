@@ -1,0 +1,12 @@
+# ListDomainsResponseBody
+
+
+## Fields
+
+| Field                                                                                | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `ID`                                                                                 | *string*                                                                             | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `Domain`                                                                             | *string*                                                                             | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `Status`                                                                             | [operations.ListDomainsStatus](../../models/operations/listdomainsstatus.md)         | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `ErrorMessage`                                                                       | *string*                                                                             | :heavy_check_mark:                                                                   | N/A                                                                                  |
+| `DNSRecords`                                                                         | [][operations.ListDomainsDNSRecord](../../models/operations/listdomainsdnsrecord.md) | :heavy_check_mark:                                                                   | N/A                                                                                  |

@@ -1,0 +1,9 @@
+# CreateUserAssetResponse
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `Object`                                                                                          | [*operations.CreateUserAssetResponseBody](../../models/operations/createuserassetresponsebody.md) | :heavy_minus_sign:                                                                                | An object containing the uploaded asset metadata.                                                 |

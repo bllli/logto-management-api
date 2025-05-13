@@ -1,0 +1,9 @@
+# UpdateOrganizationRoleResponse
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                              | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| `Object`                                                                                                        | [*operations.UpdateOrganizationRoleResponseBody](../../models/operations/updateorganizationroleresponsebody.md) | :heavy_minus_sign:                                                                                              | The organization role was updated successfully.                                                                 |

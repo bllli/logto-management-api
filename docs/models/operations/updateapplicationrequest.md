@@ -1,0 +1,9 @@
+# UpdateApplicationRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                               | *string*                                                                                           | :heavy_check_mark:                                                                                 | The unique identifier of the application.                                                          |
+| `RequestBody`                                                                                      | [operations.UpdateApplicationRequestBody](../../models/operations/updateapplicationrequestbody.md) | :heavy_check_mark:                                                                                 | N/A                                                                                                |

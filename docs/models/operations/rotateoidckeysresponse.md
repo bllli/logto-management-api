@@ -1,0 +1,9 @@
+# RotateOidcKeysResponse
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `HTTPMeta`                                                                                       | [components.HTTPMetadata](../../models/components/httpmetadata.md)                               | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `ResponseBodies`                                                                                 | [][operations.RotateOidcKeysResponseBody](../../models/operations/rotateoidckeysresponsebody.md) | :heavy_minus_sign:                                                                               | An array of OIDC signing keys after rotation.                                                    |

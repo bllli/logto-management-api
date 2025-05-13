@@ -1,0 +1,9 @@
+# VerifySocialVerificationResponse
+
+
+## Fields
+
+| Field                                                                                                               | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                                  | :heavy_check_mark:                                                                                                  | N/A                                                                                                                 |
+| `Object`                                                                                                            | [*operations.VerifySocialVerificationResponseBody](../../models/operations/verifysocialverificationresponsebody.md) | :heavy_minus_sign:                                                                                                  | The social authorization response has been successfully verified.                                                   |

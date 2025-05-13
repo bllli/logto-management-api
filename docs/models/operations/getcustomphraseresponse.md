@@ -1,0 +1,9 @@
+# GetCustomPhraseResponse
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `Object`                                                                                          | [*operations.GetCustomPhraseResponseBody](../../models/operations/getcustomphraseresponsebody.md) | :heavy_minus_sign:                                                                                | Custom phrases for the specified language tag.                                                    |

@@ -1,0 +1,10 @@
+# PutAPIInteractionMfaClientExtensionResults
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `Appid`                                                                                               | **bool*                                                                                               | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `CrepProps`                                                                                           | [*operations.PutAPIInteractionMfaCrepProps](../../models/operations/putapiinteractionmfacrepprops.md) | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `HmacCreateSecret`                                                                                    | **bool*                                                                                               | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |

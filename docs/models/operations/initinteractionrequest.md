@@ -1,0 +1,9 @@
+# InitInteractionRequest
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `InteractionEvent`                                                                                       | [operations.InitInteractionInteractionEvent](../../models/operations/initinteractioninteractionevent.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `CaptchaToken`                                                                                           | **string*                                                                                                | :heavy_minus_sign:                                                                                       | N/A                                                                                                      |

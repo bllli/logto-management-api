@@ -1,0 +1,9 @@
+# ReplaceUserRolesRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `UserID`                                                                                         | *string*                                                                                         | :heavy_check_mark:                                                                               | The unique identifier of the user.                                                               |
+| `RequestBody`                                                                                    | [operations.ReplaceUserRolesRequestBody](../../models/operations/replaceuserrolesrequestbody.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |

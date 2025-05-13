@@ -1,0 +1,9 @@
+# ListResourceScopesResponse
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                               | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                       | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `ResponseBodies`                                                                                         | [][operations.ListResourceScopesResponseBody](../../models/operations/listresourcescopesresponsebody.md) | :heavy_minus_sign:                                                                                       | An array of scopes for the requested resource.                                                           |

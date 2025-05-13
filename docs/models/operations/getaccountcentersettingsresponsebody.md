@@ -1,0 +1,13 @@
+# GetAccountCenterSettingsResponseBody
+
+Account center settings.
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `TenantID`                                                                                             | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `ID`                                                                                                   | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `Enabled`                                                                                              | *bool*                                                                                                 | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `Fields`                                                                                               | [operations.GetAccountCenterSettingsFields](../../models/operations/getaccountcentersettingsfields.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

@@ -1,0 +1,9 @@
+# ReplaceUserIdentityRequestBody
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `UserID`                                                                                                      | *string*                                                                                                      | :heavy_check_mark:                                                                                            | The user's social identity ID.                                                                                |
+| `Details`                                                                                                     | [*operations.ReplaceUserIdentityDetailsRequest](../../models/operations/replaceuseridentitydetailsrequest.md) | :heavy_minus_sign:                                                                                            | The user's social identity details.                                                                           |

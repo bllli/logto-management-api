@@ -1,0 +1,9 @@
+# GetSignInExpSecondaryIdentifier
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `Identifier`                                                                                     | [operations.GetSignInExpIdentifierUnion](../../models/operations/getsigninexpidentifierunion.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `Verify`                                                                                         | **bool*                                                                                          | :heavy_minus_sign:                                                                               | N/A                                                                                              |

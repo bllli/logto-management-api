@@ -1,0 +1,9 @@
+# PutAPIInteractionIdentifier6
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ConnectorID`                                                                                          | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `ConnectorData`                                                                                        | [operations.PutAPIInteractionConnectorData](../../models/operations/putapiinteractionconnectordata.md) | :heavy_check_mark:                                                                                     | arbitrary                                                                                              |

@@ -1,0 +1,9 @@
+# AssignOrganizationRolesToUserRequestBody
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `OrganizationRoleIds`                                                                                     | []*string*                                                                                                | :heavy_minus_sign:                                                                                        | An array of organization role IDs to assign to the user. User existed roles assignment will be ignored.   |
+| `OrganizationRoleNames`                                                                                   | []*string*                                                                                                | :heavy_minus_sign:                                                                                        | An array of organization role names to assign to the user. User existed roles assignment will be ignored. |

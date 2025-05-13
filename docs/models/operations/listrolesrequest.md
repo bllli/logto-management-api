@@ -1,0 +1,13 @@
+# ListRolesRequest
+
+
+## Fields
+
+| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `ExcludeUserID`                                                         | **string*                                                               | :heavy_minus_sign:                                                      | Exclude roles assigned to a user.                                       |
+| `ExcludeApplicationID`                                                  | **string*                                                               | :heavy_minus_sign:                                                      | Exclude roles assigned to an application.                               |
+| `Type`                                                                  | [*operations.QueryParamType](../../models/operations/queryparamtype.md) | :heavy_minus_sign:                                                      | Filter by role type.                                                    |
+| `Page`                                                                  | **int64*                                                                | :heavy_minus_sign:                                                      | Page number (starts from 1).                                            |
+| `PageSize`                                                              | **int64*                                                                | :heavy_minus_sign:                                                      | Entries per page.                                                       |
+| `SearchParams`                                                          | map[string]*string*                                                     | :heavy_minus_sign:                                                      | Search query parameters.                                                |

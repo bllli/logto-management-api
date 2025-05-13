@@ -1,0 +1,9 @@
+# MissingResourceScope
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `Resource`                                                                                                 | [operations.GetAPIInteractionConsentResource](../../models/operations/getapiinteractionconsentresource.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
+| `Scopes`                                                                                                   | [][operations.GetAPIInteractionConsentScope](../../models/operations/getapiinteractionconsentscope.md)     | :heavy_check_mark:                                                                                         | N/A                                                                                                        |

@@ -1,0 +1,9 @@
+# OrganizationResourceScope
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `Resource`                                                                                                   | [operations.OrganizationResourceScopeResource](../../models/operations/organizationresourcescoperesource.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `Scopes`                                                                                                     | [][operations.OrganizationResourceScopeScope](../../models/operations/organizationresourcescopescope.md)     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

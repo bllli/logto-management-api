@@ -1,0 +1,9 @@
+# ListRoleScopesResponse
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `HTTPMeta`                                                                                       | [components.HTTPMetadata](../../models/components/httpmetadata.md)                               | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `ResponseBodies`                                                                                 | [][operations.ListRoleScopesResponseBody](../../models/operations/listrolescopesresponsebody.md) | :heavy_minus_sign:                                                                               | An array of API resource scopes linked with the role.                                            |

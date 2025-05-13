@@ -1,0 +1,9 @@
+# GenerateBackupCodesResponse
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                        | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| `Object`                                                                                                  | [*operations.GenerateBackupCodesResponseBody](../../models/operations/generatebackupcodesresponsebody.md) | :heavy_minus_sign:                                                                                        | Backup codes have been successfully generated.                                                            |

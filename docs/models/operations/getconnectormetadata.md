@@ -1,0 +1,11 @@
+# GetConnectorMetadata
+
+
+## Fields
+
+| Field                                                                                       | Type                                                                                        | Required                                                                                    | Description                                                                                 |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `Target`                                                                                    | **string*                                                                                   | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `Name`                                                                                      | [*operations.GetConnectorMetadataName](../../models/operations/getconnectormetadataname.md) | :heavy_minus_sign:                                                                          | Validator function                                                                          |
+| `Logo`                                                                                      | **string*                                                                                   | :heavy_minus_sign:                                                                          | N/A                                                                                         |
+| `LogoDark`                                                                                  | **string*                                                                                   | :heavy_minus_sign:                                                                          | N/A                                                                                         |

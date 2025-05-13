@@ -1,0 +1,9 @@
+# GetSsoConnectorResponse
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `Object`                                                                                          | [*operations.GetSsoConnectorResponseBody](../../models/operations/getssoconnectorresponsebody.md) | :heavy_minus_sign:                                                                                | The SSO connector data with the given ID.                                                         |

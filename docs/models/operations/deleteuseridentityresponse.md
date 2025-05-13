@@ -1,0 +1,9 @@
+# DeleteUserIdentityResponse
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                              | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                      | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
+| `Object`                                                                                                | [*operations.DeleteUserIdentityResponseBody](../../models/operations/deleteuseridentityresponsebody.md) | :heavy_minus_sign:                                                                                      | The identity is deleted from the user.                                                                  |

@@ -1,0 +1,9 @@
+# GetSignInExperienceConfigCaptchaConfig
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `Type`                                                                                               | [operations.GetSignInExperienceConfigType](../../models/operations/getsigninexperienceconfigtype.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `SiteKey`                                                                                            | *string*                                                                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |

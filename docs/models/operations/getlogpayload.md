@@ -1,0 +1,16 @@
+# GetLogPayload
+
+
+## Fields
+
+| Field                                                              | Type                                                               | Required                                                           | Description                                                        |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| `Key`                                                              | *string*                                                           | :heavy_check_mark:                                                 | N/A                                                                |
+| `Result`                                                           | [operations.GetLogResult](../../models/operations/getlogresult.md) | :heavy_check_mark:                                                 | N/A                                                                |
+| `Error`                                                            | [*operations.GetLogError](../../models/operations/getlogerror.md)  | :heavy_minus_sign:                                                 | N/A                                                                |
+| `IP`                                                               | **string*                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `UserAgent`                                                        | **string*                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `UserID`                                                           | **string*                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `ApplicationID`                                                    | **string*                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `SessionID`                                                        | **string*                                                          | :heavy_minus_sign:                                                 | N/A                                                                |
+| `Params`                                                           | map[string]*any*                                                   | :heavy_minus_sign:                                                 | N/A                                                                |

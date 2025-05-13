@@ -1,0 +1,8 @@
+# RotateOidcKeysRequestBody
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `SigningKeyAlgorithm`                                                                                                | [*operations.SigningKeyAlgorithmRequest](../../models/operations/signingkeyalgorithmrequest.md)                      | :heavy_minus_sign:                                                                                                   | The signing key algorithm the new generated private key is using.<br/><br/>Only applicable when `keyType` is `private-keys`. |

@@ -1,0 +1,9 @@
+# ReplaceOneTimeTokenStatusRequest
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ID`                                                                                                               | *string*                                                                                                           | :heavy_check_mark:                                                                                                 | The unique identifier of the one time token.                                                                       |
+| `RequestBody`                                                                                                      | [operations.ReplaceOneTimeTokenStatusRequestBody](../../models/operations/replaceonetimetokenstatusrequestbody.md) | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |

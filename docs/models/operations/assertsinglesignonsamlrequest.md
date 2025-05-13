@@ -1,0 +1,9 @@
+# AssertSingleSignOnSamlRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ConnectorID`                                                                                                | *string*                                                                                                     | :heavy_check_mark:                                                                                           | The unique identifier of the connector.                                                                      |
+| `RequestBody`                                                                                                | [operations.AssertSingleSignOnSamlRequestBody](../../models/operations/assertsinglesignonsamlrequestbody.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

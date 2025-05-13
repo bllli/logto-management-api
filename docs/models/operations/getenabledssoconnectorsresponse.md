@@ -1,0 +1,9 @@
+# GetEnabledSsoConnectorsResponse
+
+
+## Fields
+
+| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                                | :heavy_check_mark:                                                                                                | N/A                                                                                                               |
+| `Object`                                                                                                          | [*operations.GetEnabledSsoConnectorsResponseBody](../../models/operations/getenabledssoconnectorsresponsebody.md) | :heavy_minus_sign:                                                                                                | The enabled SSO connectors have been successfully retrieved.                                                      |

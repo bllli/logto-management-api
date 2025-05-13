@@ -1,0 +1,10 @@
+# ListApplicationUserConsentOrganizationsResponseBody
+
+List of organization entities granted by the user for the application.
+
+
+## Fields
+
+| Field                                                                                                                                              | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Organizations`                                                                                                                                    | [][operations.ListApplicationUserConsentOrganizationsOrganization](../../models/operations/listapplicationuserconsentorganizationsorganization.md) | :heavy_check_mark:                                                                                                                                 | A list of organization entities granted by the user for the application.                                                                           |

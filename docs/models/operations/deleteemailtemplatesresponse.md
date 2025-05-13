@@ -1,0 +1,9 @@
+# DeleteEmailTemplatesResponse
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                  | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                          | :heavy_check_mark:                                                                                          | N/A                                                                                                         |
+| `Object`                                                                                                    | [*operations.DeleteEmailTemplatesResponseBody](../../models/operations/deleteemailtemplatesresponsebody.md) | :heavy_minus_sign:                                                                                          | The email templates were deleted successfully.                                                              |

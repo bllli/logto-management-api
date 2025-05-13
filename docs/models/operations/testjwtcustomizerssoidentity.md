@@ -1,0 +1,10 @@
+# TestJwtCustomizerSsoIdentity
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `Issuer`                                                                                 | *string*                                                                                 | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `IdentityID`                                                                             | *string*                                                                                 | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `Detail`                                                                                 | [operations.TestJwtCustomizerDetail](../../models/operations/testjwtcustomizerdetail.md) | :heavy_check_mark:                                                                       | arbitrary                                                                                |

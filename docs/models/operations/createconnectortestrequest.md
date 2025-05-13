@@ -1,0 +1,9 @@
+# CreateConnectorTestRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `FactoryID`                                                                                            | *string*                                                                                               | :heavy_check_mark:                                                                                     | The unique identifier of the factory.                                                                  |
+| `RequestBody`                                                                                          | [operations.CreateConnectorTestRequestBody](../../models/operations/createconnectortestrequestbody.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

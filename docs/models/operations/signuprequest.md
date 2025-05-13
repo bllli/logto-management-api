@@ -1,0 +1,13 @@
+# SignUpRequest
+
+Sign-up method settings
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `Identifiers`                                                                                      | [][operations.SignUpIdentifierRequestEnum](../../models/operations/signupidentifierrequestenum.md) | :heavy_check_mark:                                                                                 | Specify allowed identifiers when signing-up.                                                       |
+| `Password`                                                                                         | *bool*                                                                                             | :heavy_check_mark:                                                                                 | Whether the user is required to set a password when signing-up.                                    |
+| `Verify`                                                                                           | *bool*                                                                                             | :heavy_check_mark:                                                                                 | Whether the user is required to verify their email/phone when signing-up.                          |
+| `SecondaryIdentifiers`                                                                             | [][operations.SecondaryIdentifierRequest](../../models/operations/secondaryidentifierrequest.md)   | :heavy_minus_sign:                                                                                 | N/A                                                                                                |

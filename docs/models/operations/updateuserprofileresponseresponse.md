@@ -1,0 +1,9 @@
+# UpdateUserProfileResponseResponse
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                    | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| `Object`                                                                                              | [*operations.UpdateUserProfileResponseBody](../../models/operations/updateuserprofileresponsebody.md) | :heavy_minus_sign:                                                                                    | Updated profile in JSON for the given user ID.                                                        |

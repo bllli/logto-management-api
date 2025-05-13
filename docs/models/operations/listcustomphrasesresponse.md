@@ -1,0 +1,9 @@
+# ListCustomPhrasesResponse
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `HTTPMeta`                                                                                             | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                     | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `ResponseBodies`                                                                                       | [][operations.ListCustomPhrasesResponseBody](../../models/operations/listcustomphrasesresponsebody.md) | :heavy_minus_sign:                                                                                     | An array of custom phrases.                                                                            |

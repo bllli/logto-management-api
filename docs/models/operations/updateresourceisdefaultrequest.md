@@ -1,0 +1,9 @@
+# UpdateResourceIsDefaultRequest
+
+
+## Fields
+
+| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                                           | *string*                                                                                                       | :heavy_check_mark:                                                                                             | The unique identifier of the resource.                                                                         |
+| `RequestBody`                                                                                                  | [operations.UpdateResourceIsDefaultRequestBody](../../models/operations/updateresourceisdefaultrequestbody.md) | :heavy_check_mark:                                                                                             | N/A                                                                                                            |

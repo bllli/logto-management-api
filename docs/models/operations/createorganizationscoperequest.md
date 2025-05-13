@@ -1,0 +1,10 @@
+# CreateOrganizationScopeRequest
+
+
+## Fields
+
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `TenantID`                                                                              | **string*                                                                               | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `Name`                                                                                  | *string*                                                                                | :heavy_check_mark:                                                                      | The name of the organization scope. It must be unique within the organization template. |
+| `Description`                                                                           | **string*                                                                               | :heavy_minus_sign:                                                                      | The description of the organization scope.                                              |

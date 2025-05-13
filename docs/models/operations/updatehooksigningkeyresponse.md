@@ -1,0 +1,9 @@
+# UpdateHookSigningKeyResponse
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                  | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                          | :heavy_check_mark:                                                                                          | N/A                                                                                                         |
+| `Object`                                                                                                    | [*operations.UpdateHookSigningKeyResponseBody](../../models/operations/updatehooksigningkeyresponsebody.md) | :heavy_minus_sign:                                                                                          | The signing key for the hook was updated successfully.                                                      |

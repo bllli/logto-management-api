@@ -1,0 +1,9 @@
+# AddOneTimeTokensResponse
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                  | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `Object`                                                                                            | [*operations.AddOneTimeTokensResponseBody](../../models/operations/addonetimetokensresponsebody.md) | :heavy_minus_sign:                                                                                  | The one-time token was created successfully.                                                        |

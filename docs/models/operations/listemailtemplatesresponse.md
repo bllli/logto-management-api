@@ -1,0 +1,9 @@
+# ListEmailTemplatesResponse
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                               | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                       | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `ResponseBodies`                                                                                         | [][operations.ListEmailTemplatesResponseBody](../../models/operations/listemailtemplatesresponsebody.md) | :heavy_minus_sign:                                                                                       | The list of matched email templates. Returns empty list, if no email template is found.                  |

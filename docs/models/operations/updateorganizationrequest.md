@@ -1,0 +1,9 @@
+# UpdateOrganizationRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                                 | *string*                                                                                             | :heavy_check_mark:                                                                                   | The unique identifier of the organization.                                                           |
+| `RequestBody`                                                                                        | [operations.UpdateOrganizationRequestBody](../../models/operations/updateorganizationrequestbody.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |

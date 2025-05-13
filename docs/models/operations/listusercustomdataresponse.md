@@ -1,0 +1,9 @@
+# ListUserCustomDataResponse
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                              | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                      | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
+| `Object`                                                                                                | [*operations.ListUserCustomDataResponseBody](../../models/operations/listusercustomdataresponsebody.md) | :heavy_minus_sign:                                                                                      | Custom data in JSON for the given user ID.                                                              |

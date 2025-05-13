@@ -1,0 +1,9 @@
+# CreateResourceScopeRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ResourceID`                                                                                           | *string*                                                                                               | :heavy_check_mark:                                                                                     | The unique identifier of the resource.                                                                 |
+| `RequestBody`                                                                                          | [operations.CreateResourceScopeRequestBody](../../models/operations/createresourcescoperequestbody.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

@@ -1,0 +1,8 @@
+# UpdateInteractionEventRequest
+
+
+## Fields
+
+| Field                                                                                                                  | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `InteractionEvent`                                                                                                     | [operations.UpdateInteractionEventInteractionEvent](../../models/operations/updateinteractioneventinteractionevent.md) | :heavy_check_mark:                                                                                                     | The type of the interaction event. Only `SignIn` and `Register` are supported.                                         |

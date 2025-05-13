@@ -1,0 +1,9 @@
+# CreateUserPersonalAccessTokenRequestBody
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `Name`                                                                                                   | *string*                                                                                                 | :heavy_check_mark:                                                                                       | The personal access token name. Must be unique within the user.                                          |
+| `ExpiresAt`                                                                                              | **float64*                                                                                               | :heavy_minus_sign:                                                                                       | The epoch time in milliseconds when the token will expire. If not provided, the token will never expire. |

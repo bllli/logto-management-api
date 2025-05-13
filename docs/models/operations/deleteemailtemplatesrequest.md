@@ -1,0 +1,9 @@
+# DeleteEmailTemplatesRequest
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `LanguageTag`                                                                                               | **string*                                                                                                   | :heavy_minus_sign:                                                                                          | The language tag of the email template, e.g., `en` or `fr`.                                                 |
+| `TemplateType`                                                                                              | [*operations.DeleteEmailTemplatesTemplateType](../../models/operations/deleteemailtemplatestemplatetype.md) | :heavy_minus_sign:                                                                                          | The type of the email template, e.g. `SignIn` or `ForgotPassword`                                           |

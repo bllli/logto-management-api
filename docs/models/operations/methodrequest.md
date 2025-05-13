@@ -1,0 +1,11 @@
+# MethodRequest
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `Identifier`                                                                             | [operations.MethodIdentifierRequest](../../models/operations/methodidentifierrequest.md) | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `Password`                                                                               | *bool*                                                                                   | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `VerificationCode`                                                                       | *bool*                                                                                   | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `IsPasswordPrimary`                                                                      | *bool*                                                                                   | :heavy_check_mark:                                                                       | N/A                                                                                      |

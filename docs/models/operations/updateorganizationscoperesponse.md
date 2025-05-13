@@ -1,0 +1,9 @@
+# UpdateOrganizationScopeResponse
+
+
+## Fields
+
+| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                                | :heavy_check_mark:                                                                                                | N/A                                                                                                               |
+| `Object`                                                                                                          | [*operations.UpdateOrganizationScopeResponseBody](../../models/operations/updateorganizationscoperesponsebody.md) | :heavy_minus_sign:                                                                                                | The organization scope was updated successfully.                                                                  |

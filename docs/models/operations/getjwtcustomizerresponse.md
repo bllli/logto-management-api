@@ -1,0 +1,9 @@
+# GetJwtCustomizerResponse
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                  | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `OneOf`                                                                                             | [*operations.GetJwtCustomizerResponseBody](../../models/operations/getjwtcustomizerresponsebody.md) | :heavy_minus_sign:                                                                                  | The JWT customizer.                                                                                 |

@@ -1,0 +1,14 @@
+# GetCaptchaProviderResponseBody
+
+Captcha provider.
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `TenantID`                                                                                           | *string*                                                                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `ID`                                                                                                 | *string*                                                                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `Config`                                                                                             | [operations.GetCaptchaProviderConfigUnion](../../models/operations/getcaptchaproviderconfigunion.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `CreatedAt`                                                                                          | *float64*                                                                                            | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `UpdatedAt`                                                                                          | *float64*                                                                                            | :heavy_check_mark:                                                                                   | N/A                                                                                                  |

@@ -1,0 +1,10 @@
+# FeaturedApplication
+
+
+## Fields
+
+| Field                                                                                    | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ID`                                                                                     | *string*                                                                                 | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `Name`                                                                                   | *string*                                                                                 | :heavy_check_mark:                                                                       | N/A                                                                                      |
+| `Type`                                                                                   | [operations.FeaturedApplicationType](../../models/operations/featuredapplicationtype.md) | :heavy_check_mark:                                                                       | N/A                                                                                      |

@@ -1,0 +1,9 @@
+# UpdateEmailTemplateDetailsRequest
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                                                 | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | The unique identifier of the email template.                                                                         |
+| `RequestBody`                                                                                                        | [operations.UpdateEmailTemplateDetailsRequestBody](../../models/operations/updateemailtemplatedetailsrequestbody.md) | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |

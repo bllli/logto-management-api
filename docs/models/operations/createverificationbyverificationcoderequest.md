@@ -1,0 +1,8 @@
+# CreateVerificationByVerificationCodeRequest
+
+
+## Fields
+
+| Field                                                                                                                                  | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `Identifier`                                                                                                                           | [operations.CreateVerificationByVerificationCodeIdentifier](../../models/operations/createverificationbyverificationcodeidentifier.md) | :heavy_check_mark:                                                                                                                     | The identifier (email address or phone number) to send the verification code to.                                                       |

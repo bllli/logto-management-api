@@ -1,0 +1,12 @@
+# MfaRequest
+
+MFA settings
+
+
+## Fields
+
+| Field                                                                                                               | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `Factors`                                                                                                           | [][operations.FactorRequest](../../models/operations/factorrequest.md)                                              | :heavy_check_mark:                                                                                                  | N/A                                                                                                                 |
+| `Policy`                                                                                                            | [operations.PolicyRequest](../../models/operations/policyrequest.md)                                                | :heavy_check_mark:                                                                                                  | N/A                                                                                                                 |
+| `OrganizationRequiredMfaPolicy`                                                                                     | [*operations.OrganizationRequiredMfaPolicyRequest](../../models/operations/organizationrequiredmfapolicyrequest.md) | :heavy_minus_sign:                                                                                                  | N/A                                                                                                                 |

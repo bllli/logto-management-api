@@ -1,0 +1,9 @@
+# UploadCustomUIAssetsResponse
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                  | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                          | :heavy_check_mark:                                                                                          | N/A                                                                                                         |
+| `Object`                                                                                                    | [*operations.UploadCustomUIAssetsResponseBody](../../models/operations/uploadcustomuiassetsresponsebody.md) | :heavy_minus_sign:                                                                                          | An JSON object containing the custom UI assets ID.                                                          |

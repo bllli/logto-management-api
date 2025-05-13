@@ -1,0 +1,10 @@
+# GetOidcKeysResponseBody
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                                    | *string*                                                                                                | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
+| `CreatedAt`                                                                                             | *float64*                                                                                               | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
+| `SigningKeyAlgorithm`                                                                                   | [*operations.GetOidcKeysSigningKeyAlgorithm](../../models/operations/getoidckeyssigningkeyalgorithm.md) | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |

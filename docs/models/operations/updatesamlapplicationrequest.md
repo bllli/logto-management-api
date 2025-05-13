@@ -1,0 +1,9 @@
+# UpdateSamlApplicationRequest
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                                       | *string*                                                                                                   | :heavy_check_mark:                                                                                         | The unique identifier of the saml application.                                                             |
+| `RequestBody`                                                                                              | [operations.UpdateSamlApplicationRequestBody](../../models/operations/updatesamlapplicationrequestbody.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |

@@ -1,0 +1,9 @@
+# TestJwtCustomizerResponse
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                    | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| `Object`                                                                                              | [*operations.TestJwtCustomizerResponseBody](../../models/operations/testjwtcustomizerresponsebody.md) | :heavy_minus_sign:                                                                                    | The result of the JWT customizer script testing.                                                      |

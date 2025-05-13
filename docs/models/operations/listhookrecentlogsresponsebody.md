@@ -1,0 +1,11 @@
+# ListHookRecentLogsResponseBody
+
+
+## Fields
+
+| Field                                                                                        | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `ID`                                                                                         | *string*                                                                                     | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `Key`                                                                                        | *string*                                                                                     | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `Payload`                                                                                    | [operations.ListHookRecentLogsPayload](../../models/operations/listhookrecentlogspayload.md) | :heavy_check_mark:                                                                           | N/A                                                                                          |
+| `CreatedAt`                                                                                  | *float64*                                                                                    | :heavy_check_mark:                                                                           | N/A                                                                                          |

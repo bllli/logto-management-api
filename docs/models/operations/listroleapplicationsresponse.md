@@ -1,0 +1,9 @@
+# ListRoleApplicationsResponse
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `HTTPMeta`                                                                                                   | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                           | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `ResponseBodies`                                                                                             | [][operations.ListRoleApplicationsResponseBody](../../models/operations/listroleapplicationsresponsebody.md) | :heavy_minus_sign:                                                                                           | An array of applications that have the role assigned.                                                        |

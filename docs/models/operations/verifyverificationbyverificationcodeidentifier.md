@@ -1,0 +1,11 @@
+# VerifyVerificationByVerificationCodeIdentifier
+
+The identifier (email address or phone number) to verify the code against. Must match the identifier used to send the verification code.
+
+
+## Fields
+
+| Field                                                                                                                      | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `Type`                                                                                                                     | [operations.VerifyVerificationByVerificationCodeType](../../models/operations/verifyverificationbyverificationcodetype.md) | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |
+| `Value`                                                                                                                    | *string*                                                                                                                   | :heavy_check_mark:                                                                                                         | N/A                                                                                                                        |

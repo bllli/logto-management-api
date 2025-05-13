@@ -1,0 +1,38 @@
+speakeasyVersion: 1.543.8
+sources:
+    Logto API references:
+        sourceNamespace: logto-api-references
+        sourceRevisionDigest: sha256:af83bb84ea36fd5047b78f1431099a26cd9af1ca415cfc382f2685d5382c074f
+        sourceBlobDigest: sha256:343fbcf567f5e476f2490c305c57a6c7434d653f2aeec95e2fa3bf4f12f4cd30
+        tags:
+            - latest
+            - Cloud
+targets:
+    logto-management-api:
+        source: Logto API references
+        sourceNamespace: logto-api-references
+        sourceRevisionDigest: sha256:af83bb84ea36fd5047b78f1431099a26cd9af1ca415cfc382f2685d5382c074f
+        sourceBlobDigest: sha256:343fbcf567f5e476f2490c305c57a6c7434d653f2aeec95e2fa3bf4f12f4cd30
+        codeSamplesNamespace: logto-api-references-go-code-samples
+        codeSamplesRevisionDigest: sha256:1aa09133439bcfbb7623a1f387887a864ed61583c6d79becad6282bb9e9c6fae
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Logto API references:
+            inputs:
+                - location: ../logto-openapi-source.json
+            overlays:
+                - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            registry:
+                location: registry.speakeasyapi.dev/wtf/temp/logto-api-references
+    targets:
+        logto-management-api:
+            target: go
+            source: Logto API references
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/wtf/temp/logto-api-references-go-code-samples
+                labelOverride:
+                    fixedValue: Go (SDK)
+                blocking: false

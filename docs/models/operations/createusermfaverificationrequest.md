@@ -1,0 +1,9 @@
+# CreateUserMfaVerificationRequest
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `UserID`                                                                                                           | *string*                                                                                                           | :heavy_check_mark:                                                                                                 | The unique identifier of the user.                                                                                 |
+| `RequestBody`                                                                                                      | [operations.CreateUserMfaVerificationRequestBody](../../models/operations/createusermfaverificationrequestbody.md) | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |

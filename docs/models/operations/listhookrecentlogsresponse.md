@@ -1,0 +1,9 @@
+# ListHookRecentLogsResponse
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                               | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                       | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `ResponseBodies`                                                                                         | [][operations.ListHookRecentLogsResponseBody](../../models/operations/listhookrecentlogsresponsebody.md) | :heavy_minus_sign:                                                                                       | A list of recent logs for the hook.                                                                      |
