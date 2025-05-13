@@ -30,8 +30,8 @@ func newInteraction(sdkConfig sdkConfiguration) *Interaction {
 	}
 }
 
-// Update interaction event
-// Update the current experience interaction event to the given event type. This API is used to switch the interaction event between `SignIn` and `Register`, while keeping all the verification records data.
+// Update API resource
+// Update an API resource details by ID with the given data. This method performs a partial update.
 func (s *Interaction) Update(ctx context.Context, request operations.PutAPIInteractionRequest, opts ...operations.Option) (*operations.PutAPIInteractionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -223,8 +223,8 @@ func (s *Interaction) Update(ctx context.Context, request operations.PutAPIInter
 
 }
 
-// Delete custom phrase
-// Delete custom phrases for the specified language tag.
+// Delete captcha provider
+// Delete the captcha provider.
 func (s *Interaction) Delete(ctx context.Context, opts ...operations.Option) (*operations.DeleteAPIInteractionResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -783,8 +783,8 @@ func (s *Interaction) PatchIdentifiers(ctx context.Context, request operations.P
 
 }
 
-// UpdateProfile - Update other profile
-// Update other profile for the user, only the fields that are passed in will be updated, to update the address, the user must have the address scope.
+// UpdateProfile - Update user profile
+// Update profile for the given user ID. This method performs a partial update of the profile object.
 func (s *Interaction) UpdateProfile(ctx context.Context, request operations.PutAPIInteractionProfileRequest, opts ...operations.Option) (*operations.PutAPIInteractionProfileResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -1341,6 +1341,8 @@ func (s *Interaction) DeleteProfile(ctx context.Context, opts ...operations.Opti
 
 }
 
+// Submit interaction
+// Submit the current interaction. <br/>- Submit the verified user identity to the OIDC provider for further authentication (SignIn and Register). <br/>- Update the user's profile data if any (SignIn and Register). <br/>- Reset the password and clear all the interaction records (ForgotPassword).
 func (s *Interaction) Submit(ctx context.Context, opts ...operations.Option) (*operations.PostAPIInteractionSubmitResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{
@@ -2314,6 +2316,8 @@ func (s *Interaction) PostTotp(ctx context.Context, opts ...operations.Option) (
 
 }
 
+// VerifyWebAuthnRegistration - Verify WebAuthn registration verification
+// Verify the WebAuthn registration response against the user's WebAuthn registration challenge. If the response is valid, the WebAuthn registration record will be marked as verified.
 func (s *Interaction) VerifyWebAuthnRegistration(ctx context.Context, opts ...operations.Option) (*operations.PostAPIInteractionVerificationWebauthnRegistrationResponse, error) {
 	o := operations.Options{}
 	supportedOptions := []string{

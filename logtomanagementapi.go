@@ -236,9 +236,9 @@ func New(opts ...SDKOption) *LogtoManagementAPI {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "Cloud",
-			SDKVersion:        "0.1.1",
+			SDKVersion:        "0.1.2",
 			GenVersion:        "2.598.22",
-			UserAgent:         "speakeasy-sdk/go 0.1.1 2.598.22 Cloud github.com/bllli/logto-management-api",
+			UserAgent:         "speakeasy-sdk/go 0.1.2 2.598.22 Cloud github.com/bllli/logto-management-api",
 			Hooks:             hooks.New(),
 		},
 	}

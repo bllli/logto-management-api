@@ -5,8 +5,8 @@ management:
   docVersion: Cloud
   speakeasyVersion: 1.543.8
   generationVersion: 2.598.22
-  releaseVersion: 0.1.1
-  configChecksum: 86bc1c984600c919293b346b6b7d6ddb
+  releaseVersion: 0.1.2
+  configChecksum: 82ebfb1d9e6892b37f98fcbdc07d6847
 features:
   go:
     acceptHeaders: 2.81.2

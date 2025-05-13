@@ -2,8 +2,8 @@ speakeasyVersion: 1.543.8
 sources:
     Logto API references:
         sourceNamespace: logto-api-references
-        sourceRevisionDigest: sha256:af83bb84ea36fd5047b78f1431099a26cd9af1ca415cfc382f2685d5382c074f
-        sourceBlobDigest: sha256:343fbcf567f5e476f2490c305c57a6c7434d653f2aeec95e2fa3bf4f12f4cd30
+        sourceRevisionDigest: sha256:a8a39f29dc7cb23c93b034f92cf8d8cae54e6dd22fffc0dcd6ff91bb0c4ea02c
+        sourceBlobDigest: sha256:f5ec3d62f6a906ba54f1bcb73c4741cb830d901f494620ec03cd24946c0f5cfb
         tags:
             - latest
             - Cloud
@@ -11,10 +11,10 @@ targets:
     logto-management-api:
         source: Logto API references
         sourceNamespace: logto-api-references
-        sourceRevisionDigest: sha256:af83bb84ea36fd5047b78f1431099a26cd9af1ca415cfc382f2685d5382c074f
-        sourceBlobDigest: sha256:343fbcf567f5e476f2490c305c57a6c7434d653f2aeec95e2fa3bf4f12f4cd30
+        sourceRevisionDigest: sha256:a8a39f29dc7cb23c93b034f92cf8d8cae54e6dd22fffc0dcd6ff91bb0c4ea02c
+        sourceBlobDigest: sha256:f5ec3d62f6a906ba54f1bcb73c4741cb830d901f494620ec03cd24946c0f5cfb
         codeSamplesNamespace: logto-api-references-go-code-samples
-        codeSamplesRevisionDigest: sha256:1aa09133439bcfbb7623a1f387887a864ed61583c6d79becad6282bb9e9c6fae
+        codeSamplesRevisionDigest: sha256:22b50fcfabc4d5b1791c49f980f48a3fe851e27e4fb3e32844c45cb728ef086d
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
