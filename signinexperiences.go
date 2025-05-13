@@ -56,7 +56,7 @@ func (s *SignInExperiences) CheckPassword(ctx context.Context, request operation
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CheckPasswordWithDefaultSignInExperience",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

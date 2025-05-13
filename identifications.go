@@ -55,7 +55,7 @@ func (s *Identifications) IdentifyUser(ctx context.Context, request operations.I
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "IdentifyUser",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

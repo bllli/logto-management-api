@@ -656,10 +656,6 @@ func (o *ListApplicationsProtectedAppMetadata) GetCustomDomains() []ListApplicat
 	return o.CustomDomains
 }
 
-// ListApplicationsCustomData - arbitrary
-type ListApplicationsCustomData struct {
-}
-
 type ListApplicationsResponseBody struct {
 	TenantID string `json:"tenantId"`
 	ID       string `json:"id"`
@@ -674,9 +670,9 @@ type ListApplicationsResponseBody struct {
 	CustomClientMetadata ListApplicationsCustomClientMetadata  `json:"customClientMetadata"`
 	ProtectedAppMetadata *ListApplicationsProtectedAppMetadata `json:"protectedAppMetadata"`
 	// arbitrary
-	CustomData   ListApplicationsCustomData `json:"customData"`
-	IsThirdParty bool                       `json:"isThirdParty"`
-	CreatedAt    float64                    `json:"createdAt"`
+	CustomData   map[string]any `json:"customData"`
+	IsThirdParty bool           `json:"isThirdParty"`
+	CreatedAt    float64        `json:"createdAt"`
 }
 
 func (o *ListApplicationsResponseBody) GetTenantID() string {
@@ -742,9 +738,9 @@ func (o *ListApplicationsResponseBody) GetProtectedAppMetadata() *ListApplicatio
 	return o.ProtectedAppMetadata
 }
 
-func (o *ListApplicationsResponseBody) GetCustomData() ListApplicationsCustomData {
+func (o *ListApplicationsResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return ListApplicationsCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

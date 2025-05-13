@@ -56,7 +56,7 @@ func (s *MyAccount) GetProfile(ctx context.Context, opts ...operations.Option) (
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetProfile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -262,7 +262,7 @@ func (s *MyAccount) Modify(ctx context.Context, request operations.UpdateProfile
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateProfile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -479,7 +479,7 @@ func (s *MyAccount) UpdateProfile(ctx context.Context, request operations.Update
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateOtherProfile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -694,7 +694,7 @@ func (s *MyAccount) UpdatePassword(ctx context.Context, request operations.Updat
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdatePassword",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -891,7 +891,7 @@ func (s *MyAccount) UpdatePrimaryEmail(ctx context.Context, request operations.U
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdatePrimaryEmail",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1086,7 +1086,7 @@ func (s *MyAccount) DeletePrimaryEmail(ctx context.Context, opts ...operations.O
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeletePrimaryEmail",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1274,7 +1274,7 @@ func (s *MyAccount) UpdatePrimaryPhone(ctx context.Context, request operations.U
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdatePrimaryPhone",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1469,7 +1469,7 @@ func (s *MyAccount) DeletePrimaryPhone(ctx context.Context, opts ...operations.O
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeletePrimaryPhone",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1657,7 +1657,7 @@ func (s *MyAccount) AddUserIdentities(ctx context.Context, request operations.Ad
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "AddUserIdentities",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1856,7 +1856,7 @@ func (s *MyAccount) DeleteIdentity(ctx context.Context, target string, opts ...o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteIdentity",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

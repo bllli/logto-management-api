@@ -24,7 +24,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"github.com/bllli/logto-management-api/models/operations"
 	"log"
@@ -34,10 +33,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.EmailTemplates.Replace(ctx, operations.ReplaceEmailTemplatesRequest{
@@ -82,7 +78,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"log"
 )
@@ -91,10 +86,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.EmailTemplates.List(ctx, nil, nil)
@@ -138,7 +130,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"log"
 )
@@ -147,10 +138,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.EmailTemplates.Remove(ctx, nil, nil)
@@ -194,7 +182,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"log"
 )
@@ -203,10 +190,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.EmailTemplates.GetByID(ctx, "<id>")
@@ -249,7 +233,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"log"
 )
@@ -258,10 +241,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.EmailTemplates.Delete(ctx, "<id>")
@@ -304,7 +284,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"github.com/bllli/logto-management-api/models/operations"
 	"log"
@@ -314,10 +293,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.EmailTemplates.UpdateDetails(ctx, "<id>", operations.UpdateEmailTemplateDetailsRequestBody{})

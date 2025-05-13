@@ -63,7 +63,7 @@ func (s *Hooks) List(ctx context.Context, includeExecutionStats *string, page *i
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListHooks",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -275,7 +275,7 @@ func (s *Hooks) Create(ctx context.Context, request operations.CreateHookRequest
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateHook",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -495,7 +495,7 @@ func (s *Hooks) Get(ctx context.Context, id string, includeExecutionStats *strin
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetHook",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -714,7 +714,7 @@ func (s *Hooks) Update(ctx context.Context, id string, requestBody operations.Up
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateHook",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -935,7 +935,7 @@ func (s *Hooks) Delete(ctx context.Context, id string, opts ...operations.Option
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteHook",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1132,7 +1132,7 @@ func (s *Hooks) ListRecentLogs(ctx context.Context, id string, logKey *string, p
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListHookRecentLogs",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1349,7 +1349,7 @@ func (s *Hooks) Test(ctx context.Context, id string, requestBody operations.Crea
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateHookTest",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1552,7 +1552,7 @@ func (s *Hooks) UpdateSigningKey(ctx context.Context, id string, opts ...operati
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateHookSigningKey",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

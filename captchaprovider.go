@@ -56,7 +56,7 @@ func (s *CaptchaProvider) Get(ctx context.Context, opts ...operations.Option) (*
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetCaptchaProvider",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -264,7 +264,7 @@ func (s *CaptchaProvider) Update(ctx context.Context, request operations.UpdateC
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateCaptchaProvider",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

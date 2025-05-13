@@ -30,7 +30,7 @@ func newAuthnSaml(sdkConfig sdkConfiguration) *AuthnSaml {
 // SAML social connectors are deprecated. Use the SSO SAML connector instead.
 //
 // Deprecated: This will be removed in a future release, please migrate away from it as soon as possible.
-func (s *AuthnSaml) Assert(ctx context.Context, connectorID string, requestBody operations.AssertSamlRequestBody, opts ...operations.Option) (*operations.AssertSamlResponse, error) {
+func (s *AuthnSaml) Assert(ctx context.Context, connectorID string, requestBody map[string]any, opts ...operations.Option) (*operations.AssertSamlResponse, error) {
 	request := operations.AssertSamlRequest{
 		ConnectorID: connectorID,
 		RequestBody: requestBody,
@@ -63,7 +63,7 @@ func (s *AuthnSaml) Assert(ctx context.Context, connectorID string, requestBody 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "AssertSaml",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

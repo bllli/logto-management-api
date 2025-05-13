@@ -57,7 +57,7 @@ func (s *Verifications) CreateByPassword(ctx context.Context, request operations
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateVerificationByPassword",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -274,7 +274,7 @@ func (s *Verifications) CreateByVerificationCode(ctx context.Context, request op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateVerificationByVerificationCode",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -491,7 +491,7 @@ func (s *Verifications) VerifyByCode(ctx context.Context, request operations.Ver
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyVerificationByVerificationCode",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -708,7 +708,7 @@ func (s *Verifications) CreateBySocial(ctx context.Context, request operations.C
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateVerificationBySocial",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -927,7 +927,7 @@ func (s *Verifications) VerifyBySocial(ctx context.Context, request operations.V
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyVerificationBySocial",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

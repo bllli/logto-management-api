@@ -56,7 +56,7 @@ func (s *SignInExperience) Get(ctx context.Context, opts ...operations.Option) (
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSignInExp",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -269,7 +269,7 @@ func (s *SignInExperience) Update(ctx context.Context, requestBody operations.Up
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateSignInExp",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -492,7 +492,7 @@ func (s *SignInExperience) UploadCustomUIAssets(ctx context.Context, request *op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UploadCustomUiAssets",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "multipart", `request:"mediaType=multipart/form-data"`)

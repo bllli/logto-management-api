@@ -56,7 +56,7 @@ func (s *DashboardUsers) GetTotalCount(ctx context.Context, opts ...operations.O
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetTotalUserCount",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

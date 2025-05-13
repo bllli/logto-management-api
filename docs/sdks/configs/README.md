@@ -31,7 +31,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"log"
 )
@@ -40,10 +39,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.Configs.GetAdminConsole(ctx)
@@ -85,7 +81,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"github.com/bllli/logto-management-api/models/operations"
 	"log"
@@ -95,10 +90,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.Configs.UpdateAdminConsole(ctx, operations.UpdateAdminConsoleConfigRequest{})
@@ -141,7 +133,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"github.com/bllli/logto-management-api/models/operations"
 	"log"
@@ -151,10 +142,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.Configs.GetOidcKeys(ctx, operations.GetOidcKeysKeyTypePrivateKeys)
@@ -197,7 +185,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"github.com/bllli/logto-management-api/models/operations"
 	"log"
@@ -207,10 +194,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.Configs.DeleteOidcKey(ctx, operations.DeleteOidcKeyKeyTypePrivateKeys, "<id>")
@@ -256,7 +240,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"github.com/bllli/logto-management-api/models/operations"
 	"log"
@@ -266,10 +249,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.Configs.RotateOidcKeys(ctx, operations.RotateOidcKeysKeyTypePrivateKeys, operations.RotateOidcKeysRequestBody{})
@@ -313,7 +293,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"github.com/bllli/logto-management-api/models/operations"
 	"log"
@@ -323,10 +302,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.Configs.GetJwtCustomizer(ctx, operations.GetJwtCustomizerTokenTypePathClientCredentials)
@@ -369,7 +345,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"github.com/bllli/logto-management-api/models/operations"
 	"log"
@@ -379,10 +354,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.Configs.DeleteJwtCustomizer(ctx, operations.DeleteJwtCustomizerTokenTypePathAccessToken)
@@ -425,7 +397,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"log"
 )
@@ -434,10 +405,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.Configs.ListJwtCustomizers(ctx)
@@ -479,7 +447,6 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/bllli/logto-management-api/models/components"
 	logtomanagementapi "github.com/bllli/logto-management-api"
 	"github.com/bllli/logto-management-api/models/operations"
 	"log"
@@ -489,10 +456,7 @@ func main() {
     ctx := context.Background()
 
     s := logtomanagementapi.New(
-        logtomanagementapi.WithSecurity(components.Security{
-            ClientID: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_ID")),
-            ClientSecret: logtomanagementapi.String(os.Getenv("LOGTOMANAGEMENTAPI_CLIENT_SECRET")),
-        }),
+        logtomanagementapi.WithSecurity(os.Getenv("LOGTOMANAGEMENTAPI_BEARER_AUTH")),
     )
 
     res, err := s.Configs.TestJwtCustomizer(ctx, operations.CreateTestJwtCustomizerRequestTestJwtCustomizerRequestBody1(

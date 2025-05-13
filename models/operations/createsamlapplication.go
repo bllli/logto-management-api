@@ -9,8 +9,8 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// CreateSamlApplicationCustomDataRequest - Optional custom data for the application.
-type CreateSamlApplicationCustomDataRequest struct {
+// CreateSamlApplicationCustomData - Optional custom data for the application.
+type CreateSamlApplicationCustomData struct {
 }
 
 type CreateSamlApplicationAttributeMappingRequest struct {
@@ -290,7 +290,7 @@ type CreateSamlApplicationRequest struct {
 	// Optional description of the SAML application.
 	Description *string `json:"description,omitempty"`
 	// Optional custom data for the application.
-	CustomData       *CreateSamlApplicationCustomDataRequest       `json:"customData,omitempty"`
+	CustomData       *CreateSamlApplicationCustomData              `json:"customData,omitempty"`
 	AttributeMapping *CreateSamlApplicationAttributeMappingRequest `json:"attributeMapping,omitempty"`
 	EntityID         *string                                       `json:"entityId,omitempty"`
 	// The Assertion Consumer Service (ACS) URL where the SAML response will be sent.
@@ -325,7 +325,7 @@ func (o *CreateSamlApplicationRequest) GetDescription() *string {
 	return o.Description
 }
 
-func (o *CreateSamlApplicationRequest) GetCustomData() *CreateSamlApplicationCustomDataRequest {
+func (o *CreateSamlApplicationRequest) GetCustomData() *CreateSamlApplicationCustomData {
 	if o == nil {
 		return nil
 	}
@@ -403,10 +403,6 @@ func (e *CreateSamlApplicationType) UnmarshalJSON(data []byte) error {
 	default:
 		return fmt.Errorf("invalid value for CreateSamlApplicationType: %v", v)
 	}
-}
-
-// CreateSamlApplicationCustomDataResponse - arbitrary
-type CreateSamlApplicationCustomDataResponse struct {
 }
 
 type CreateSamlApplicationAttributeMappingResponse struct {
@@ -733,7 +729,7 @@ type CreateSamlApplicationResponseBody struct {
 	Description *string                   `json:"description"`
 	Type        CreateSamlApplicationType `json:"type"`
 	// arbitrary
-	CustomData       CreateSamlApplicationCustomDataResponse       `json:"customData"`
+	CustomData       map[string]any                                `json:"customData"`
 	IsThirdParty     bool                                          `json:"isThirdParty"`
 	CreatedAt        float64                                       `json:"createdAt"`
 	AttributeMapping CreateSamlApplicationAttributeMappingResponse `json:"attributeMapping"`
@@ -779,9 +775,9 @@ func (o *CreateSamlApplicationResponseBody) GetType() CreateSamlApplicationType 
 	return o.Type
 }
 
-func (o *CreateSamlApplicationResponseBody) GetCustomData() CreateSamlApplicationCustomDataResponse {
+func (o *CreateSamlApplicationResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return CreateSamlApplicationCustomDataResponse{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

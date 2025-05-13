@@ -56,7 +56,7 @@ func (s *SsoConnectors) Create(ctx context.Context, request operations.CreateSso
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateSsoConnector",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -280,7 +280,7 @@ func (s *SsoConnectors) List(ctx context.Context, page *int64, pageSize *int64, 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListSsoConnectors",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -494,7 +494,7 @@ func (s *SsoConnectors) Get(ctx context.Context, id string, opts ...operations.O
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSsoConnector",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -708,7 +708,7 @@ func (s *SsoConnectors) Delete(ctx context.Context, id string, opts ...operation
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteSsoConnector",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -903,7 +903,7 @@ func (s *SsoConnectors) Update(ctx context.Context, id string, requestBody opera
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateSsoConnector",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1128,7 +1128,7 @@ func (s *SsoConnectors) GetEnabled(ctx context.Context, email string, opts ...op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetEnabledSsoConnectors",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 

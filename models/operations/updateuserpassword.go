@@ -38,18 +38,10 @@ func (o *UpdateUserPasswordRequest) GetRequestBody() UpdateUserPasswordRequestBo
 	return o.RequestBody
 }
 
-// UpdateUserPasswordCustomData - arbitrary
-type UpdateUserPasswordCustomData struct {
-}
-
-// UpdateUserPasswordDetails - arbitrary
-type UpdateUserPasswordDetails struct {
-}
-
 type UpdateUserPasswordIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *UpdateUserPasswordDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *UpdateUserPasswordIdentities) GetUserID() string {
@@ -59,7 +51,7 @@ func (o *UpdateUserPasswordIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *UpdateUserPasswordIdentities) GetDetails() *UpdateUserPasswordDetails {
+func (o *UpdateUserPasswordIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -216,10 +208,6 @@ func (o *UpdateUserPasswordProfile) GetAddress() *UpdateUserPasswordAddress {
 	return o.Address
 }
 
-// UpdateUserPasswordDetail - arbitrary
-type UpdateUserPasswordDetail struct {
-}
-
 type UpdateUserPasswordSsoIdentity struct {
 	TenantID   string `json:"tenantId"`
 	ID         string `json:"id"`
@@ -227,9 +215,9 @@ type UpdateUserPasswordSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail         UpdateUserPasswordDetail `json:"detail"`
-	CreatedAt      float64                  `json:"createdAt"`
-	SsoConnectorID string                   `json:"ssoConnectorId"`
+	Detail         map[string]any `json:"detail"`
+	CreatedAt      float64        `json:"createdAt"`
+	SsoConnectorID string         `json:"ssoConnectorId"`
 }
 
 func (o *UpdateUserPasswordSsoIdentity) GetTenantID() string {
@@ -267,9 +255,9 @@ func (o *UpdateUserPasswordSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *UpdateUserPasswordSsoIdentity) GetDetail() UpdateUserPasswordDetail {
+func (o *UpdateUserPasswordSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return UpdateUserPasswordDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -297,7 +285,7 @@ type UpdateUserPasswordResponseBody struct {
 	Name         *string `json:"name"`
 	Avatar       *string `json:"avatar"`
 	// arbitrary
-	CustomData    UpdateUserPasswordCustomData            `json:"customData"`
+	CustomData    map[string]any                          `json:"customData"`
 	Identities    map[string]UpdateUserPasswordIdentities `json:"identities"`
 	LastSignInAt  *float64                                `json:"lastSignInAt"`
 	CreatedAt     float64                                 `json:"createdAt"`
@@ -351,9 +339,9 @@ func (o *UpdateUserPasswordResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *UpdateUserPasswordResponseBody) GetCustomData() UpdateUserPasswordCustomData {
+func (o *UpdateUserPasswordResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return UpdateUserPasswordCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

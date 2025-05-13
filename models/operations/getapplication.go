@@ -454,10 +454,6 @@ func (o *GetApplicationProtectedAppMetadata) GetCustomDomains() []GetApplication
 	return o.CustomDomains
 }
 
-// GetApplicationCustomData - arbitrary
-type GetApplicationCustomData struct {
-}
-
 // GetApplicationResponseBody - Details of the application.
 type GetApplicationResponseBody struct {
 	TenantID string `json:"tenantId"`
@@ -473,10 +469,10 @@ type GetApplicationResponseBody struct {
 	CustomClientMetadata GetApplicationCustomClientMetadata  `json:"customClientMetadata"`
 	ProtectedAppMetadata *GetApplicationProtectedAppMetadata `json:"protectedAppMetadata"`
 	// arbitrary
-	CustomData   GetApplicationCustomData `json:"customData"`
-	IsThirdParty bool                     `json:"isThirdParty"`
-	CreatedAt    float64                  `json:"createdAt"`
-	IsAdmin      bool                     `json:"isAdmin"`
+	CustomData   map[string]any `json:"customData"`
+	IsThirdParty bool           `json:"isThirdParty"`
+	CreatedAt    float64        `json:"createdAt"`
+	IsAdmin      bool           `json:"isAdmin"`
 }
 
 func (o *GetApplicationResponseBody) GetTenantID() string {
@@ -542,9 +538,9 @@ func (o *GetApplicationResponseBody) GetProtectedAppMetadata() *GetApplicationPr
 	return o.ProtectedAppMetadata
 }
 
-func (o *GetApplicationResponseBody) GetCustomData() GetApplicationCustomData {
+func (o *GetApplicationResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return GetApplicationCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

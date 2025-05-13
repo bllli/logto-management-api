@@ -63,7 +63,7 @@ func (s *OneTimeTokens) List(ctx context.Context, email *string, status *operati
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListOneTimeTokens",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -275,7 +275,7 @@ func (s *OneTimeTokens) Add(ctx context.Context, request operations.AddOneTimeTo
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "AddOneTimeTokens",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -494,7 +494,7 @@ func (s *OneTimeTokens) Get(ctx context.Context, id string, opts ...operations.O
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetOneTimeToken",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -708,7 +708,7 @@ func (s *OneTimeTokens) Delete(ctx context.Context, id string, opts ...operation
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteOneTimeToken",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -898,7 +898,7 @@ func (s *OneTimeTokens) Verify(ctx context.Context, request operations.VerifyOne
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyOneTimeToken",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1120,7 +1120,7 @@ func (s *OneTimeTokens) UpdateStatus(ctx context.Context, id string, requestBody
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceOneTimeTokenStatus",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

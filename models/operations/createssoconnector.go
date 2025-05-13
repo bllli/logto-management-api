@@ -6,10 +6,6 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// CreateSsoConnectorConfigRequest - arbitrary
-type CreateSsoConnectorConfigRequest struct {
-}
-
 type CreateSsoConnectorBrandingRequest struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	Logo        *string `json:"logo,omitempty"`
@@ -39,7 +35,7 @@ func (o *CreateSsoConnectorBrandingRequest) GetDarkLogo() *string {
 
 type CreateSsoConnectorRequest struct {
 	// arbitrary
-	Config        *CreateSsoConnectorConfigRequest   `json:"config,omitempty"`
+	Config        map[string]any                     `json:"config,omitempty"`
 	Domains       []string                           `json:"domains,omitempty"`
 	Branding      *CreateSsoConnectorBrandingRequest `json:"branding,omitempty"`
 	SyncProfile   *bool                              `json:"syncProfile,omitempty"`
@@ -47,7 +43,7 @@ type CreateSsoConnectorRequest struct {
 	ConnectorName string                             `json:"connectorName"`
 }
 
-func (o *CreateSsoConnectorRequest) GetConfig() *CreateSsoConnectorConfigRequest {
+func (o *CreateSsoConnectorRequest) GetConfig() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -89,10 +85,6 @@ func (o *CreateSsoConnectorRequest) GetConnectorName() string {
 	return o.ConnectorName
 }
 
-// CreateSsoConnectorConfigResponse - arbitrary
-type CreateSsoConnectorConfigResponse struct {
-}
-
 type CreateSsoConnectorBrandingResponse struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	Logo        *string `json:"logo,omitempty"`
@@ -127,7 +119,7 @@ type CreateSsoConnectorResponseBody struct {
 	ProviderName  string `json:"providerName"`
 	ConnectorName string `json:"connectorName"`
 	// arbitrary
-	Config      CreateSsoConnectorConfigResponse   `json:"config"`
+	Config      map[string]any                     `json:"config"`
 	Domains     []string                           `json:"domains"`
 	Branding    CreateSsoConnectorBrandingResponse `json:"branding"`
 	SyncProfile bool                               `json:"syncProfile"`
@@ -162,9 +154,9 @@ func (o *CreateSsoConnectorResponseBody) GetConnectorName() string {
 	return o.ConnectorName
 }
 
-func (o *CreateSsoConnectorResponseBody) GetConfig() CreateSsoConnectorConfigResponse {
+func (o *CreateSsoConnectorResponseBody) GetConfig() map[string]any {
 	if o == nil {
-		return CreateSsoConnectorConfigResponse{}
+		return map[string]any{}
 	}
 	return o.Config
 }

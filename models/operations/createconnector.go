@@ -10,8 +10,8 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// CreateConnectorConfigRequest - The connector config object that will be passed to the connector. The config object should be compatible with the connector factory.
-type CreateConnectorConfigRequest struct {
+// CreateConnectorConfig - The connector config object that will be passed to the connector. The config object should be compatible with the connector factory.
+type CreateConnectorConfig struct {
 }
 
 // CreateConnectorNameRequest - Validator function
@@ -57,7 +57,7 @@ func (o *CreateConnectorMetadataRequest) GetLogoDark() *string {
 
 type CreateConnectorRequest struct {
 	// The connector config object that will be passed to the connector. The config object should be compatible with the connector factory.
-	Config *CreateConnectorConfigRequest `json:"config,omitempty"`
+	Config *CreateConnectorConfig `json:"config,omitempty"`
 	// The connector factory ID for creating the connector.
 	ConnectorID string `json:"connectorId"`
 	// Custom connector metadata, will be used to overwrite the default connector factory metadata.
@@ -68,7 +68,7 @@ type CreateConnectorRequest struct {
 	ID *string `json:"id,omitempty"`
 }
 
-func (o *CreateConnectorRequest) GetConfig() *CreateConnectorConfigRequest {
+func (o *CreateConnectorRequest) GetConfig() *CreateConnectorConfig {
 	if o == nil {
 		return nil
 	}
@@ -101,10 +101,6 @@ func (o *CreateConnectorRequest) GetID() *string {
 		return nil
 	}
 	return o.ID
-}
-
-// CreateConnectorConfigResponse - arbitrary
-type CreateConnectorConfigResponse struct {
 }
 
 // CreateConnectorMetadataNameResponse - Validator function
@@ -690,7 +686,7 @@ type CreateConnectorResponseBody struct {
 	ID          string `json:"id"`
 	SyncProfile bool   `json:"syncProfile"`
 	// arbitrary
-	Config      CreateConnectorConfigResponse   `json:"config"`
+	Config      map[string]any                  `json:"config"`
 	Metadata    CreateConnectorMetadataResponse `json:"metadata"`
 	ConnectorID string                          `json:"connectorId"`
 	Target      string                          `json:"target"`
@@ -727,9 +723,9 @@ func (o *CreateConnectorResponseBody) GetSyncProfile() bool {
 	return o.SyncProfile
 }
 
-func (o *CreateConnectorResponseBody) GetConfig() CreateConnectorConfigResponse {
+func (o *CreateConnectorResponseBody) GetConfig() map[string]any {
 	if o == nil {
-		return CreateConnectorConfigResponse{}
+		return map[string]any{}
 	}
 	return o.Config
 }

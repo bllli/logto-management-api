@@ -26,18 +26,10 @@ func (o *DeleteUserIdentityRequest) GetTarget() string {
 	return o.Target
 }
 
-// DeleteUserIdentityCustomData - arbitrary
-type DeleteUserIdentityCustomData struct {
-}
-
-// DeleteUserIdentityDetails - arbitrary
-type DeleteUserIdentityDetails struct {
-}
-
 type DeleteUserIdentityIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *DeleteUserIdentityDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *DeleteUserIdentityIdentities) GetUserID() string {
@@ -47,7 +39,7 @@ func (o *DeleteUserIdentityIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *DeleteUserIdentityIdentities) GetDetails() *DeleteUserIdentityDetails {
+func (o *DeleteUserIdentityIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -204,10 +196,6 @@ func (o *DeleteUserIdentityProfile) GetAddress() *DeleteUserIdentityAddress {
 	return o.Address
 }
 
-// DeleteUserIdentityDetail - arbitrary
-type DeleteUserIdentityDetail struct {
-}
-
 type DeleteUserIdentitySsoIdentity struct {
 	TenantID   string `json:"tenantId"`
 	ID         string `json:"id"`
@@ -215,9 +203,9 @@ type DeleteUserIdentitySsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail         DeleteUserIdentityDetail `json:"detail"`
-	CreatedAt      float64                  `json:"createdAt"`
-	SsoConnectorID string                   `json:"ssoConnectorId"`
+	Detail         map[string]any `json:"detail"`
+	CreatedAt      float64        `json:"createdAt"`
+	SsoConnectorID string         `json:"ssoConnectorId"`
 }
 
 func (o *DeleteUserIdentitySsoIdentity) GetTenantID() string {
@@ -255,9 +243,9 @@ func (o *DeleteUserIdentitySsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *DeleteUserIdentitySsoIdentity) GetDetail() DeleteUserIdentityDetail {
+func (o *DeleteUserIdentitySsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return DeleteUserIdentityDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -285,7 +273,7 @@ type DeleteUserIdentityResponseBody struct {
 	Name         *string `json:"name"`
 	Avatar       *string `json:"avatar"`
 	// arbitrary
-	CustomData    DeleteUserIdentityCustomData            `json:"customData"`
+	CustomData    map[string]any                          `json:"customData"`
 	Identities    map[string]DeleteUserIdentityIdentities `json:"identities"`
 	LastSignInAt  *float64                                `json:"lastSignInAt"`
 	CreatedAt     float64                                 `json:"createdAt"`
@@ -339,9 +327,9 @@ func (o *DeleteUserIdentityResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *DeleteUserIdentityResponseBody) GetCustomData() DeleteUserIdentityCustomData {
+func (o *DeleteUserIdentityResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return DeleteUserIdentityCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

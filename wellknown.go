@@ -63,7 +63,7 @@ func (s *WellKnown) GetSignInExperienceConfig(ctx context.Context, organizationI
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSignInExperienceConfig",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -271,7 +271,7 @@ func (s *WellKnown) GetPhrases(ctx context.Context, lng *string, opts ...operati
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSignInExperiencePhrases",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -480,7 +480,7 @@ func (s *WellKnown) GetExperience(ctx context.Context, organizationID *string, a
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetWellKnownExperience",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -684,7 +684,7 @@ func (s *WellKnown) GetManagementOpenapiJSON(ctx context.Context, opts ...operat
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetWellKnownManagementOpenapiJson",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -862,7 +862,7 @@ func (s *WellKnown) GetExperienceOpenapiJSON(ctx context.Context, opts ...operat
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetWellKnownExperienceOpenapiJson",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -1040,7 +1040,7 @@ func (s *WellKnown) GetUserOpenapiJSON(ctx context.Context, opts ...operations.O
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetWellKnownUserOpenapiJson",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 

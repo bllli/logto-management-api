@@ -57,7 +57,7 @@ func (s *Dashboard) GetNewUserCounts(ctx context.Context, opts ...operations.Opt
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetNewUserCounts",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -267,7 +267,7 @@ func (s *Dashboard) GetActiveUsers(ctx context.Context, date *string, opts ...op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetActiveUserCounts",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

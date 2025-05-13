@@ -38,18 +38,10 @@ func (o *UpdateUserIsSuspendedRequest) GetRequestBody() UpdateUserIsSuspendedReq
 	return o.RequestBody
 }
 
-// UpdateUserIsSuspendedCustomData - arbitrary
-type UpdateUserIsSuspendedCustomData struct {
-}
-
-// UpdateUserIsSuspendedDetails - arbitrary
-type UpdateUserIsSuspendedDetails struct {
-}
-
 type UpdateUserIsSuspendedIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *UpdateUserIsSuspendedDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *UpdateUserIsSuspendedIdentities) GetUserID() string {
@@ -59,7 +51,7 @@ func (o *UpdateUserIsSuspendedIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *UpdateUserIsSuspendedIdentities) GetDetails() *UpdateUserIsSuspendedDetails {
+func (o *UpdateUserIsSuspendedIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -216,10 +208,6 @@ func (o *UpdateUserIsSuspendedProfile) GetAddress() *UpdateUserIsSuspendedAddres
 	return o.Address
 }
 
-// UpdateUserIsSuspendedDetail - arbitrary
-type UpdateUserIsSuspendedDetail struct {
-}
-
 type UpdateUserIsSuspendedSsoIdentity struct {
 	TenantID   string `json:"tenantId"`
 	ID         string `json:"id"`
@@ -227,9 +215,9 @@ type UpdateUserIsSuspendedSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail         UpdateUserIsSuspendedDetail `json:"detail"`
-	CreatedAt      float64                     `json:"createdAt"`
-	SsoConnectorID string                      `json:"ssoConnectorId"`
+	Detail         map[string]any `json:"detail"`
+	CreatedAt      float64        `json:"createdAt"`
+	SsoConnectorID string         `json:"ssoConnectorId"`
 }
 
 func (o *UpdateUserIsSuspendedSsoIdentity) GetTenantID() string {
@@ -267,9 +255,9 @@ func (o *UpdateUserIsSuspendedSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *UpdateUserIsSuspendedSsoIdentity) GetDetail() UpdateUserIsSuspendedDetail {
+func (o *UpdateUserIsSuspendedSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return UpdateUserIsSuspendedDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -297,7 +285,7 @@ type UpdateUserIsSuspendedResponseBody struct {
 	Name         *string `json:"name"`
 	Avatar       *string `json:"avatar"`
 	// arbitrary
-	CustomData    UpdateUserIsSuspendedCustomData            `json:"customData"`
+	CustomData    map[string]any                             `json:"customData"`
 	Identities    map[string]UpdateUserIsSuspendedIdentities `json:"identities"`
 	LastSignInAt  *float64                                   `json:"lastSignInAt"`
 	CreatedAt     float64                                    `json:"createdAt"`
@@ -351,9 +339,9 @@ func (o *UpdateUserIsSuspendedResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *UpdateUserIsSuspendedResponseBody) GetCustomData() UpdateUserIsSuspendedCustomData {
+func (o *UpdateUserIsSuspendedResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return UpdateUserIsSuspendedCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

@@ -221,10 +221,6 @@ func (o *CreateApplicationCustomClientMetadataRequest) GetRotateRefreshToken() *
 	return o.RotateRefreshToken
 }
 
-// CreateApplicationCustomDataRequest - arbitrary
-type CreateApplicationCustomDataRequest struct {
-}
-
 // CreateApplicationProtectedAppMetadataRequest - The data for protected app, this feature is not available for open source version.
 type CreateApplicationProtectedAppMetadataRequest struct {
 	// The subdomain prefix, e.g., my-site.
@@ -254,8 +250,8 @@ type CreateApplicationRequest struct {
 	OidcClientMetadata   *CreateApplicationOidcClientMetadataRequest   `json:"oidcClientMetadata,omitempty"`
 	CustomClientMetadata *CreateApplicationCustomClientMetadataRequest `json:"customClientMetadata,omitempty"`
 	// arbitrary
-	CustomData   *CreateApplicationCustomDataRequest `json:"customData,omitempty"`
-	IsThirdParty *bool                               `json:"isThirdParty,omitempty"`
+	CustomData   map[string]any `json:"customData,omitempty"`
+	IsThirdParty *bool          `json:"isThirdParty,omitempty"`
 	// The data for protected app, this feature is not available for open source version.
 	ProtectedAppMetadata *CreateApplicationProtectedAppMetadataRequest `json:"protectedAppMetadata,omitempty"`
 }
@@ -295,7 +291,7 @@ func (o *CreateApplicationRequest) GetCustomClientMetadata() *CreateApplicationC
 	return o.CustomClientMetadata
 }
 
-func (o *CreateApplicationRequest) GetCustomData() *CreateApplicationCustomDataRequest {
+func (o *CreateApplicationRequest) GetCustomData() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -748,10 +744,6 @@ func (o *CreateApplicationProtectedAppMetadataResponse) GetCustomDomains() []Cre
 	return o.CustomDomains
 }
 
-// CreateApplicationCustomDataResponse - arbitrary
-type CreateApplicationCustomDataResponse struct {
-}
-
 // CreateApplicationResponseBody - The application was created successfully.
 type CreateApplicationResponseBody struct {
 	TenantID string `json:"tenantId"`
@@ -767,9 +759,9 @@ type CreateApplicationResponseBody struct {
 	CustomClientMetadata CreateApplicationCustomClientMetadataResponse  `json:"customClientMetadata"`
 	ProtectedAppMetadata *CreateApplicationProtectedAppMetadataResponse `json:"protectedAppMetadata"`
 	// arbitrary
-	CustomData   CreateApplicationCustomDataResponse `json:"customData"`
-	IsThirdParty bool                                `json:"isThirdParty"`
-	CreatedAt    float64                             `json:"createdAt"`
+	CustomData   map[string]any `json:"customData"`
+	IsThirdParty bool           `json:"isThirdParty"`
+	CreatedAt    float64        `json:"createdAt"`
 }
 
 func (o *CreateApplicationResponseBody) GetTenantID() string {
@@ -835,9 +827,9 @@ func (o *CreateApplicationResponseBody) GetProtectedAppMetadata() *CreateApplica
 	return o.ProtectedAppMetadata
 }
 
-func (o *CreateApplicationResponseBody) GetCustomData() CreateApplicationCustomDataResponse {
+func (o *CreateApplicationResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return CreateApplicationCustomDataResponse{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

@@ -57,7 +57,7 @@ func (s *Roles) List(ctx context.Context, request operations.ListRolesRequest, o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListRoles",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -269,7 +269,7 @@ func (s *Roles) Create(ctx context.Context, request operations.CreateRoleRequest
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateRole",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -492,7 +492,7 @@ func (s *Roles) Get(ctx context.Context, id string, opts ...operations.Option) (
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetRole",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -707,7 +707,7 @@ func (s *Roles) Update(ctx context.Context, id string, requestBody operations.Up
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateRole",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -930,7 +930,7 @@ func (s *Roles) Delete(ctx context.Context, id string, opts ...operations.Option
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteRole",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1127,7 +1127,7 @@ func (s *Roles) ListUsers(ctx context.Context, id string, page *int64, pageSize 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListRoleUsers",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1346,7 +1346,7 @@ func (s *Roles) AssignUser(ctx context.Context, id string, requestBody operation
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateRoleUser",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1550,7 +1550,7 @@ func (s *Roles) DeleteUser(ctx context.Context, id string, userID string, opts .
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteRoleUser",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1747,7 +1747,7 @@ func (s *Roles) ListApplications(ctx context.Context, id string, page *int64, pa
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListRoleApplications",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1967,7 +1967,7 @@ func (s *Roles) AssignApplications(ctx context.Context, id string, requestBody o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateRoleApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2171,7 +2171,7 @@ func (s *Roles) RemoveFromApplication(ctx context.Context, id string, applicatio
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteRoleApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -2368,7 +2368,7 @@ func (s *Roles) GetScopes(ctx context.Context, id string, page *int64, pageSize 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListRoleScopes",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -2587,7 +2587,7 @@ func (s *Roles) LinkScopes(ctx context.Context, id string, requestBody operation
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateRoleScope",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2812,7 +2812,7 @@ func (s *Roles) DeleteScope(ctx context.Context, id string, scopeID string, opts
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteRoleScope",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

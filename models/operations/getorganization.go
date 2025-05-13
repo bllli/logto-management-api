@@ -18,10 +18,6 @@ func (o *GetOrganizationRequest) GetID() string {
 	return o.ID
 }
 
-// GetOrganizationCustomData - arbitrary
-type GetOrganizationCustomData struct {
-}
-
 type GetOrganizationBranding struct {
 	LogoURL     *string `json:"logoUrl,omitempty"`
 	DarkLogoURL *string `json:"darkLogoUrl,omitempty"`
@@ -64,10 +60,10 @@ type GetOrganizationResponseBody struct {
 	Name        string  `json:"name"`
 	Description *string `json:"description"`
 	// arbitrary
-	CustomData    GetOrganizationCustomData `json:"customData"`
-	IsMfaRequired bool                      `json:"isMfaRequired"`
-	Branding      GetOrganizationBranding   `json:"branding"`
-	CreatedAt     float64                   `json:"createdAt"`
+	CustomData    map[string]any          `json:"customData"`
+	IsMfaRequired bool                    `json:"isMfaRequired"`
+	Branding      GetOrganizationBranding `json:"branding"`
+	CreatedAt     float64                 `json:"createdAt"`
 }
 
 func (o *GetOrganizationResponseBody) GetTenantID() string {
@@ -98,9 +94,9 @@ func (o *GetOrganizationResponseBody) GetDescription() *string {
 	return o.Description
 }
 
-func (o *GetOrganizationResponseBody) GetCustomData() GetOrganizationCustomData {
+func (o *GetOrganizationResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return GetOrganizationCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

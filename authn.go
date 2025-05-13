@@ -62,7 +62,7 @@ func (s *Authn) AssertSingleSignOnSaml(ctx context.Context, connectorID string, 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "AssertSingleSignOnSaml",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

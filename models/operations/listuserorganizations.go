@@ -18,10 +18,6 @@ func (o *ListUserOrganizationsRequest) GetUserID() string {
 	return o.UserID
 }
 
-// ListUserOrganizationsCustomData - arbitrary
-type ListUserOrganizationsCustomData struct {
-}
-
 type ListUserOrganizationsBranding struct {
 	LogoURL     *string `json:"logoUrl,omitempty"`
 	DarkLogoURL *string `json:"darkLogoUrl,omitempty"`
@@ -82,7 +78,7 @@ type ListUserOrganizationsResponseBody struct {
 	Name        string  `json:"name"`
 	Description *string `json:"description"`
 	// arbitrary
-	CustomData        ListUserOrganizationsCustomData         `json:"customData"`
+	CustomData        map[string]any                          `json:"customData"`
 	IsMfaRequired     bool                                    `json:"isMfaRequired"`
 	Branding          ListUserOrganizationsBranding           `json:"branding"`
 	CreatedAt         float64                                 `json:"createdAt"`
@@ -117,9 +113,9 @@ func (o *ListUserOrganizationsResponseBody) GetDescription() *string {
 	return o.Description
 }
 
-func (o *ListUserOrganizationsResponseBody) GetCustomData() ListUserOrganizationsCustomData {
+func (o *ListUserOrganizationsResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return ListUserOrganizationsCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

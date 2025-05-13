@@ -49,10 +49,6 @@ func (o *GetJwtCustomizerRequest) GetTokenTypePath() GetJwtCustomizerTokenTypePa
 	return o.TokenTypePath
 }
 
-// GetJwtCustomizerContextSample2 - arbitrary
-type GetJwtCustomizerContextSample2 struct {
-}
-
 type GetJwtCustomizerAud2Type string
 
 const (
@@ -163,8 +159,8 @@ type GetJwtCustomizerResponseBody2 struct {
 	Script               string            `json:"script"`
 	EnvironmentVariables map[string]string `json:"environmentVariables,omitempty"`
 	// arbitrary
-	ContextSample *GetJwtCustomizerContextSample2 `json:"contextSample,omitempty"`
-	TokenSample   *GetJwtCustomizerTokenSample2   `json:"tokenSample,omitempty"`
+	ContextSample map[string]any                `json:"contextSample,omitempty"`
+	TokenSample   *GetJwtCustomizerTokenSample2 `json:"tokenSample,omitempty"`
 }
 
 func (o *GetJwtCustomizerResponseBody2) GetScript() string {
@@ -181,7 +177,7 @@ func (o *GetJwtCustomizerResponseBody2) GetEnvironmentVariables() map[string]str
 	return o.EnvironmentVariables
 }
 
-func (o *GetJwtCustomizerResponseBody2) GetContextSample() *GetJwtCustomizerContextSample2 {
+func (o *GetJwtCustomizerResponseBody2) GetContextSample() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -195,18 +191,10 @@ func (o *GetJwtCustomizerResponseBody2) GetTokenSample() *GetJwtCustomizerTokenS
 	return o.TokenSample
 }
 
-// GetJwtCustomizerCustomData - arbitrary
-type GetJwtCustomizerCustomData struct {
-}
-
-// GetJwtCustomizerDetails - arbitrary
-type GetJwtCustomizerDetails struct {
-}
-
 type GetJwtCustomizerIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *GetJwtCustomizerDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *GetJwtCustomizerIdentities) GetUserID() string {
@@ -216,7 +204,7 @@ func (o *GetJwtCustomizerIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *GetJwtCustomizerIdentities) GetDetails() *GetJwtCustomizerDetails {
+func (o *GetJwtCustomizerIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -373,15 +361,11 @@ func (o *GetJwtCustomizerProfile) GetAddress() *GetJwtCustomizerAddress {
 	return o.Address
 }
 
-// GetJwtCustomizerDetail - arbitrary
-type GetJwtCustomizerDetail struct {
-}
-
 type GetJwtCustomizerSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail GetJwtCustomizerDetail `json:"detail"`
+	Detail map[string]any `json:"detail"`
 }
 
 func (o *GetJwtCustomizerSsoIdentity) GetIssuer() string {
@@ -398,9 +382,9 @@ func (o *GetJwtCustomizerSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *GetJwtCustomizerSsoIdentity) GetDetail() GetJwtCustomizerDetail {
+func (o *GetJwtCustomizerSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return GetJwtCustomizerDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -625,7 +609,7 @@ type GetJwtCustomizerUser struct {
 	Name         *string `json:"name,omitempty"`
 	Avatar       *string `json:"avatar,omitempty"`
 	// arbitrary
-	CustomData             *GetJwtCustomizerCustomData             `json:"customData,omitempty"`
+	CustomData             map[string]any                          `json:"customData,omitempty"`
 	Identities             map[string]GetJwtCustomizerIdentities   `json:"identities,omitempty"`
 	LastSignInAt           *float64                                `json:"lastSignInAt,omitempty"`
 	CreatedAt              *float64                                `json:"createdAt,omitempty"`
@@ -683,7 +667,7 @@ func (o *GetJwtCustomizerUser) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *GetJwtCustomizerUser) GetCustomData() *GetJwtCustomizerCustomData {
+func (o *GetJwtCustomizerUser) GetCustomData() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -781,14 +765,10 @@ func (o *GetJwtCustomizerUser) GetOrganizationRoles() []GetJwtCustomizerOrganiza
 	return o.OrganizationRoles
 }
 
-// GetJwtCustomizerSubjectTokenContext - arbitrary
-type GetJwtCustomizerSubjectTokenContext struct {
-}
-
 type GetJwtCustomizerGrant struct {
 	Type *string `json:"type,omitempty"`
 	// arbitrary
-	SubjectTokenContext *GetJwtCustomizerSubjectTokenContext `json:"subjectTokenContext,omitempty"`
+	SubjectTokenContext map[string]any `json:"subjectTokenContext,omitempty"`
 }
 
 func (o *GetJwtCustomizerGrant) GetType() *string {
@@ -798,26 +778,26 @@ func (o *GetJwtCustomizerGrant) GetType() *string {
 	return o.Type
 }
 
-func (o *GetJwtCustomizerGrant) GetSubjectTokenContext() *GetJwtCustomizerSubjectTokenContext {
+func (o *GetJwtCustomizerGrant) GetSubjectTokenContext() map[string]any {
 	if o == nil {
 		return nil
 	}
 	return o.SubjectTokenContext
 }
 
-type GetJwtCustomizerContextSample1 struct {
+type GetJwtCustomizerContextSample struct {
 	User  GetJwtCustomizerUser   `json:"user"`
 	Grant *GetJwtCustomizerGrant `json:"grant,omitempty"`
 }
 
-func (o *GetJwtCustomizerContextSample1) GetUser() GetJwtCustomizerUser {
+func (o *GetJwtCustomizerContextSample) GetUser() GetJwtCustomizerUser {
 	if o == nil {
 		return GetJwtCustomizerUser{}
 	}
 	return o.User
 }
 
-func (o *GetJwtCustomizerContextSample1) GetGrant() *GetJwtCustomizerGrant {
+func (o *GetJwtCustomizerContextSample) GetGrant() *GetJwtCustomizerGrant {
 	if o == nil {
 		return nil
 	}
@@ -979,10 +959,10 @@ func (o *GetJwtCustomizerTokenSample1) GetKind() *string {
 }
 
 type GetJwtCustomizerResponseBody1 struct {
-	Script               string                          `json:"script"`
-	EnvironmentVariables map[string]string               `json:"environmentVariables,omitempty"`
-	ContextSample        *GetJwtCustomizerContextSample1 `json:"contextSample,omitempty"`
-	TokenSample          *GetJwtCustomizerTokenSample1   `json:"tokenSample,omitempty"`
+	Script               string                         `json:"script"`
+	EnvironmentVariables map[string]string              `json:"environmentVariables,omitempty"`
+	ContextSample        *GetJwtCustomizerContextSample `json:"contextSample,omitempty"`
+	TokenSample          *GetJwtCustomizerTokenSample1  `json:"tokenSample,omitempty"`
 }
 
 func (o *GetJwtCustomizerResponseBody1) GetScript() string {
@@ -999,7 +979,7 @@ func (o *GetJwtCustomizerResponseBody1) GetEnvironmentVariables() map[string]str
 	return o.EnvironmentVariables
 }
 
-func (o *GetJwtCustomizerResponseBody1) GetContextSample() *GetJwtCustomizerContextSample1 {
+func (o *GetJwtCustomizerResponseBody1) GetContextSample() *GetJwtCustomizerContextSample {
 	if o == nil {
 		return nil
 	}

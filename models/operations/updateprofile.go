@@ -36,18 +36,10 @@ func (o *UpdateProfileRequest) GetUsername() *string {
 	return o.Username
 }
 
-// UpdateProfileCustomData - arbitrary
-type UpdateProfileCustomData struct {
-}
-
-// UpdateProfileDetails - arbitrary
-type UpdateProfileDetails struct {
-}
-
 type UpdateProfileIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *UpdateProfileDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *UpdateProfileIdentities) GetUserID() string {
@@ -57,7 +49,7 @@ func (o *UpdateProfileIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *UpdateProfileIdentities) GetDetails() *UpdateProfileDetails {
+func (o *UpdateProfileIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -214,10 +206,6 @@ func (o *UpdateProfileProfile) GetAddress() *UpdateProfileAddress {
 	return o.Address
 }
 
-// UpdateProfileDetail - arbitrary
-type UpdateProfileDetail struct {
-}
-
 type UpdateProfileSsoIdentity struct {
 	TenantID   string `json:"tenantId"`
 	ID         string `json:"id"`
@@ -225,9 +213,9 @@ type UpdateProfileSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail         UpdateProfileDetail `json:"detail"`
-	CreatedAt      float64             `json:"createdAt"`
-	SsoConnectorID string              `json:"ssoConnectorId"`
+	Detail         map[string]any `json:"detail"`
+	CreatedAt      float64        `json:"createdAt"`
+	SsoConnectorID string         `json:"ssoConnectorId"`
 }
 
 func (o *UpdateProfileSsoIdentity) GetTenantID() string {
@@ -265,9 +253,9 @@ func (o *UpdateProfileSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *UpdateProfileSsoIdentity) GetDetail() UpdateProfileDetail {
+func (o *UpdateProfileSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return UpdateProfileDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -295,7 +283,7 @@ type UpdateProfileResponseBody struct {
 	Name         *string `json:"name,omitempty"`
 	Avatar       *string `json:"avatar,omitempty"`
 	// arbitrary
-	CustomData    *UpdateProfileCustomData           `json:"customData,omitempty"`
+	CustomData    map[string]any                     `json:"customData,omitempty"`
 	Identities    map[string]UpdateProfileIdentities `json:"identities,omitempty"`
 	LastSignInAt  *float64                           `json:"lastSignInAt,omitempty"`
 	CreatedAt     *float64                           `json:"createdAt,omitempty"`
@@ -349,7 +337,7 @@ func (o *UpdateProfileResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *UpdateProfileResponseBody) GetCustomData() *UpdateProfileCustomData {
+func (o *UpdateProfileResponseBody) GetCustomData() map[string]any {
 	if o == nil {
 		return nil
 	}

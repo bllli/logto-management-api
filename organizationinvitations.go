@@ -60,7 +60,7 @@ func (s *OrganizationInvitations) Fetch(ctx context.Context, id string, opts ...
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetOrganizationInvitation",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -274,7 +274,7 @@ func (s *OrganizationInvitations) Delete(ctx context.Context, id string, opts ..
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteOrganizationInvitation",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -470,7 +470,7 @@ func (s *OrganizationInvitations) Get(ctx context.Context, organizationID *strin
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListOrganizationInvitations",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -682,7 +682,7 @@ func (s *OrganizationInvitations) Create(ctx context.Context, request operations
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateOrganizationInvitation",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -906,7 +906,7 @@ func (s *OrganizationInvitations) ResendMessage(ctx context.Context, id string, 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateOrganizationInvitationMessage",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1106,7 +1106,7 @@ func (s *OrganizationInvitations) ReplaceStatus(ctx context.Context, id string, 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceOrganizationInvitationStatus",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

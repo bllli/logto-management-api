@@ -27,18 +27,10 @@ func (o *GetUserRequest) GetIncludeSsoIdentities() *string {
 	return o.IncludeSsoIdentities
 }
 
-// GetUserCustomData - arbitrary
-type GetUserCustomData struct {
-}
-
-// GetUserDetails - arbitrary
-type GetUserDetails struct {
-}
-
 type GetUserIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *GetUserDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *GetUserIdentities) GetUserID() string {
@@ -48,7 +40,7 @@ func (o *GetUserIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *GetUserIdentities) GetDetails() *GetUserDetails {
+func (o *GetUserIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -205,10 +197,6 @@ func (o *GetUserProfile) GetAddress() *GetUserAddress {
 	return o.Address
 }
 
-// GetUserDetail - arbitrary
-type GetUserDetail struct {
-}
-
 type GetUserSsoIdentity struct {
 	TenantID   string `json:"tenantId"`
 	ID         string `json:"id"`
@@ -216,9 +204,9 @@ type GetUserSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail         GetUserDetail `json:"detail"`
-	CreatedAt      float64       `json:"createdAt"`
-	SsoConnectorID string        `json:"ssoConnectorId"`
+	Detail         map[string]any `json:"detail"`
+	CreatedAt      float64        `json:"createdAt"`
+	SsoConnectorID string         `json:"ssoConnectorId"`
 }
 
 func (o *GetUserSsoIdentity) GetTenantID() string {
@@ -256,9 +244,9 @@ func (o *GetUserSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *GetUserSsoIdentity) GetDetail() GetUserDetail {
+func (o *GetUserSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return GetUserDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -286,7 +274,7 @@ type GetUserResponseBody struct {
 	Name         *string `json:"name"`
 	Avatar       *string `json:"avatar"`
 	// arbitrary
-	CustomData    GetUserCustomData            `json:"customData"`
+	CustomData    map[string]any               `json:"customData"`
 	Identities    map[string]GetUserIdentities `json:"identities"`
 	LastSignInAt  *float64                     `json:"lastSignInAt"`
 	CreatedAt     float64                      `json:"createdAt"`
@@ -341,9 +329,9 @@ func (o *GetUserResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *GetUserResponseBody) GetCustomData() GetUserCustomData {
+func (o *GetUserResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return GetUserCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

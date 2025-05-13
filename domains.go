@@ -57,7 +57,7 @@ func (s *Domains) List(ctx context.Context, opts ...operations.Option) (*operati
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListDomains",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -263,7 +263,7 @@ func (s *Domains) Create(ctx context.Context, request operations.CreateDomainReq
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateDomain",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -484,7 +484,7 @@ func (s *Domains) Get(ctx context.Context, id string, opts ...operations.Option)
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetDomain",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -698,7 +698,7 @@ func (s *Domains) Delete(ctx context.Context, id string, opts ...operations.Opti
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteDomain",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

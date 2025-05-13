@@ -60,7 +60,7 @@ func (s *JwtCustomizers) Upsert(ctx context.Context, tokenTypePath operations.Up
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpsertJwtCustomizer",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -301,7 +301,7 @@ func (s *JwtCustomizers) Update(ctx context.Context, tokenTypePath operations.Up
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateJwtCustomizer",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

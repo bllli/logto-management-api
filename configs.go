@@ -59,7 +59,7 @@ func (s *Configs) GetAdminConsole(ctx context.Context, opts ...operations.Option
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetAdminConsoleConfig",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -267,7 +267,7 @@ func (s *Configs) UpdateAdminConsole(ctx context.Context, request operations.Upd
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateAdminConsoleConfig",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -488,7 +488,7 @@ func (s *Configs) GetOidcKeys(ctx context.Context, keyType operations.GetOidcKey
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetOidcKeys",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -701,7 +701,7 @@ func (s *Configs) DeleteOidcKey(ctx context.Context, keyType operations.DeleteOi
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteOidcKey",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -900,7 +900,7 @@ func (s *Configs) RotateOidcKeys(ctx context.Context, keyType operations.RotateO
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "RotateOidcKeys",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1121,7 +1121,7 @@ func (s *Configs) GetJwtCustomizer(ctx context.Context, tokenTypePath operations
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetJwtCustomizer",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1335,7 +1335,7 @@ func (s *Configs) DeleteJwtCustomizer(ctx context.Context, tokenTypePath operati
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteJwtCustomizer",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1525,7 +1525,7 @@ func (s *Configs) ListJwtCustomizers(ctx context.Context, opts ...operations.Opt
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListJwtCustomizers",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1731,7 +1731,7 @@ func (s *Configs) TestJwtCustomizer(ctx context.Context, request operations.Test
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "TestJwtCustomizer",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1873,12 +1873,12 @@ func (s *Configs) TestJwtCustomizer(ctx context.Context, request operations.Test
 				return nil, err
 			}
 
-			var out operations.TestJwtCustomizerResponseBody
+			var out map[string]any
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.Object = &out
+			res.Object = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {

@@ -48,10 +48,6 @@ func (o *ListApplicationOrganizationsRequest) GetPageSize() *int64 {
 	return o.PageSize
 }
 
-// ListApplicationOrganizationsCustomData - arbitrary
-type ListApplicationOrganizationsCustomData struct {
-}
-
 type ListApplicationOrganizationsBranding struct {
 	LogoURL     *string `json:"logoUrl,omitempty"`
 	DarkLogoURL *string `json:"darkLogoUrl,omitempty"`
@@ -112,7 +108,7 @@ type ListApplicationOrganizationsResponseBody struct {
 	Name        string  `json:"name"`
 	Description *string `json:"description"`
 	// arbitrary
-	CustomData        ListApplicationOrganizationsCustomData         `json:"customData"`
+	CustomData        map[string]any                                 `json:"customData"`
 	IsMfaRequired     bool                                           `json:"isMfaRequired"`
 	Branding          ListApplicationOrganizationsBranding           `json:"branding"`
 	CreatedAt         float64                                        `json:"createdAt"`
@@ -147,9 +143,9 @@ func (o *ListApplicationOrganizationsResponseBody) GetDescription() *string {
 	return o.Description
 }
 
-func (o *ListApplicationOrganizationsResponseBody) GetCustomData() ListApplicationOrganizationsCustomData {
+func (o *ListApplicationOrganizationsResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return ListApplicationOrganizationsCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

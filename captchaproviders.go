@@ -55,7 +55,7 @@ func (s *CaptchaProviders) Delete(ctx context.Context, opts ...operations.Option
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteCaptchaProvider",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

@@ -183,10 +183,6 @@ func (o *UpdateApplicationCustomClientMetadataRequest) GetRotateRefreshToken() *
 	return o.RotateRefreshToken
 }
 
-// ApplicationsUpdateApplicationCustomDataRequest - arbitrary
-type ApplicationsUpdateApplicationCustomDataRequest struct {
-}
-
 type PageRuleRequest struct {
 	Path string `json:"path"`
 }
@@ -231,8 +227,8 @@ type UpdateApplicationRequestBody struct {
 	OidcClientMetadata   *UpdateApplicationOidcClientMetadataRequest   `json:"oidcClientMetadata,omitempty"`
 	CustomClientMetadata *UpdateApplicationCustomClientMetadataRequest `json:"customClientMetadata,omitempty"`
 	// arbitrary
-	CustomData           *ApplicationsUpdateApplicationCustomDataRequest `json:"customData,omitempty"`
-	ProtectedAppMetadata *UpdateApplicationProtectedAppMetadataRequest   `json:"protectedAppMetadata,omitempty"`
+	CustomData           map[string]any                                `json:"customData,omitempty"`
+	ProtectedAppMetadata *UpdateApplicationProtectedAppMetadataRequest `json:"protectedAppMetadata,omitempty"`
 	// Whether the application has admin access. User can enable the admin access for Machine-to-Machine apps.
 	IsAdmin *bool `json:"isAdmin,omitempty"`
 }
@@ -265,7 +261,7 @@ func (o *UpdateApplicationRequestBody) GetCustomClientMetadata() *UpdateApplicat
 	return o.CustomClientMetadata
 }
 
-func (o *UpdateApplicationRequestBody) GetCustomData() *ApplicationsUpdateApplicationCustomDataRequest {
+func (o *UpdateApplicationRequestBody) GetCustomData() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -738,10 +734,6 @@ func (o *UpdateApplicationProtectedAppMetadataResponse) GetCustomDomains() []Upd
 	return o.CustomDomains
 }
 
-// ApplicationsUpdateApplicationCustomDataResponse - arbitrary
-type ApplicationsUpdateApplicationCustomDataResponse struct {
-}
-
 // UpdateApplicationResponseBody - The application was updated successfully.
 type UpdateApplicationResponseBody struct {
 	TenantID string `json:"tenantId"`
@@ -757,9 +749,9 @@ type UpdateApplicationResponseBody struct {
 	CustomClientMetadata UpdateApplicationCustomClientMetadataResponse  `json:"customClientMetadata"`
 	ProtectedAppMetadata *UpdateApplicationProtectedAppMetadataResponse `json:"protectedAppMetadata"`
 	// arbitrary
-	CustomData   ApplicationsUpdateApplicationCustomDataResponse `json:"customData"`
-	IsThirdParty bool                                            `json:"isThirdParty"`
-	CreatedAt    float64                                         `json:"createdAt"`
+	CustomData   map[string]any `json:"customData"`
+	IsThirdParty bool           `json:"isThirdParty"`
+	CreatedAt    float64        `json:"createdAt"`
 }
 
 func (o *UpdateApplicationResponseBody) GetTenantID() string {
@@ -825,9 +817,9 @@ func (o *UpdateApplicationResponseBody) GetProtectedAppMetadata() *UpdateApplica
 	return o.ProtectedAppMetadata
 }
 
-func (o *UpdateApplicationResponseBody) GetCustomData() ApplicationsUpdateApplicationCustomDataResponse {
+func (o *UpdateApplicationResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return ApplicationsUpdateApplicationCustomDataResponse{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

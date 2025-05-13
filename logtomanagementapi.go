@@ -202,9 +202,10 @@ func WithClient(client HTTPClient) SDKOption {
 }
 
 // WithSecurity configures the SDK to use the provided security details
-func WithSecurity(security components.Security) SDKOption {
+func WithSecurity(bearerAuth string) SDKOption {
 	return func(sdk *LogtoManagementAPI) {
-		sdk.sdkConfiguration.Security = utils.AsSecuritySource(security)
+		security := components.Security{BearerAuth: &bearerAuth}
+		sdk.sdkConfiguration.Security = utils.AsSecuritySource(&security)
 	}
 }
 
@@ -236,9 +237,9 @@ func New(opts ...SDKOption) *LogtoManagementAPI {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "Cloud",
-			SDKVersion:        "0.1.3",
+			SDKVersion:        "0.3.0",
 			GenVersion:        "2.598.22",
-			UserAgent:         "speakeasy-sdk/go 0.1.3 2.598.22 Cloud github.com/bllli/logto-management-api",
+			UserAgent:         "speakeasy-sdk/go 0.3.0 2.598.22 Cloud github.com/bllli/logto-management-api",
 			Hooks:             hooks.New(),
 		},
 	}

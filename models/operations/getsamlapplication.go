@@ -58,10 +58,6 @@ func (e *GetSamlApplicationType) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// GetSamlApplicationCustomData - arbitrary
-type GetSamlApplicationCustomData struct {
-}
-
 type GetSamlApplicationAttributeMapping struct {
 	Sub                 *string `json:"sub,omitempty"`
 	Name                *string `json:"name,omitempty"`
@@ -386,7 +382,7 @@ type GetSamlApplicationResponseBody struct {
 	Description *string                `json:"description"`
 	Type        GetSamlApplicationType `json:"type"`
 	// arbitrary
-	CustomData       GetSamlApplicationCustomData       `json:"customData"`
+	CustomData       map[string]any                     `json:"customData"`
 	IsThirdParty     bool                               `json:"isThirdParty"`
 	CreatedAt        float64                            `json:"createdAt"`
 	AttributeMapping GetSamlApplicationAttributeMapping `json:"attributeMapping"`
@@ -432,9 +428,9 @@ func (o *GetSamlApplicationResponseBody) GetType() GetSamlApplicationType {
 	return o.Type
 }
 
-func (o *GetSamlApplicationResponseBody) GetCustomData() GetSamlApplicationCustomData {
+func (o *GetSamlApplicationResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return GetSamlApplicationCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

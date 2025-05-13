@@ -491,10 +491,6 @@ func (o *ListOrganizationApplicationsProtectedAppMetadata) GetCustomDomains() []
 	return o.CustomDomains
 }
 
-// ListOrganizationApplicationsCustomData - arbitrary
-type ListOrganizationApplicationsCustomData struct {
-}
-
 type ListOrganizationApplicationsOrganizationRole struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`
@@ -528,7 +524,7 @@ type ListOrganizationApplicationsResponseBody struct {
 	CustomClientMetadata ListOrganizationApplicationsCustomClientMetadata  `json:"customClientMetadata"`
 	ProtectedAppMetadata *ListOrganizationApplicationsProtectedAppMetadata `json:"protectedAppMetadata"`
 	// arbitrary
-	CustomData        ListOrganizationApplicationsCustomData         `json:"customData"`
+	CustomData        map[string]any                                 `json:"customData"`
 	IsThirdParty      bool                                           `json:"isThirdParty"`
 	CreatedAt         float64                                        `json:"createdAt"`
 	OrganizationRoles []ListOrganizationApplicationsOrganizationRole `json:"organizationRoles"`
@@ -597,9 +593,9 @@ func (o *ListOrganizationApplicationsResponseBody) GetProtectedAppMetadata() *Li
 	return o.ProtectedAppMetadata
 }
 
-func (o *ListOrganizationApplicationsResponseBody) GetCustomData() ListOrganizationApplicationsCustomData {
+func (o *ListOrganizationApplicationsResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return ListOrganizationApplicationsCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

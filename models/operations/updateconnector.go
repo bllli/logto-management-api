@@ -10,8 +10,8 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// UpdateConnectorConfigRequest - The connector config object that will be passed to the connector. The config object should be compatible with the connector factory.
-type UpdateConnectorConfigRequest struct {
+// UpdateConnectorConfig - The connector config object that will be passed to the connector. The config object should be compatible with the connector factory.
+type UpdateConnectorConfig struct {
 }
 
 // UpdateConnectorNameRequest - Validator function
@@ -57,14 +57,14 @@ func (o *UpdateConnectorMetadataRequest) GetLogoDark() *string {
 
 type UpdateConnectorRequestBody struct {
 	// The connector config object that will be passed to the connector. The config object should be compatible with the connector factory.
-	Config *UpdateConnectorConfigRequest `json:"config,omitempty"`
+	Config *UpdateConnectorConfig `json:"config,omitempty"`
 	// Custom connector metadata, will be used to overwrite the default connector metadata.
 	Metadata *UpdateConnectorMetadataRequest `json:"metadata,omitempty"`
 	// Whether to sync user profile from the identity provider to Logto at each sign-in. If `false`, the user profile will only be synced when the user is created.
 	SyncProfile *bool `json:"syncProfile,omitempty"`
 }
 
-func (o *UpdateConnectorRequestBody) GetConfig() *UpdateConnectorConfigRequest {
+func (o *UpdateConnectorRequestBody) GetConfig() *UpdateConnectorConfig {
 	if o == nil {
 		return nil
 	}
@@ -103,10 +103,6 @@ func (o *UpdateConnectorRequest) GetRequestBody() UpdateConnectorRequestBody {
 		return UpdateConnectorRequestBody{}
 	}
 	return o.RequestBody
-}
-
-// UpdateConnectorConfigResponse - arbitrary
-type UpdateConnectorConfigResponse struct {
 }
 
 // UpdateConnectorMetadataNameResponse - Validator function
@@ -692,7 +688,7 @@ type UpdateConnectorResponseBody struct {
 	ID          string `json:"id"`
 	SyncProfile bool   `json:"syncProfile"`
 	// arbitrary
-	Config      UpdateConnectorConfigResponse   `json:"config"`
+	Config      map[string]any                  `json:"config"`
 	Metadata    UpdateConnectorMetadataResponse `json:"metadata"`
 	ConnectorID string                          `json:"connectorId"`
 	Target      string                          `json:"target"`
@@ -729,9 +725,9 @@ func (o *UpdateConnectorResponseBody) GetSyncProfile() bool {
 	return o.SyncProfile
 }
 
-func (o *UpdateConnectorResponseBody) GetConfig() UpdateConnectorConfigResponse {
+func (o *UpdateConnectorResponseBody) GetConfig() map[string]any {
 	if o == nil {
-		return UpdateConnectorConfigResponse{}
+		return map[string]any{}
 	}
 	return o.Config
 }

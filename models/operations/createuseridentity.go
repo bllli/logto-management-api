@@ -47,14 +47,10 @@ func (o *CreateUserIdentityRequest) GetRequestBody() CreateUserIdentityRequestBo
 	return o.RequestBody
 }
 
-// CreateUserIdentityDetails - arbitrary
-type CreateUserIdentityDetails struct {
-}
-
 type CreateUserIdentityResponseBody struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *CreateUserIdentityDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *CreateUserIdentityResponseBody) GetUserID() string {
@@ -64,7 +60,7 @@ func (o *CreateUserIdentityResponseBody) GetUserID() string {
 	return o.UserID
 }
 
-func (o *CreateUserIdentityResponseBody) GetDetails() *CreateUserIdentityDetails {
+func (o *CreateUserIdentityResponseBody) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}

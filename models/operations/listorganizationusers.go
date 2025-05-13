@@ -59,18 +59,10 @@ func (o *ListOrganizationUsersRequest) GetPageSize() *int64 {
 	return o.PageSize
 }
 
-// ListOrganizationUsersCustomData - arbitrary
-type ListOrganizationUsersCustomData struct {
-}
-
-// ListOrganizationUsersDetails - arbitrary
-type ListOrganizationUsersDetails struct {
-}
-
 type ListOrganizationUsersIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *ListOrganizationUsersDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *ListOrganizationUsersIdentities) GetUserID() string {
@@ -80,7 +72,7 @@ func (o *ListOrganizationUsersIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *ListOrganizationUsersIdentities) GetDetails() *ListOrganizationUsersDetails {
+func (o *ListOrganizationUsersIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -264,7 +256,7 @@ type ListOrganizationUsersResponseBody struct {
 	Name         *string `json:"name"`
 	Avatar       *string `json:"avatar"`
 	// arbitrary
-	CustomData        ListOrganizationUsersCustomData            `json:"customData"`
+	CustomData        map[string]any                             `json:"customData"`
 	Identities        map[string]ListOrganizationUsersIdentities `json:"identities"`
 	LastSignInAt      *float64                                   `json:"lastSignInAt"`
 	CreatedAt         float64                                    `json:"createdAt"`
@@ -317,9 +309,9 @@ func (o *ListOrganizationUsersResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *ListOrganizationUsersResponseBody) GetCustomData() ListOrganizationUsersCustomData {
+func (o *ListOrganizationUsersResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return ListOrganizationUsersCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

@@ -47,14 +47,10 @@ func (o *PatchAPIInteractionIdentifiersRequestBody7) GetEmail() string {
 	return o.Email
 }
 
-// PatchAPIInteractionIdentifiersConnectorData - arbitrary
-type PatchAPIInteractionIdentifiersConnectorData struct {
-}
-
 type PatchAPIInteractionIdentifiersRequestBody6 struct {
 	ConnectorID string `json:"connectorId"`
 	// arbitrary
-	ConnectorData PatchAPIInteractionIdentifiersConnectorData `json:"connectorData"`
+	ConnectorData map[string]any `json:"connectorData"`
 }
 
 func (o *PatchAPIInteractionIdentifiersRequestBody6) GetConnectorID() string {
@@ -64,9 +60,9 @@ func (o *PatchAPIInteractionIdentifiersRequestBody6) GetConnectorID() string {
 	return o.ConnectorID
 }
 
-func (o *PatchAPIInteractionIdentifiersRequestBody6) GetConnectorData() PatchAPIInteractionIdentifiersConnectorData {
+func (o *PatchAPIInteractionIdentifiersRequestBody6) GetConnectorData() map[string]any {
 	if o == nil {
-		return PatchAPIInteractionIdentifiersConnectorData{}
+		return map[string]any{}
 	}
 	return o.ConnectorData
 }

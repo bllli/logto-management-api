@@ -6,14 +6,10 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// AssertSamlRequestBody - arbitrary
-type AssertSamlRequestBody struct {
-}
-
 type AssertSamlRequest struct {
 	// The unique identifier of the connector.
-	ConnectorID string                `pathParam:"style=simple,explode=false,name=connectorId"`
-	RequestBody AssertSamlRequestBody `request:"mediaType=application/json"`
+	ConnectorID string         `pathParam:"style=simple,explode=false,name=connectorId"`
+	RequestBody map[string]any `request:"mediaType=application/json"`
 }
 
 func (o *AssertSamlRequest) GetConnectorID() string {
@@ -23,9 +19,9 @@ func (o *AssertSamlRequest) GetConnectorID() string {
 	return o.ConnectorID
 }
 
-func (o *AssertSamlRequest) GetRequestBody() AssertSamlRequestBody {
+func (o *AssertSamlRequest) GetRequestBody() map[string]any {
 	if o == nil {
-		return AssertSamlRequestBody{}
+		return map[string]any{}
 	}
 	return o.RequestBody
 }

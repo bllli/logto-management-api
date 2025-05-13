@@ -55,7 +55,7 @@ func (s *SwaggerJSON) Get(ctx context.Context, opts ...operations.Option) (*oper
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSwaggerJson",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 

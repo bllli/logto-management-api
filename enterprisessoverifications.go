@@ -60,7 +60,7 @@ func (s *EnterpriseSsoVerifications) Create(ctx context.Context, connectorID str
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateEnterpriseSsoVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

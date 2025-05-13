@@ -22,10 +22,6 @@ func (o *ListConnectorsRequest) GetTarget() *string {
 	return o.Target
 }
 
-// ListConnectorsConfig - arbitrary
-type ListConnectorsConfig struct {
-}
-
 // ListConnectorsMetadataName - Validator function
 type ListConnectorsMetadataName struct {
 }
@@ -608,7 +604,7 @@ type ListConnectorsResponseBody struct {
 	ID          string `json:"id"`
 	SyncProfile bool   `json:"syncProfile"`
 	// arbitrary
-	Config      ListConnectorsConfig   `json:"config"`
+	Config      map[string]any         `json:"config"`
 	Metadata    ListConnectorsMetadata `json:"metadata"`
 	ConnectorID string                 `json:"connectorId"`
 	Target      string                 `json:"target"`
@@ -645,9 +641,9 @@ func (o *ListConnectorsResponseBody) GetSyncProfile() bool {
 	return o.SyncProfile
 }
 
-func (o *ListConnectorsResponseBody) GetConfig() ListConnectorsConfig {
+func (o *ListConnectorsResponseBody) GetConfig() map[string]any {
 	if o == nil {
-		return ListConnectorsConfig{}
+		return map[string]any{}
 	}
 	return o.Config
 }

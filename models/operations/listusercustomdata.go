@@ -18,14 +18,10 @@ func (o *ListUserCustomDataRequest) GetUserID() string {
 	return o.UserID
 }
 
-// ListUserCustomDataResponseBody - arbitrary
-type ListUserCustomDataResponseBody struct {
-}
-
 type ListUserCustomDataResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// Custom data in JSON for the given user ID.
-	Object *ListUserCustomDataResponseBody
+	Object map[string]any
 }
 
 func (o *ListUserCustomDataResponse) GetHTTPMeta() components.HTTPMetadata {
@@ -35,7 +31,7 @@ func (o *ListUserCustomDataResponse) GetHTTPMeta() components.HTTPMetadata {
 	return o.HTTPMeta
 }
 
-func (o *ListUserCustomDataResponse) GetObject() *ListUserCustomDataResponseBody {
+func (o *ListUserCustomDataResponse) GetObject() map[string]any {
 	if o == nil {
 		return nil
 	}

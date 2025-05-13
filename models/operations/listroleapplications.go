@@ -492,10 +492,6 @@ func (o *ListRoleApplicationsProtectedAppMetadata) GetCustomDomains() []ListRole
 	return o.CustomDomains
 }
 
-// ListRoleApplicationsCustomData - arbitrary
-type ListRoleApplicationsCustomData struct {
-}
-
 type ListRoleApplicationsResponseBody struct {
 	TenantID             string                                    `json:"tenantId"`
 	ID                   string                                    `json:"id"`
@@ -507,9 +503,9 @@ type ListRoleApplicationsResponseBody struct {
 	CustomClientMetadata ListRoleApplicationsCustomClientMetadata  `json:"customClientMetadata"`
 	ProtectedAppMetadata *ListRoleApplicationsProtectedAppMetadata `json:"protectedAppMetadata"`
 	// arbitrary
-	CustomData   ListRoleApplicationsCustomData `json:"customData"`
-	IsThirdParty bool                           `json:"isThirdParty"`
-	CreatedAt    float64                        `json:"createdAt"`
+	CustomData   map[string]any `json:"customData"`
+	IsThirdParty bool           `json:"isThirdParty"`
+	CreatedAt    float64        `json:"createdAt"`
 }
 
 func (o *ListRoleApplicationsResponseBody) GetTenantID() string {
@@ -575,9 +571,9 @@ func (o *ListRoleApplicationsResponseBody) GetProtectedAppMetadata() *ListRoleAp
 	return o.ProtectedAppMetadata
 }
 
-func (o *ListRoleApplicationsResponseBody) GetCustomData() ListRoleApplicationsCustomData {
+func (o *ListRoleApplicationsResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return ListRoleApplicationsCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

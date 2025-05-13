@@ -53,10 +53,6 @@ func (e *PasswordAlgorithm) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// CreateUserCustomDataRequest - arbitrary
-type CreateUserCustomDataRequest struct {
-}
-
 type CreateUserAddressRequest struct {
 	Formatted     *string `json:"formatted,omitempty"`
 	StreetAddress *string `json:"streetAddress,omitempty"`
@@ -224,8 +220,8 @@ type CreateUserRequest struct {
 	Name              *string            `json:"name,omitempty"`
 	Avatar            *string            `json:"avatar,omitempty"`
 	// arbitrary
-	CustomData *CreateUserCustomDataRequest `json:"customData,omitempty"`
-	Profile    *CreateUserProfileRequest    `json:"profile,omitempty"`
+	CustomData map[string]any            `json:"customData,omitempty"`
+	Profile    *CreateUserProfileRequest `json:"profile,omitempty"`
 }
 
 func (o *CreateUserRequest) GetPrimaryPhone() *string {
@@ -284,7 +280,7 @@ func (o *CreateUserRequest) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *CreateUserRequest) GetCustomData() *CreateUserCustomDataRequest {
+func (o *CreateUserRequest) GetCustomData() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -298,18 +294,10 @@ func (o *CreateUserRequest) GetProfile() *CreateUserProfileRequest {
 	return o.Profile
 }
 
-// CreateUserCustomDataResponse - arbitrary
-type CreateUserCustomDataResponse struct {
-}
-
-// CreateUserDetails - arbitrary
-type CreateUserDetails struct {
-}
-
 type CreateUserIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *CreateUserDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *CreateUserIdentities) GetUserID() string {
@@ -319,7 +307,7 @@ func (o *CreateUserIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *CreateUserIdentities) GetDetails() *CreateUserDetails {
+func (o *CreateUserIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -476,10 +464,6 @@ func (o *CreateUserProfileResponse) GetAddress() *CreateUserAddressResponse {
 	return o.Address
 }
 
-// CreateUserDetail - arbitrary
-type CreateUserDetail struct {
-}
-
 type CreateUserSsoIdentity struct {
 	TenantID   string `json:"tenantId"`
 	ID         string `json:"id"`
@@ -487,9 +471,9 @@ type CreateUserSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail         CreateUserDetail `json:"detail"`
-	CreatedAt      float64          `json:"createdAt"`
-	SsoConnectorID string           `json:"ssoConnectorId"`
+	Detail         map[string]any `json:"detail"`
+	CreatedAt      float64        `json:"createdAt"`
+	SsoConnectorID string         `json:"ssoConnectorId"`
 }
 
 func (o *CreateUserSsoIdentity) GetTenantID() string {
@@ -527,9 +511,9 @@ func (o *CreateUserSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *CreateUserSsoIdentity) GetDetail() CreateUserDetail {
+func (o *CreateUserSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return CreateUserDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -557,7 +541,7 @@ type CreateUserResponseBody struct {
 	Name         *string `json:"name"`
 	Avatar       *string `json:"avatar"`
 	// arbitrary
-	CustomData    CreateUserCustomDataResponse    `json:"customData"`
+	CustomData    map[string]any                  `json:"customData"`
 	Identities    map[string]CreateUserIdentities `json:"identities"`
 	LastSignInAt  *float64                        `json:"lastSignInAt"`
 	CreatedAt     float64                         `json:"createdAt"`
@@ -611,9 +595,9 @@ func (o *CreateUserResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *CreateUserResponseBody) GetCustomData() CreateUserCustomDataResponse {
+func (o *CreateUserResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return CreateUserCustomDataResponse{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

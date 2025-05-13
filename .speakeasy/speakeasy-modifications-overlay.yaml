@@ -2,7 +2,7 @@ overlay: 1.0.0
 x-speakeasy-jsonpath: rfc9535
 info:
   title: Speakeasy Modifications
-  version: 0.0.2
+  version: 0.0.6
   x-speakeasy-metadata:
     after: ""
     before: ""
@@ -2656,3 +2656,653 @@ actions:
       before: sdk.Experience.CreateTotpSecret()
       created_at: 1747108949622
       type: method-name
+  - target: $["paths"]["/api/organizations"]["post"]["requestBody"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125514663
+      type: user-edit
+  - target: $["paths"]["/api/applications"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/applications"]["post"]["requestBody"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/applications"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/applications/{id}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/applications/{id}"]["patch"]["requestBody"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/applications/{id}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/applications/{applicationId}/custom-data"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/applications/{id}/organizations"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/applications/{id}/legacy-secret"]["delete"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/applications/{id}/users/{userId}/consent-organizations"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["organizations"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["grant"]["properties"]["subjectTokenContext"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][1]["properties"]["contextSample"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["201"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["201"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["201"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["201"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["grant"]["properties"]["subjectTokenContext"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["put"]["responses"]["201"]["content"]["application/json"]["schema"]["oneOf"][1]["properties"]["contextSample"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["grant"]["properties"]["subjectTokenContext"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][1]["properties"]["contextSample"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["user"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["contextSample"]["properties"]["grant"]["properties"]["subjectTokenContext"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/{tokenTypePath}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["oneOf"][1]["properties"]["contextSample"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["oneOf"][0]["properties"]["value"]["properties"]["contextSample"]["properties"]["user"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["oneOf"][0]["properties"]["value"]["properties"]["contextSample"]["properties"]["user"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["oneOf"][0]["properties"]["value"]["properties"]["contextSample"]["properties"]["user"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["oneOf"][0]["properties"]["value"]["properties"]["contextSample"]["properties"]["grant"]["properties"]["subjectTokenContext"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["oneOf"][1]["properties"]["value"]["properties"]["contextSample"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/test"]["post"]["requestBody"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["context"]["properties"]["user"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/test"]["post"]["requestBody"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["context"]["properties"]["user"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/test"]["post"]["requestBody"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["context"]["properties"]["user"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/test"]["post"]["requestBody"]["content"]["application/json"]["schema"]["oneOf"][0]["properties"]["context"]["properties"]["grant"]["properties"]["subjectTokenContext"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/configs/jwt-customizer/test"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/connectors"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/connectors"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/connectors/{id}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/connectors/{id}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/custom-data"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/custom-data"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users"]["post"]["requestBody"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/password"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/password"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/password"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/is-suspended"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/is-suspended"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/is-suspended"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/identities/{target}"]["put"]["responses"]["200"]["content"]["application/json"]["schema"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/identities/{target}"]["put"]["responses"]["201"]["content"]["application/json"]["schema"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/identities/{target}"]["delete"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/identities/{target}"]["delete"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/identities/{target}"]["delete"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/identities"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/users/{userId}/organizations"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702573
+      type: user-edit
+  - target: $["paths"]["/api/roles/{id}/users"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/roles/{id}/users"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/roles/{id}/users"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/roles/{id}/applications"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/organizations"]["post"]["responses"]["201"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/organizations"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/organizations/{id}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/organizations/{id}"]["patch"]["requestBody"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/organizations/{id}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/organizations/{id}/users"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/organizations/{id}/users"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/organizations/{id}/applications"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/organizations/{id}/jit/sso-connectors"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/sso-connectors"]["post"]["requestBody"]["content"]["application/json"]["schema"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/sso-connectors"]["post"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/sso-connectors"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["items"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/sso-connectors/{id}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/sso-connectors/{id}"]["patch"]["requestBody"]["content"]["application/json"]["schema"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/sso-connectors/{id}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["config"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/saml-applications"]["post"]["responses"]["201"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/saml-applications/{id}"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/saml-applications/{id}"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/authn/saml/{connectorId}"]["post"]["requestBody"]["content"]["application/json"]["schema"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/my-account"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/my-account"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/my-account"]["get"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/my-account"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["customData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/my-account"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["identities"]["additionalProperties"]["properties"]["details"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/my-account"]["patch"]["responses"]["200"]["content"]["application/json"]["schema"]["properties"]["ssoIdentities"]["items"]["properties"]["detail"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/interaction"]["put"]["requestBody"]["content"]["application/json"]["schema"]["properties"]["identifier"]["oneOf"][5]["properties"]["connectorData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["paths"]["/api/interaction/identifiers"]["patch"]["requestBody"]["content"]["application/json"]["schema"]["oneOf"][5]["properties"]["connectorData"]
+    update:
+      additionalProperties: true
+    x-speakeasy-metadata:
+      created_at: 1747125702574
+      type: user-edit
+  - target: $["components"]["securitySchemes"]
+    remove: true
+    x-speakeasy-metadata:
+      created_at: 1747126281176
+      type: user-edit
+  - target: $["security"]
+    remove: true
+    x-speakeasy-metadata:
+      created_at: 1747126281176
+      type: user-edit
+  - target: $
+    update:
+      security:
+        - bearerAuth: []
+    x-speakeasy-metadata:
+      created_at: 1747127443191
+      type: user-edit
+  - target: $["components"]
+    update:
+      securitySchemes:
+        bearerAuth:
+          type: http
+          scheme: bearer
+    x-speakeasy-metadata:
+      created_at: 1747127443191
+      type: user-edit

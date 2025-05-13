@@ -6,10 +6,10 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// UsersUpdateUserCustomDataRequest - Custom data object to update for the given user ID. Note this will replace the entire custom data object.
+// UpdateUserCustomData - Custom data object to update for the given user ID. Note this will replace the entire custom data object.
 //
 // If you want to perform a partial update, use the `PATCH /api/users/{userId}/custom-data` endpoint instead.
-type UsersUpdateUserCustomDataRequest struct {
+type UpdateUserCustomData struct {
 }
 
 type UpdateUserAddressRequest struct {
@@ -174,8 +174,8 @@ type UpdateUserRequestBody struct {
 	// Custom data object to update for the given user ID. Note this will replace the entire custom data object.
 	//
 	// If you want to perform a partial update, use the `PATCH /api/users/{userId}/custom-data` endpoint instead.
-	CustomData *UsersUpdateUserCustomDataRequest `json:"customData,omitempty"`
-	Profile    *UsersUpdateUserProfileRequest    `json:"profile,omitempty"`
+	CustomData *UpdateUserCustomData          `json:"customData,omitempty"`
+	Profile    *UsersUpdateUserProfileRequest `json:"profile,omitempty"`
 }
 
 func (o *UpdateUserRequestBody) GetUsername() *string {
@@ -213,7 +213,7 @@ func (o *UpdateUserRequestBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *UpdateUserRequestBody) GetCustomData() *UsersUpdateUserCustomDataRequest {
+func (o *UpdateUserRequestBody) GetCustomData() *UpdateUserCustomData {
 	if o == nil {
 		return nil
 	}
@@ -247,18 +247,10 @@ func (o *UpdateUserRequest) GetRequestBody() UpdateUserRequestBody {
 	return o.RequestBody
 }
 
-// UsersUpdateUserCustomDataResponse - arbitrary
-type UsersUpdateUserCustomDataResponse struct {
-}
-
-// UpdateUserDetails - arbitrary
-type UpdateUserDetails struct {
-}
-
 type UpdateUserIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *UpdateUserDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *UpdateUserIdentities) GetUserID() string {
@@ -268,7 +260,7 @@ func (o *UpdateUserIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *UpdateUserIdentities) GetDetails() *UpdateUserDetails {
+func (o *UpdateUserIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -425,10 +417,6 @@ func (o *UsersUpdateUserProfileResponse) GetAddress() *UpdateUserAddressResponse
 	return o.Address
 }
 
-// UpdateUserDetail - arbitrary
-type UpdateUserDetail struct {
-}
-
 type UpdateUserSsoIdentity struct {
 	TenantID   string `json:"tenantId"`
 	ID         string `json:"id"`
@@ -436,9 +424,9 @@ type UpdateUserSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail         UpdateUserDetail `json:"detail"`
-	CreatedAt      float64          `json:"createdAt"`
-	SsoConnectorID string           `json:"ssoConnectorId"`
+	Detail         map[string]any `json:"detail"`
+	CreatedAt      float64        `json:"createdAt"`
+	SsoConnectorID string         `json:"ssoConnectorId"`
 }
 
 func (o *UpdateUserSsoIdentity) GetTenantID() string {
@@ -476,9 +464,9 @@ func (o *UpdateUserSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *UpdateUserSsoIdentity) GetDetail() UpdateUserDetail {
+func (o *UpdateUserSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return UpdateUserDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -506,16 +494,16 @@ type UpdateUserResponseBody struct {
 	Name         *string `json:"name"`
 	Avatar       *string `json:"avatar"`
 	// arbitrary
-	CustomData    UsersUpdateUserCustomDataResponse `json:"customData"`
-	Identities    map[string]UpdateUserIdentities   `json:"identities"`
-	LastSignInAt  *float64                          `json:"lastSignInAt"`
-	CreatedAt     float64                           `json:"createdAt"`
-	UpdatedAt     float64                           `json:"updatedAt"`
-	Profile       UsersUpdateUserProfileResponse    `json:"profile"`
-	ApplicationID *string                           `json:"applicationId"`
-	IsSuspended   bool                              `json:"isSuspended"`
-	HasPassword   *bool                             `json:"hasPassword,omitempty"`
-	SsoIdentities []UpdateUserSsoIdentity           `json:"ssoIdentities,omitempty"`
+	CustomData    map[string]any                  `json:"customData"`
+	Identities    map[string]UpdateUserIdentities `json:"identities"`
+	LastSignInAt  *float64                        `json:"lastSignInAt"`
+	CreatedAt     float64                         `json:"createdAt"`
+	UpdatedAt     float64                         `json:"updatedAt"`
+	Profile       UsersUpdateUserProfileResponse  `json:"profile"`
+	ApplicationID *string                         `json:"applicationId"`
+	IsSuspended   bool                            `json:"isSuspended"`
+	HasPassword   *bool                           `json:"hasPassword,omitempty"`
+	SsoIdentities []UpdateUserSsoIdentity         `json:"ssoIdentities,omitempty"`
 }
 
 func (o *UpdateUserResponseBody) GetID() string {
@@ -560,9 +548,9 @@ func (o *UpdateUserResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *UpdateUserResponseBody) GetCustomData() UsersUpdateUserCustomDataResponse {
+func (o *UpdateUserResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return UsersUpdateUserCustomDataResponse{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

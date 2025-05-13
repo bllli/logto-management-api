@@ -454,10 +454,6 @@ func (o *DeleteApplicationLegacySecretProtectedAppMetadata) GetCustomDomains() [
 	return o.CustomDomains
 }
 
-// DeleteApplicationLegacySecretCustomData - arbitrary
-type DeleteApplicationLegacySecretCustomData struct {
-}
-
 // DeleteApplicationLegacySecretResponseBody - OK
 type DeleteApplicationLegacySecretResponseBody struct {
 	TenantID             string                                             `json:"tenantId"`
@@ -470,9 +466,9 @@ type DeleteApplicationLegacySecretResponseBody struct {
 	CustomClientMetadata DeleteApplicationLegacySecretCustomClientMetadata  `json:"customClientMetadata"`
 	ProtectedAppMetadata *DeleteApplicationLegacySecretProtectedAppMetadata `json:"protectedAppMetadata"`
 	// arbitrary
-	CustomData   DeleteApplicationLegacySecretCustomData `json:"customData"`
-	IsThirdParty bool                                    `json:"isThirdParty"`
-	CreatedAt    float64                                 `json:"createdAt"`
+	CustomData   map[string]any `json:"customData"`
+	IsThirdParty bool           `json:"isThirdParty"`
+	CreatedAt    float64        `json:"createdAt"`
 }
 
 func (o *DeleteApplicationLegacySecretResponseBody) GetTenantID() string {
@@ -538,9 +534,9 @@ func (o *DeleteApplicationLegacySecretResponseBody) GetProtectedAppMetadata() *D
 	return o.ProtectedAppMetadata
 }
 
-func (o *DeleteApplicationLegacySecretResponseBody) GetCustomData() DeleteApplicationLegacySecretCustomData {
+func (o *DeleteApplicationLegacySecretResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return DeleteApplicationLegacySecretCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

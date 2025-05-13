@@ -6,10 +6,6 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// UpdateOrganizationCustomDataRequest - arbitrary
-type UpdateOrganizationCustomDataRequest struct {
-}
-
 type UpdateOrganizationBrandingRequest struct {
 	LogoURL     *string `json:"logoUrl,omitempty"`
 	DarkLogoURL *string `json:"darkLogoUrl,omitempty"`
@@ -53,10 +49,10 @@ type UpdateOrganizationRequestBody struct {
 	// The updated description of the organization.
 	Description *string `json:"description,omitempty"`
 	// arbitrary
-	CustomData    *UpdateOrganizationCustomDataRequest `json:"customData,omitempty"`
-	IsMfaRequired *bool                                `json:"isMfaRequired,omitempty"`
-	Branding      *UpdateOrganizationBrandingRequest   `json:"branding,omitempty"`
-	CreatedAt     *float64                             `json:"createdAt,omitempty"`
+	CustomData    map[string]any                     `json:"customData,omitempty"`
+	IsMfaRequired *bool                              `json:"isMfaRequired,omitempty"`
+	Branding      *UpdateOrganizationBrandingRequest `json:"branding,omitempty"`
+	CreatedAt     *float64                           `json:"createdAt,omitempty"`
 }
 
 func (o *UpdateOrganizationRequestBody) GetTenantID() *string {
@@ -87,7 +83,7 @@ func (o *UpdateOrganizationRequestBody) GetDescription() *string {
 	return o.Description
 }
 
-func (o *UpdateOrganizationRequestBody) GetCustomData() *UpdateOrganizationCustomDataRequest {
+func (o *UpdateOrganizationRequestBody) GetCustomData() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -135,10 +131,6 @@ func (o *UpdateOrganizationRequest) GetRequestBody() UpdateOrganizationRequestBo
 	return o.RequestBody
 }
 
-// UpdateOrganizationCustomDataResponse - arbitrary
-type UpdateOrganizationCustomDataResponse struct {
-}
-
 type UpdateOrganizationBrandingResponse struct {
 	LogoURL     *string `json:"logoUrl,omitempty"`
 	DarkLogoURL *string `json:"darkLogoUrl,omitempty"`
@@ -181,10 +173,10 @@ type UpdateOrganizationResponseBody struct {
 	Name        string  `json:"name"`
 	Description *string `json:"description"`
 	// arbitrary
-	CustomData    UpdateOrganizationCustomDataResponse `json:"customData"`
-	IsMfaRequired bool                                 `json:"isMfaRequired"`
-	Branding      UpdateOrganizationBrandingResponse   `json:"branding"`
-	CreatedAt     float64                              `json:"createdAt"`
+	CustomData    map[string]any                     `json:"customData"`
+	IsMfaRequired bool                               `json:"isMfaRequired"`
+	Branding      UpdateOrganizationBrandingResponse `json:"branding"`
+	CreatedAt     float64                            `json:"createdAt"`
 }
 
 func (o *UpdateOrganizationResponseBody) GetTenantID() string {
@@ -215,9 +207,9 @@ func (o *UpdateOrganizationResponseBody) GetDescription() *string {
 	return o.Description
 }
 
-func (o *UpdateOrganizationResponseBody) GetCustomData() UpdateOrganizationCustomDataResponse {
+func (o *UpdateOrganizationResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return UpdateOrganizationCustomDataResponse{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

@@ -8,8 +8,8 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// UpdateSamlApplicationCustomDataRequest - Custom data for the application.
-type UpdateSamlApplicationCustomDataRequest struct {
+// UpdateSamlApplicationCustomData - Custom data for the application.
+type UpdateSamlApplicationCustomData struct {
 }
 
 type UpdateSamlApplicationAttributeMappingRequest struct {
@@ -289,7 +289,7 @@ type UpdateSamlApplicationRequestBody struct {
 	// Description of the SAML application.
 	Description *string `json:"description,omitempty"`
 	// Custom data for the application.
-	CustomData       *UpdateSamlApplicationCustomDataRequest       `json:"customData,omitempty"`
+	CustomData       *UpdateSamlApplicationCustomData              `json:"customData,omitempty"`
 	AttributeMapping *UpdateSamlApplicationAttributeMappingRequest `json:"attributeMapping,omitempty"`
 	EntityID         *string                                       `json:"entityId,omitempty"`
 	// The Assertion Consumer Service (ACS) URL.
@@ -313,7 +313,7 @@ func (o *UpdateSamlApplicationRequestBody) GetDescription() *string {
 	return o.Description
 }
 
-func (o *UpdateSamlApplicationRequestBody) GetCustomData() *UpdateSamlApplicationCustomDataRequest {
+func (o *UpdateSamlApplicationRequestBody) GetCustomData() *UpdateSamlApplicationCustomData {
 	if o == nil {
 		return nil
 	}
@@ -411,10 +411,6 @@ func (e *UpdateSamlApplicationType) UnmarshalJSON(data []byte) error {
 	default:
 		return fmt.Errorf("invalid value for UpdateSamlApplicationType: %v", v)
 	}
-}
-
-// UpdateSamlApplicationCustomDataResponse - arbitrary
-type UpdateSamlApplicationCustomDataResponse struct {
 }
 
 type UpdateSamlApplicationAttributeMappingResponse struct {
@@ -741,7 +737,7 @@ type UpdateSamlApplicationResponseBody struct {
 	Description *string                   `json:"description"`
 	Type        UpdateSamlApplicationType `json:"type"`
 	// arbitrary
-	CustomData       UpdateSamlApplicationCustomDataResponse       `json:"customData"`
+	CustomData       map[string]any                                `json:"customData"`
 	IsThirdParty     bool                                          `json:"isThirdParty"`
 	CreatedAt        float64                                       `json:"createdAt"`
 	AttributeMapping UpdateSamlApplicationAttributeMappingResponse `json:"attributeMapping"`
@@ -787,9 +783,9 @@ func (o *UpdateSamlApplicationResponseBody) GetType() UpdateSamlApplicationType 
 	return o.Type
 }
 
-func (o *UpdateSamlApplicationResponseBody) GetCustomData() UpdateSamlApplicationCustomDataResponse {
+func (o *UpdateSamlApplicationResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return UpdateSamlApplicationCustomDataResponse{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

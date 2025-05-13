@@ -58,10 +58,6 @@ func (e *GetSsoConnectorProviderName) UnmarshalJSON(data []byte) error {
 	}
 }
 
-// GetSsoConnectorConfig - arbitrary
-type GetSsoConnectorConfig struct {
-}
-
 type GetSsoConnectorBranding struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	Logo        *string `json:"logo,omitempty"`
@@ -122,7 +118,7 @@ type GetSsoConnectorResponseBody struct {
 	ProviderName  GetSsoConnectorProviderName `json:"providerName"`
 	ConnectorName string                      `json:"connectorName"`
 	// arbitrary
-	Config           GetSsoConnectorConfig       `json:"config"`
+	Config           map[string]any              `json:"config"`
 	Domains          []string                    `json:"domains"`
 	Branding         GetSsoConnectorBranding     `json:"branding"`
 	SyncProfile      bool                        `json:"syncProfile"`
@@ -162,9 +158,9 @@ func (o *GetSsoConnectorResponseBody) GetConnectorName() string {
 	return o.ConnectorName
 }
 
-func (o *GetSsoConnectorResponseBody) GetConfig() GetSsoConnectorConfig {
+func (o *GetSsoConnectorResponseBody) GetConfig() map[string]any {
 	if o == nil {
-		return GetSsoConnectorConfig{}
+		return map[string]any{}
 	}
 	return o.Config
 }

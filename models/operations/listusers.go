@@ -48,18 +48,10 @@ func (o *ListUsersRequest) GetSearchParams() map[string]string {
 	return o.SearchParams
 }
 
-// ListUsersCustomData - arbitrary
-type ListUsersCustomData struct {
-}
-
-// ListUsersDetails - arbitrary
-type ListUsersDetails struct {
-}
-
 type ListUsersIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *ListUsersDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *ListUsersIdentities) GetUserID() string {
@@ -69,7 +61,7 @@ func (o *ListUsersIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *ListUsersIdentities) GetDetails() *ListUsersDetails {
+func (o *ListUsersIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -226,10 +218,6 @@ func (o *ListUsersProfile) GetAddress() *ListUsersAddress {
 	return o.Address
 }
 
-// ListUsersDetail - arbitrary
-type ListUsersDetail struct {
-}
-
 type ListUsersSsoIdentity struct {
 	TenantID   string `json:"tenantId"`
 	ID         string `json:"id"`
@@ -237,9 +225,9 @@ type ListUsersSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail         ListUsersDetail `json:"detail"`
-	CreatedAt      float64         `json:"createdAt"`
-	SsoConnectorID string          `json:"ssoConnectorId"`
+	Detail         map[string]any `json:"detail"`
+	CreatedAt      float64        `json:"createdAt"`
+	SsoConnectorID string         `json:"ssoConnectorId"`
 }
 
 func (o *ListUsersSsoIdentity) GetTenantID() string {
@@ -277,9 +265,9 @@ func (o *ListUsersSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *ListUsersSsoIdentity) GetDetail() ListUsersDetail {
+func (o *ListUsersSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return ListUsersDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -306,7 +294,7 @@ type ListUsersResponseBody struct {
 	Name         *string `json:"name"`
 	Avatar       *string `json:"avatar"`
 	// arbitrary
-	CustomData    ListUsersCustomData            `json:"customData"`
+	CustomData    map[string]any                 `json:"customData"`
 	Identities    map[string]ListUsersIdentities `json:"identities"`
 	LastSignInAt  *float64                       `json:"lastSignInAt"`
 	CreatedAt     float64                        `json:"createdAt"`
@@ -360,9 +348,9 @@ func (o *ListUsersResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *ListUsersResponseBody) GetCustomData() ListUsersCustomData {
+func (o *ListUsersResponseBody) GetCustomData() map[string]any {
 	if o == nil {
-		return ListUsersCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

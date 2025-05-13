@@ -55,7 +55,7 @@ func (s *Mfa) SkipBinding(ctx context.Context, opts ...operations.Option) (*oper
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "SkipMfaBindingFlow",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 

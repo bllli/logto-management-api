@@ -353,18 +353,10 @@ func (o *Token1) GetKind() *string {
 	return o.Kind
 }
 
-// TestJwtCustomizerCustomData - arbitrary
-type TestJwtCustomizerCustomData struct {
-}
-
-// TestJwtCustomizerDetails - arbitrary
-type TestJwtCustomizerDetails struct {
-}
-
 type TestJwtCustomizerIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *TestJwtCustomizerDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *TestJwtCustomizerIdentities) GetUserID() string {
@@ -374,7 +366,7 @@ func (o *TestJwtCustomizerIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *TestJwtCustomizerIdentities) GetDetails() *TestJwtCustomizerDetails {
+func (o *TestJwtCustomizerIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -531,15 +523,11 @@ func (o *TestJwtCustomizerProfile) GetAddress() *TestJwtCustomizerAddress {
 	return o.Address
 }
 
-// TestJwtCustomizerDetail - arbitrary
-type TestJwtCustomizerDetail struct {
-}
-
 type TestJwtCustomizerSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail TestJwtCustomizerDetail `json:"detail"`
+	Detail map[string]any `json:"detail"`
 }
 
 func (o *TestJwtCustomizerSsoIdentity) GetIssuer() string {
@@ -556,9 +544,9 @@ func (o *TestJwtCustomizerSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *TestJwtCustomizerSsoIdentity) GetDetail() TestJwtCustomizerDetail {
+func (o *TestJwtCustomizerSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return TestJwtCustomizerDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -783,7 +771,7 @@ type TestJwtCustomizerUser struct {
 	Name         *string `json:"name,omitempty"`
 	Avatar       *string `json:"avatar,omitempty"`
 	// arbitrary
-	CustomData             *TestJwtCustomizerCustomData             `json:"customData,omitempty"`
+	CustomData             map[string]any                           `json:"customData,omitempty"`
 	Identities             map[string]TestJwtCustomizerIdentities   `json:"identities,omitempty"`
 	LastSignInAt           *float64                                 `json:"lastSignInAt,omitempty"`
 	CreatedAt              *float64                                 `json:"createdAt,omitempty"`
@@ -841,7 +829,7 @@ func (o *TestJwtCustomizerUser) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *TestJwtCustomizerUser) GetCustomData() *TestJwtCustomizerCustomData {
+func (o *TestJwtCustomizerUser) GetCustomData() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -939,14 +927,10 @@ func (o *TestJwtCustomizerUser) GetOrganizationRoles() []TestJwtCustomizerOrgani
 	return o.OrganizationRoles
 }
 
-// TestJwtCustomizerSubjectTokenContext - arbitrary
-type TestJwtCustomizerSubjectTokenContext struct {
-}
-
 type TestJwtCustomizerGrant struct {
 	Type *string `json:"type,omitempty"`
 	// arbitrary
-	SubjectTokenContext *TestJwtCustomizerSubjectTokenContext `json:"subjectTokenContext,omitempty"`
+	SubjectTokenContext map[string]any `json:"subjectTokenContext,omitempty"`
 }
 
 func (o *TestJwtCustomizerGrant) GetType() *string {
@@ -956,7 +940,7 @@ func (o *TestJwtCustomizerGrant) GetType() *string {
 	return o.Type
 }
 
-func (o *TestJwtCustomizerGrant) GetSubjectTokenContext() *TestJwtCustomizerSubjectTokenContext {
+func (o *TestJwtCustomizerGrant) GetSubjectTokenContext() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -1136,14 +1120,10 @@ func (u TestJwtCustomizerRequest) MarshalJSON() ([]byte, error) {
 	return nil, errors.New("could not marshal union type TestJwtCustomizerRequest: all fields are null")
 }
 
-// TestJwtCustomizerResponseBody - arbitrary
-type TestJwtCustomizerResponseBody struct {
-}
-
 type TestJwtCustomizerResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The result of the JWT customizer script testing.
-	Object *TestJwtCustomizerResponseBody
+	Object map[string]any
 }
 
 func (o *TestJwtCustomizerResponse) GetHTTPMeta() components.HTTPMetadata {
@@ -1153,7 +1133,7 @@ func (o *TestJwtCustomizerResponse) GetHTTPMeta() components.HTTPMetadata {
 	return o.HTTPMeta
 }
 
-func (o *TestJwtCustomizerResponse) GetObject() *TestJwtCustomizerResponseBody {
+func (o *TestJwtCustomizerResponse) GetObject() map[string]any {
 	if o == nil {
 		return nil
 	}

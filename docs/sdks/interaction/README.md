@@ -193,7 +193,9 @@ func main() {
     res, err := s.Interaction.PatchIdentifiers(ctx, operations.CreatePatchAPIInteractionIdentifiersRequestPatchAPIInteractionIdentifiersRequestBody6(
         operations.PatchAPIInteractionIdentifiersRequestBody6{
             ConnectorID: "<id>",
-            ConnectorData: operations.PatchAPIInteractionIdentifiersConnectorData{},
+            ConnectorData: map[string]any{
+
+            },
         },
     ))
     if err != nil {

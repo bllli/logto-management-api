@@ -67,7 +67,7 @@ func (s *Applications) Get(ctx context.Context, request operations.ListApplicati
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListApplications",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -279,7 +279,7 @@ func (s *Applications) Create(ctx context.Context, request operations.CreateAppl
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -502,7 +502,7 @@ func (s *Applications) Fetch(ctx context.Context, id string, opts ...operations.
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -717,7 +717,7 @@ func (s *Applications) Update(ctx context.Context, id string, requestBody operat
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -942,7 +942,7 @@ func (s *Applications) Delete(ctx context.Context, id string, opts ...operations
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1106,8 +1106,8 @@ func (s *Applications) Delete(ctx context.Context, id string, opts ...operations
 
 // UpdateCustomData - Update application custom data
 // Update the custom data of an application.
-func (s *Applications) UpdateCustomData(ctx context.Context, applicationID string, requestBody operations.UpdateApplicationCustomDataRequestBody, opts ...operations.Option) (*operations.UpdateApplicationCustomDataResponseResponse, error) {
-	request := operations.UpdateApplicationCustomDataRequestRequest{
+func (s *Applications) UpdateCustomData(ctx context.Context, applicationID string, requestBody operations.UpdateApplicationCustomDataRequestBody, opts ...operations.Option) (*operations.UpdateApplicationCustomDataResponse, error) {
+	request := operations.UpdateApplicationCustomDataRequest{
 		ApplicationID: applicationID,
 		RequestBody:   requestBody,
 	}
@@ -1139,7 +1139,7 @@ func (s *Applications) UpdateCustomData(ctx context.Context, applicationID strin
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateApplicationCustomData",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1265,7 +1265,7 @@ func (s *Applications) UpdateCustomData(ctx context.Context, applicationID strin
 		}
 	}
 
-	res := &operations.UpdateApplicationCustomDataResponseResponse{
+	res := &operations.UpdateApplicationCustomDataResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -1281,12 +1281,12 @@ func (s *Applications) UpdateCustomData(ctx context.Context, applicationID strin
 				return nil, err
 			}
 
-			var out operations.UpdateApplicationCustomDataResponseBody
+			var out map[string]any
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
 
-			res.Object = &out
+			res.Object = out
 		default:
 			rawBody, err := utils.ConsumeRawBody(httpRes)
 			if err != nil {
@@ -1361,7 +1361,7 @@ func (s *Applications) ListRoles(ctx context.Context, applicationID string, page
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListApplicationRoles",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1582,7 +1582,7 @@ func (s *Applications) AssignRoles(ctx context.Context, applicationID string, re
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "AssignApplicationRoles",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1786,7 +1786,7 @@ func (s *Applications) ReplaceRoles(ctx context.Context, applicationID string, r
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceApplicationRoles",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1990,7 +1990,7 @@ func (s *Applications) DeleteRole(ctx context.Context, applicationID string, rol
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteApplicationRole",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -2186,7 +2186,7 @@ func (s *Applications) GetProtectedAppMetadataCustomDomains(ctx context.Context,
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListApplicationProtectedAppMetadataCustomDomains",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -2403,7 +2403,7 @@ func (s *Applications) AddCustomDomain(ctx context.Context, id string, requestBo
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateApplicationProtectedAppMetadataCustomDomain",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2611,7 +2611,7 @@ func (s *Applications) RemoveCustomDomain(ctx context.Context, id string, domain
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteApplicationProtectedAppMetadataCustomDomain",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -2809,7 +2809,7 @@ func (s *Applications) ListOrganizations(ctx context.Context, id string, page *i
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListApplicationOrganizations",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -3029,7 +3029,7 @@ func (s *Applications) DeleteLegacySecret(ctx context.Context, id string, opts .
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteApplicationLegacySecret",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -3244,7 +3244,7 @@ func (s *Applications) GetSecrets(ctx context.Context, id string, opts ...operat
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListApplicationSecrets",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -3459,7 +3459,7 @@ func (s *Applications) AddSecret(ctx context.Context, id string, requestBody ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateApplicationSecret",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -3681,7 +3681,7 @@ func (s *Applications) DeleteSecret(ctx context.Context, id string, name string,
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteApplicationSecret",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -3877,7 +3877,7 @@ func (s *Applications) UpdateSecret(ctx context.Context, id string, name string,
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateApplicationSecret",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -4100,7 +4100,7 @@ func (s *Applications) CreateUserConsentScope(ctx context.Context, applicationID
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateApplicationUserConsentScope",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -4303,7 +4303,7 @@ func (s *Applications) ListUserConsentScopes(ctx context.Context, applicationID 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListApplicationUserConsentScopes",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -4519,7 +4519,7 @@ func (s *Applications) DeleteUserConsentScope(ctx context.Context, applicationID
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteApplicationUserConsentScope",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -4720,7 +4720,7 @@ func (s *Applications) UpdateSignInExperience(ctx context.Context, applicationID
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceApplicationSignInExperience",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -4968,7 +4968,7 @@ func (s *Applications) GetSignInExperience(ctx context.Context, applicationID st
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetApplicationSignInExperience",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -5185,7 +5185,7 @@ func (s *Applications) ListUserConsentOrganizations(ctx context.Context, id stri
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListApplicationUserConsentOrganizations",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -5407,7 +5407,7 @@ func (s *Applications) ReplaceUserConsentOrganizations(ctx context.Context, id s
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceApplicationUserConsentOrganizations",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -5612,7 +5612,7 @@ func (s *Applications) GrantUserConsent(ctx context.Context, id string, userID s
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateApplicationUserConsentOrganization",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -5817,7 +5817,7 @@ func (s *Applications) RevokeUserConsent(ctx context.Context, id string, userID 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteApplicationUserConsentOrganization",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

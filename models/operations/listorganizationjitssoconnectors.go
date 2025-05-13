@@ -48,10 +48,6 @@ func (o *ListOrganizationJitSsoConnectorsRequest) GetPageSize() *int64 {
 	return o.PageSize
 }
 
-// ListOrganizationJitSsoConnectorsConfig - arbitrary
-type ListOrganizationJitSsoConnectorsConfig struct {
-}
-
 type ListOrganizationJitSsoConnectorsBranding struct {
 	DisplayName *string `json:"displayName,omitempty"`
 	Logo        *string `json:"logo,omitempty"`
@@ -85,7 +81,7 @@ type ListOrganizationJitSsoConnectorsResponseBody struct {
 	ProviderName  string `json:"providerName"`
 	ConnectorName string `json:"connectorName"`
 	// arbitrary
-	Config      ListOrganizationJitSsoConnectorsConfig   `json:"config"`
+	Config      map[string]any                           `json:"config"`
 	Domains     []string                                 `json:"domains"`
 	Branding    ListOrganizationJitSsoConnectorsBranding `json:"branding"`
 	SyncProfile bool                                     `json:"syncProfile"`
@@ -120,9 +116,9 @@ func (o *ListOrganizationJitSsoConnectorsResponseBody) GetConnectorName() string
 	return o.ConnectorName
 }
 
-func (o *ListOrganizationJitSsoConnectorsResponseBody) GetConfig() ListOrganizationJitSsoConnectorsConfig {
+func (o *ListOrganizationJitSsoConnectorsResponseBody) GetConfig() map[string]any {
 	if o == nil {
-		return ListOrganizationJitSsoConnectorsConfig{}
+		return map[string]any{}
 	}
 	return o.Config
 }

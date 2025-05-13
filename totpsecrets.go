@@ -56,7 +56,7 @@ func (s *TotpSecrets) Create(ctx context.Context, opts ...operations.Option) (*o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateTotpSecret",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 

@@ -61,7 +61,7 @@ func (s *AuthnHasura) Get(ctx context.Context, resource string, unauthorizedRole
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetHasuraAuth",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 

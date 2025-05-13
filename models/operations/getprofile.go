@@ -6,18 +6,10 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// GetProfileCustomData - arbitrary
-type GetProfileCustomData struct {
-}
-
-// GetProfileDetails - arbitrary
-type GetProfileDetails struct {
-}
-
 type GetProfileIdentities struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *GetProfileDetails `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *GetProfileIdentities) GetUserID() string {
@@ -27,7 +19,7 @@ func (o *GetProfileIdentities) GetUserID() string {
 	return o.UserID
 }
 
-func (o *GetProfileIdentities) GetDetails() *GetProfileDetails {
+func (o *GetProfileIdentities) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
@@ -184,10 +176,6 @@ func (o *GetProfileProfile) GetAddress() *GetProfileAddress {
 	return o.Address
 }
 
-// GetProfileDetail - arbitrary
-type GetProfileDetail struct {
-}
-
 type GetProfileSsoIdentity struct {
 	TenantID   string `json:"tenantId"`
 	ID         string `json:"id"`
@@ -195,9 +183,9 @@ type GetProfileSsoIdentity struct {
 	Issuer     string `json:"issuer"`
 	IdentityID string `json:"identityId"`
 	// arbitrary
-	Detail         GetProfileDetail `json:"detail"`
-	CreatedAt      float64          `json:"createdAt"`
-	SsoConnectorID string           `json:"ssoConnectorId"`
+	Detail         map[string]any `json:"detail"`
+	CreatedAt      float64        `json:"createdAt"`
+	SsoConnectorID string         `json:"ssoConnectorId"`
 }
 
 func (o *GetProfileSsoIdentity) GetTenantID() string {
@@ -235,9 +223,9 @@ func (o *GetProfileSsoIdentity) GetIdentityID() string {
 	return o.IdentityID
 }
 
-func (o *GetProfileSsoIdentity) GetDetail() GetProfileDetail {
+func (o *GetProfileSsoIdentity) GetDetail() map[string]any {
 	if o == nil {
-		return GetProfileDetail{}
+		return map[string]any{}
 	}
 	return o.Detail
 }
@@ -265,7 +253,7 @@ type GetProfileResponseBody struct {
 	Name         *string `json:"name,omitempty"`
 	Avatar       *string `json:"avatar,omitempty"`
 	// arbitrary
-	CustomData    *GetProfileCustomData           `json:"customData,omitempty"`
+	CustomData    map[string]any                  `json:"customData,omitempty"`
 	Identities    map[string]GetProfileIdentities `json:"identities,omitempty"`
 	LastSignInAt  *float64                        `json:"lastSignInAt,omitempty"`
 	CreatedAt     *float64                        `json:"createdAt,omitempty"`
@@ -319,7 +307,7 @@ func (o *GetProfileResponseBody) GetAvatar() *string {
 	return o.Avatar
 }
 
-func (o *GetProfileResponseBody) GetCustomData() *GetProfileCustomData {
+func (o *GetProfileResponseBody) GetCustomData() map[string]any {
 	if o == nil {
 		return nil
 	}

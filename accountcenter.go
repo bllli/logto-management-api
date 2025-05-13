@@ -56,7 +56,7 @@ func (s *AccountCenter) Get(ctx context.Context, opts ...operations.Option) (*op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetAccountCenterSettings",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -262,7 +262,7 @@ func (s *AccountCenter) UpdateSettings(ctx context.Context, request operations.U
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateAccountCenterSettings",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

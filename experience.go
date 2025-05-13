@@ -57,7 +57,7 @@ func (s *Experience) InitInteraction(ctx context.Context, request operations.Ini
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "InitInteraction",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -246,7 +246,7 @@ func (s *Experience) Submit(ctx context.Context, opts ...operations.Option) (*op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "SubmitInteraction",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -452,7 +452,7 @@ func (s *Experience) CreatePasswordVerification(ctx context.Context, request ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreatePasswordVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -663,7 +663,7 @@ func (s *Experience) VerifyCode(ctx context.Context, request operations.VerifyVe
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyVerificationCodeVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -879,7 +879,7 @@ func (s *Experience) CreateSocialVerification(ctx context.Context, connectorID s
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateSocialVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1095,7 +1095,7 @@ func (s *Experience) VerifySocial(ctx context.Context, connectorID string, reque
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifySocialVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1311,7 +1311,7 @@ func (s *Experience) VerifyEnterpriseSso(ctx context.Context, connectorID string
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyEnterpriseSsoVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1522,7 +1522,7 @@ func (s *Experience) VerifyTotp(ctx context.Context, request operations.VerifyTo
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyTotpVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1731,7 +1731,7 @@ func (s *Experience) CreateWebAuthnRegistration(ctx context.Context, opts ...ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateWebAuthnRegistrationVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -1933,7 +1933,7 @@ func (s *Experience) VerifyWebAuthnRegistration(ctx context.Context, request ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyWebAuthnRegistrationVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -2142,7 +2142,7 @@ func (s *Experience) VerifyWebAuthnAuthentication(ctx context.Context, request o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyWebAuthnAuthenticationVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -2351,7 +2351,7 @@ func (s *Experience) GenerateBackupCodes(ctx context.Context, opts ...operations
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GenerateBackupCodes",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -2553,7 +2553,7 @@ func (s *Experience) VerifyBackupCode(ctx context.Context, request operations.Ve
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyBackupCode",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -2762,7 +2762,7 @@ func (s *Experience) VerifyOneTimeToken(ctx context.Context, request operations.
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyOneTimeTokenVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -2971,7 +2971,7 @@ func (s *Experience) ResetPassword(ctx context.Context, request operations.Reset
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ResetUserPassword",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -3162,7 +3162,7 @@ func (s *Experience) BindMfaVerification(ctx context.Context, request operations
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "BindMfaVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

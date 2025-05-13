@@ -6,15 +6,15 @@ import (
 	"github.com/bllli/logto-management-api/models/components"
 )
 
-// ReplaceUserIdentityDetailsRequest - The user's social identity details.
-type ReplaceUserIdentityDetailsRequest struct {
+// ReplaceUserIdentityDetails - The user's social identity details.
+type ReplaceUserIdentityDetails struct {
 }
 
 type ReplaceUserIdentityRequestBody struct {
 	// The user's social identity ID.
 	UserID string `json:"userId"`
 	// The user's social identity details.
-	Details *ReplaceUserIdentityDetailsRequest `json:"details,omitempty"`
+	Details *ReplaceUserIdentityDetails `json:"details,omitempty"`
 }
 
 func (o *ReplaceUserIdentityRequestBody) GetUserID() string {
@@ -24,7 +24,7 @@ func (o *ReplaceUserIdentityRequestBody) GetUserID() string {
 	return o.UserID
 }
 
-func (o *ReplaceUserIdentityRequestBody) GetDetails() *ReplaceUserIdentityDetailsRequest {
+func (o *ReplaceUserIdentityRequestBody) GetDetails() *ReplaceUserIdentityDetails {
 	if o == nil {
 		return nil
 	}
@@ -59,14 +59,10 @@ func (o *ReplaceUserIdentityRequest) GetRequestBody() ReplaceUserIdentityRequest
 	return o.RequestBody
 }
 
-// ReplaceUserIdentityDetailsResponse2 - arbitrary
-type ReplaceUserIdentityDetailsResponse2 struct {
-}
-
 type ReplaceUserIdentityResponseBody2 struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *ReplaceUserIdentityDetailsResponse2 `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *ReplaceUserIdentityResponseBody2) GetUserID() string {
@@ -76,21 +72,17 @@ func (o *ReplaceUserIdentityResponseBody2) GetUserID() string {
 	return o.UserID
 }
 
-func (o *ReplaceUserIdentityResponseBody2) GetDetails() *ReplaceUserIdentityDetailsResponse2 {
+func (o *ReplaceUserIdentityResponseBody2) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}
 	return o.Details
 }
 
-// ReplaceUserIdentityDetailsResponse1 - arbitrary
-type ReplaceUserIdentityDetailsResponse1 struct {
-}
-
 type ReplaceUserIdentityResponseBody1 struct {
 	UserID string `json:"userId"`
 	// arbitrary
-	Details *ReplaceUserIdentityDetailsResponse1 `json:"details,omitempty"`
+	Details map[string]any `json:"details,omitempty"`
 }
 
 func (o *ReplaceUserIdentityResponseBody1) GetUserID() string {
@@ -100,7 +92,7 @@ func (o *ReplaceUserIdentityResponseBody1) GetUserID() string {
 	return o.UserID
 }
 
-func (o *ReplaceUserIdentityResponseBody1) GetDetails() *ReplaceUserIdentityDetailsResponse1 {
+func (o *ReplaceUserIdentityResponseBody1) GetDetails() map[string]any {
 	if o == nil {
 		return nil
 	}

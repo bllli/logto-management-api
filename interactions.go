@@ -54,7 +54,7 @@ func (s *Interactions) VerifySocialAuthorizationURI(ctx context.Context, request
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/verification/social-authorization-uri",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

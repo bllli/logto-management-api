@@ -59,7 +59,7 @@ func (s *Connectors) Create(ctx context.Context, request operations.CreateConnec
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateConnector",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -280,7 +280,7 @@ func (s *Connectors) List(ctx context.Context, target *string, opts ...operation
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListConnectors",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -496,7 +496,7 @@ func (s *Connectors) Get(ctx context.Context, id string, opts ...operations.Opti
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetConnector",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -711,7 +711,7 @@ func (s *Connectors) Update(ctx context.Context, id string, requestBody operatio
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateConnector",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -934,7 +934,7 @@ func (s *Connectors) Delete(ctx context.Context, id string, opts ...operations.O
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteConnector",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1129,7 +1129,7 @@ func (s *Connectors) Test(ctx context.Context, factoryID string, requestBody ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateConnectorTest",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1331,7 +1331,7 @@ func (s *Connectors) CreateAuthorizationURI(ctx context.Context, connectorID str
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateConnectorAuthorizationUri",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

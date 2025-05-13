@@ -5,26 +5,21 @@ import (
 	"fmt"
 
 	logtomanagementapi "github.com/bllli/logto-management-api"
-	"github.com/bllli/logto-management-api/models/components"
+	"github.com/bllli/logto-management-api/internal/tokenmanager"
 )
 
 func main() {
-	clientId := "your-m2m-client-id"
-	clientSecret := "your-m2m-client-secret"
-	// Do not forget to grant the m2m client the LogtoManagementAPI scope
-	resource := "https://default.logto.app/api"
-	scope := "all"
+	var config = &tokenmanager.LogtoM2MConfig{
+		ServerURL: "https://your-logto-instance.com",
+		AppID:     "your-m2m-client-id",
+		AppSecret: "your-m2m-client-secret",
+		Resource:  "https://default.logto.app/api",
+		Scope:     "all", // Do not forget to grant the m2m client the LogtoManagementAPI scope
+	}
 
-	client := logtomanagementapi.New(
-		logtomanagementapi.WithServerURL("https://<your-logto-instance>"),
-		logtomanagementapi.WithSecurity(components.Security{
-			ClientID:     &clientId,
-			ClientSecret: &clientSecret,
-			Resource:     &resource,
-			Scope:        &scope,
-		}),
-	)
+	client := logtomanagementapi.NewLogtoTokenManagerWithClient(config)
 	ctx := context.Background()
+
 	orgs, err := client.Organizations.List(ctx, nil, nil, nil, nil)
 	if err != nil {
 		panic(err)

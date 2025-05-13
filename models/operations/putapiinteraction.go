@@ -77,14 +77,10 @@ func (o *PutAPIInteractionIdentifier7) GetEmail() string {
 	return o.Email
 }
 
-// PutAPIInteractionConnectorData - arbitrary
-type PutAPIInteractionConnectorData struct {
-}
-
 type PutAPIInteractionIdentifier6 struct {
 	ConnectorID string `json:"connectorId"`
 	// arbitrary
-	ConnectorData PutAPIInteractionConnectorData `json:"connectorData"`
+	ConnectorData map[string]any `json:"connectorData"`
 }
 
 func (o *PutAPIInteractionIdentifier6) GetConnectorID() string {
@@ -94,9 +90,9 @@ func (o *PutAPIInteractionIdentifier6) GetConnectorID() string {
 	return o.ConnectorID
 }
 
-func (o *PutAPIInteractionIdentifier6) GetConnectorData() PutAPIInteractionConnectorData {
+func (o *PutAPIInteractionIdentifier6) GetConnectorData() map[string]any {
 	if o == nil {
-		return PutAPIInteractionConnectorData{}
+		return map[string]any{}
 	}
 	return o.ConnectorData
 }

@@ -56,7 +56,7 @@ func (s *UserAssets) GetServiceStatus(ctx context.Context, opts ...operations.Op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetUserAssetServiceStatus",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -262,7 +262,7 @@ func (s *UserAssets) Upload(ctx context.Context, request *operations.CreateUserA
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateUserAsset",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "multipart", `request:"mediaType=multipart/form-data"`)

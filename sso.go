@@ -58,7 +58,7 @@ func (s *Sso) PostAuthorizationURL(ctx context.Context, connectorID string, requ
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/single-sign-on/{connectorId}/authorization-url",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

@@ -23,7 +23,6 @@ package main
 import(
 	"context"
 	logtomanagementapi "github.com/bllli/logto-management-api"
-	"github.com/bllli/logto-management-api/models/operations"
 	"log"
 )
 
@@ -32,7 +31,11 @@ func main() {
 
     s := logtomanagementapi.New()
 
-    res, err := s.AuthnSaml.Assert(ctx, "<id>", operations.AssertSamlRequestBody{})
+    res, err := s.AuthnSaml.Assert(ctx, "<id>", map[string]any{
+        "key": "<value>",
+        "key1": "<value>",
+        "key2": "<value>",
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -44,12 +47,12 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| `ctx`                                                                                | [context.Context](https://pkg.go.dev/context#Context)                                | :heavy_check_mark:                                                                   | The context to use for the request.                                                  |
-| `connectorID`                                                                        | *string*                                                                             | :heavy_check_mark:                                                                   | The unique identifier of the connector.                                              |
-| `requestBody`                                                                        | [operations.AssertSamlRequestBody](../../models/operations/assertsamlrequestbody.md) | :heavy_check_mark:                                                                   | N/A                                                                                  |
-| `opts`                                                                               | [][operations.Option](../../models/operations/option.md)                             | :heavy_minus_sign:                                                                   | The options for this request.                                                        |
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `connectorID`                                            | *string*                                                 | :heavy_check_mark:                                       | The unique identifier of the connector.                  |
+| `requestBody`                                            | map[string]*any*                                         | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response
 

@@ -22,44 +22,40 @@ func (o *UpdateUserCustomDataRequestBody) GetCustomData() UpdateUserCustomDataCu
 	return o.CustomData
 }
 
-type UpdateUserCustomDataRequestRequest struct {
+type UpdateUserCustomDataRequest struct {
 	// The unique identifier of the user.
 	UserID      string                          `pathParam:"style=simple,explode=false,name=userId"`
 	RequestBody UpdateUserCustomDataRequestBody `request:"mediaType=application/json"`
 }
 
-func (o *UpdateUserCustomDataRequestRequest) GetUserID() string {
+func (o *UpdateUserCustomDataRequest) GetUserID() string {
 	if o == nil {
 		return ""
 	}
 	return o.UserID
 }
 
-func (o *UpdateUserCustomDataRequestRequest) GetRequestBody() UpdateUserCustomDataRequestBody {
+func (o *UpdateUserCustomDataRequest) GetRequestBody() UpdateUserCustomDataRequestBody {
 	if o == nil {
 		return UpdateUserCustomDataRequestBody{}
 	}
 	return o.RequestBody
 }
 
-// UpdateUserCustomDataResponseBody - arbitrary
-type UpdateUserCustomDataResponseBody struct {
-}
-
-type UpdateUserCustomDataResponseResponse struct {
+type UpdateUserCustomDataResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// Updated custom data in JSON for the given user ID.
-	Object *UpdateUserCustomDataResponseBody
+	Object map[string]any
 }
 
-func (o *UpdateUserCustomDataResponseResponse) GetHTTPMeta() components.HTTPMetadata {
+func (o *UpdateUserCustomDataResponse) GetHTTPMeta() components.HTTPMetadata {
 	if o == nil {
 		return components.HTTPMetadata{}
 	}
 	return o.HTTPMeta
 }
 
-func (o *UpdateUserCustomDataResponseResponse) GetObject() *UpdateUserCustomDataResponseBody {
+func (o *UpdateUserCustomDataResponse) GetObject() map[string]any {
 	if o == nil {
 		return nil
 	}

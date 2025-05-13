@@ -10,44 +10,40 @@ import (
 type UpdateApplicationCustomDataRequestBody struct {
 }
 
-type UpdateApplicationCustomDataRequestRequest struct {
+type UpdateApplicationCustomDataRequest struct {
 	// The unique identifier of the application.
 	ApplicationID string                                 `pathParam:"style=simple,explode=false,name=applicationId"`
 	RequestBody   UpdateApplicationCustomDataRequestBody `request:"mediaType=application/json"`
 }
 
-func (o *UpdateApplicationCustomDataRequestRequest) GetApplicationID() string {
+func (o *UpdateApplicationCustomDataRequest) GetApplicationID() string {
 	if o == nil {
 		return ""
 	}
 	return o.ApplicationID
 }
 
-func (o *UpdateApplicationCustomDataRequestRequest) GetRequestBody() UpdateApplicationCustomDataRequestBody {
+func (o *UpdateApplicationCustomDataRequest) GetRequestBody() UpdateApplicationCustomDataRequestBody {
 	if o == nil {
 		return UpdateApplicationCustomDataRequestBody{}
 	}
 	return o.RequestBody
 }
 
-// UpdateApplicationCustomDataResponseBody - arbitrary
-type UpdateApplicationCustomDataResponseBody struct {
-}
-
-type UpdateApplicationCustomDataResponseResponse struct {
+type UpdateApplicationCustomDataResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// The updated custom data in JSON.
-	Object *UpdateApplicationCustomDataResponseBody
+	Object map[string]any
 }
 
-func (o *UpdateApplicationCustomDataResponseResponse) GetHTTPMeta() components.HTTPMetadata {
+func (o *UpdateApplicationCustomDataResponse) GetHTTPMeta() components.HTTPMetadata {
 	if o == nil {
 		return components.HTTPMetadata{}
 	}
 	return o.HTTPMeta
 }
 
-func (o *UpdateApplicationCustomDataResponseResponse) GetObject() *UpdateApplicationCustomDataResponseBody {
+func (o *UpdateApplicationCustomDataResponse) GetObject() map[string]any {
 	if o == nil {
 		return nil
 	}

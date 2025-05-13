@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 632364f7-b488-4666-8c4d-b6c246634e6a
 management:
-  docChecksum: 19a6030ae08c430eb57ff72344794b7e
+  docChecksum: c53848f8b4be3a4c79c33941a0eee710
   docVersion: Cloud
   speakeasyVersion: 1.543.8
   generationVersion: 2.598.22
-  releaseVersion: 0.1.2
-  configChecksum: 82ebfb1d9e6892b37f98fcbdc07d6847
+  releaseVersion: 0.3.0
+  configChecksum: a0565335166917532783cee4f89e65f0
 features:
   go:
     acceptHeaders: 2.81.2
@@ -20,12 +20,12 @@ features:
     flattening: 2.81.1
     globalSecurity: 2.82.11
     globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
     globalServerURLs: 2.82.3
     groups: 2.81.2
     intellisenseMarkdownSupport: 0.1.0
     nameOverrides: 2.81.2
     nullables: 0.1.1
-    oauth2ClientCredentials: 0.3.1
     responseFormat: 0.1.2
     retries: 2.83.2
     sdkHooks: 0.1.0
@@ -380,10 +380,7 @@ generatedFiles:
   - docs/models/operations/agreetotermspolicyrequest.md
   - docs/models/operations/allowuploadmimetype.md
   - docs/models/operations/application.md
-  - docs/models/operations/applicationsupdateapplicationcustomdatarequest.md
-  - docs/models/operations/applicationsupdateapplicationcustomdataresponse.md
   - docs/models/operations/assertsamlrequest.md
-  - docs/models/operations/assertsamlrequestbody.md
   - docs/models/operations/assertsamlresponse.md
   - docs/models/operations/assertsinglesignonsamlrequest.md
   - docs/models/operations/assertsinglesignonsamlrequestbody.md
@@ -429,8 +426,6 @@ generatedFiles:
   - docs/models/operations/createapplicationcloudflaredata.md
   - docs/models/operations/createapplicationcustomclientmetadatarequest.md
   - docs/models/operations/createapplicationcustomclientmetadataresponse.md
-  - docs/models/operations/createapplicationcustomdatarequest.md
-  - docs/models/operations/createapplicationcustomdataresponse.md
   - docs/models/operations/createapplicationcustomdomain.md
   - docs/models/operations/createapplicationdnsrecord.md
   - docs/models/operations/createapplicationoidcclientmetadatarequest.md
@@ -470,8 +465,7 @@ generatedFiles:
   - docs/models/operations/createconnectorauthorizationurirequestbody.md
   - docs/models/operations/createconnectorauthorizationuriresponse.md
   - docs/models/operations/createconnectorauthorizationuriresponsebody.md
-  - docs/models/operations/createconnectorconfigrequest.md
-  - docs/models/operations/createconnectorconfigresponse.md
+  - docs/models/operations/createconnectorconfig.md
   - docs/models/operations/createconnectordescription.md
   - docs/models/operations/createconnectorformitem1.md
   - docs/models/operations/createconnectorformitem2.md
@@ -524,8 +518,6 @@ generatedFiles:
   - docs/models/operations/createnewpasswordidentityverificationresponsebody.md
   - docs/models/operations/createorganizationbrandingrequest.md
   - docs/models/operations/createorganizationbrandingresponse.md
-  - docs/models/operations/createorganizationcustomdatarequest.md
-  - docs/models/operations/createorganizationcustomdataresponse.md
   - docs/models/operations/createorganizationinvitationmessagerequest.md
   - docs/models/operations/createorganizationinvitationmessagerequestbody.md
   - docs/models/operations/createorganizationinvitationmessageresponse.md
@@ -593,8 +585,7 @@ generatedFiles:
   - docs/models/operations/createsamlapplicationattributemappingrequest.md
   - docs/models/operations/createsamlapplicationattributemappingresponse.md
   - docs/models/operations/createsamlapplicationbinding.md
-  - docs/models/operations/createsamlapplicationcustomdatarequest.md
-  - docs/models/operations/createsamlapplicationcustomdataresponse.md
+  - docs/models/operations/createsamlapplicationcustomdata.md
   - docs/models/operations/createsamlapplicationencryptionrequest.md
   - docs/models/operations/createsamlapplicationencryptionresponse.md
   - docs/models/operations/createsamlapplicationnameidformatrequest.md
@@ -618,8 +609,6 @@ generatedFiles:
   - docs/models/operations/createsocialverificationresponsebody.md
   - docs/models/operations/createssoconnectorbrandingrequest.md
   - docs/models/operations/createssoconnectorbrandingresponse.md
-  - docs/models/operations/createssoconnectorconfigrequest.md
-  - docs/models/operations/createssoconnectorconfigresponse.md
   - docs/models/operations/createssoconnectorrequest.md
   - docs/models/operations/createssoconnectorresponse.md
   - docs/models/operations/createssoconnectorresponsebody.md
@@ -634,12 +623,7 @@ generatedFiles:
   - docs/models/operations/createuserassetrequest.md
   - docs/models/operations/createuserassetresponse.md
   - docs/models/operations/createuserassetresponsebody.md
-  - docs/models/operations/createusercustomdatarequest.md
-  - docs/models/operations/createusercustomdataresponse.md
-  - docs/models/operations/createuserdetail.md
-  - docs/models/operations/createuserdetails.md
   - docs/models/operations/createuseridentities.md
-  - docs/models/operations/createuseridentitydetails.md
   - docs/models/operations/createuseridentityrequest.md
   - docs/models/operations/createuseridentityrequestbody.md
   - docs/models/operations/createuseridentityresponse.md
@@ -705,7 +689,6 @@ generatedFiles:
   - docs/models/operations/deleteapiinteractionresponse.md
   - docs/models/operations/deleteapplicationlegacysecretcloudflaredata.md
   - docs/models/operations/deleteapplicationlegacysecretcustomclientmetadata.md
-  - docs/models/operations/deleteapplicationlegacysecretcustomdata.md
   - docs/models/operations/deleteapplicationlegacysecretcustomdomain.md
   - docs/models/operations/deleteapplicationlegacysecretdnsrecord.md
   - docs/models/operations/deleteapplicationlegacysecretoidcclientmetadata.md
@@ -808,9 +791,6 @@ generatedFiles:
   - docs/models/operations/deletessoconnectorrequest.md
   - docs/models/operations/deletessoconnectorresponse.md
   - docs/models/operations/deleteuseridentityaddress.md
-  - docs/models/operations/deleteuseridentitycustomdata.md
-  - docs/models/operations/deleteuseridentitydetail.md
-  - docs/models/operations/deleteuseridentitydetails.md
   - docs/models/operations/deleteuseridentityidentities.md
   - docs/models/operations/deleteuseridentityprofile.md
   - docs/models/operations/deleteuseridentityrequest.md
@@ -867,7 +847,6 @@ generatedFiles:
   - docs/models/operations/getapiinteractionsinglesignonconnectorsresponse.md
   - docs/models/operations/getapplicationcloudflaredata.md
   - docs/models/operations/getapplicationcustomclientmetadata.md
-  - docs/models/operations/getapplicationcustomdata.md
   - docs/models/operations/getapplicationcustomdomain.md
   - docs/models/operations/getapplicationdnsrecord.md
   - docs/models/operations/getapplicationoidcclientmetadata.md
@@ -893,7 +872,6 @@ generatedFiles:
   - docs/models/operations/getcaptchaproviderconfigunion.md
   - docs/models/operations/getcaptchaproviderresponse.md
   - docs/models/operations/getcaptchaproviderresponsebody.md
-  - docs/models/operations/getconnectorconfig.md
   - docs/models/operations/getconnectordescription.md
   - docs/models/operations/getconnectorfactorydescription.md
   - docs/models/operations/getconnectorfactoryformitem1.md
@@ -959,11 +937,7 @@ generatedFiles:
   - docs/models/operations/getjwtcustomizeraddress.md
   - docs/models/operations/getjwtcustomizeraud1.md
   - docs/models/operations/getjwtcustomizeraud2.md
-  - docs/models/operations/getjwtcustomizercontextsample1.md
-  - docs/models/operations/getjwtcustomizercontextsample2.md
-  - docs/models/operations/getjwtcustomizercustomdata.md
-  - docs/models/operations/getjwtcustomizerdetail.md
-  - docs/models/operations/getjwtcustomizerdetails.md
+  - docs/models/operations/getjwtcustomizercontextsample.md
   - docs/models/operations/getjwtcustomizergrant.md
   - docs/models/operations/getjwtcustomizeridentities.md
   - docs/models/operations/getjwtcustomizermfaverificationfactor.md
@@ -979,7 +953,6 @@ generatedFiles:
   - docs/models/operations/getjwtcustomizerrole.md
   - docs/models/operations/getjwtcustomizerscope.md
   - docs/models/operations/getjwtcustomizerssoidentity.md
-  - docs/models/operations/getjwtcustomizersubjecttokencontext.md
   - docs/models/operations/getjwtcustomizertokensample1.md
   - docs/models/operations/getjwtcustomizertokensample2.md
   - docs/models/operations/getjwtcustomizertokentypepath.md
@@ -1003,7 +976,6 @@ generatedFiles:
   - docs/models/operations/getonetimetokenresponsebody.md
   - docs/models/operations/getonetimetokenstatus.md
   - docs/models/operations/getorganizationbranding.md
-  - docs/models/operations/getorganizationcustomdata.md
   - docs/models/operations/getorganizationinvitationorganizationrole.md
   - docs/models/operations/getorganizationinvitationrequest.md
   - docs/models/operations/getorganizationinvitationresponse.md
@@ -1020,9 +992,6 @@ generatedFiles:
   - docs/models/operations/getorganizationscoperesponse.md
   - docs/models/operations/getorganizationscoperesponsebody.md
   - docs/models/operations/getprofileaddress.md
-  - docs/models/operations/getprofilecustomdata.md
-  - docs/models/operations/getprofiledetail.md
-  - docs/models/operations/getprofiledetails.md
   - docs/models/operations/getprofileidentities.md
   - docs/models/operations/getprofileprofile.md
   - docs/models/operations/getprofileresponse.md
@@ -1040,7 +1009,6 @@ generatedFiles:
   - docs/models/operations/getsamlapplicationbinding.md
   - docs/models/operations/getsamlapplicationcallbackrequest.md
   - docs/models/operations/getsamlapplicationcallbackresponse.md
-  - docs/models/operations/getsamlapplicationcustomdata.md
   - docs/models/operations/getsamlapplicationencryption.md
   - docs/models/operations/getsamlapplicationnameidformat.md
   - docs/models/operations/getsamlapplicationrequest.md
@@ -1120,7 +1088,6 @@ generatedFiles:
   - docs/models/operations/getsigninexpsignupidentifierenum.md
   - docs/models/operations/getsigninexpsocialsignin.md
   - docs/models/operations/getssoconnectorbranding.md
-  - docs/models/operations/getssoconnectorconfig.md
   - docs/models/operations/getssoconnectorprovidername.md
   - docs/models/operations/getssoconnectorprovidertype.md
   - docs/models/operations/getssoconnectorrequest.md
@@ -1135,9 +1102,6 @@ generatedFiles:
   - docs/models/operations/getuseraddress.md
   - docs/models/operations/getuserassetservicestatusresponse.md
   - docs/models/operations/getuserassetservicestatusresponsebody.md
-  - docs/models/operations/getusercustomdata.md
-  - docs/models/operations/getuserdetail.md
-  - docs/models/operations/getuserdetails.md
   - docs/models/operations/getuserhaspasswordrequest.md
   - docs/models/operations/getuserhaspasswordresponse.md
   - docs/models/operations/getuserhaspasswordresponsebody.md
@@ -1202,7 +1166,6 @@ generatedFiles:
   - docs/models/operations/last7days.md
   - docs/models/operations/lengthrequest.md
   - docs/models/operations/listapplicationorganizationsbranding.md
-  - docs/models/operations/listapplicationorganizationscustomdata.md
   - docs/models/operations/listapplicationorganizationsorganizationrole.md
   - docs/models/operations/listapplicationorganizationsrequest.md
   - docs/models/operations/listapplicationorganizationsresponse.md
@@ -1221,7 +1184,6 @@ generatedFiles:
   - docs/models/operations/listapplicationrolestype.md
   - docs/models/operations/listapplicationscloudflaredata.md
   - docs/models/operations/listapplicationscustomclientmetadata.md
-  - docs/models/operations/listapplicationscustomdata.md
   - docs/models/operations/listapplicationscustomdomain.md
   - docs/models/operations/listapplicationsdnsrecord.md
   - docs/models/operations/listapplicationsecretsrequest.md
@@ -1241,7 +1203,6 @@ generatedFiles:
   - docs/models/operations/listapplicationstype.md
   - docs/models/operations/listapplicationsvalidationerror.md
   - docs/models/operations/listapplicationuserconsentorganizationsbranding.md
-  - docs/models/operations/listapplicationuserconsentorganizationscustomdata.md
   - docs/models/operations/listapplicationuserconsentorganizationsorganization.md
   - docs/models/operations/listapplicationuserconsentorganizationsrequest.md
   - docs/models/operations/listapplicationuserconsentorganizationsresponse.md
@@ -1269,7 +1230,6 @@ generatedFiles:
   - docs/models/operations/listconnectorfactoriesshowcondition2.md
   - docs/models/operations/listconnectorfactoriesshowcondition3.md
   - docs/models/operations/listconnectorfactoriestype.md
-  - docs/models/operations/listconnectorsconfig.md
   - docs/models/operations/listconnectorsdescription.md
   - docs/models/operations/listconnectorsformitem1.md
   - docs/models/operations/listconnectorsformitem2.md
@@ -1316,11 +1276,7 @@ generatedFiles:
   - docs/models/operations/listjwtcustomizersaddress.md
   - docs/models/operations/listjwtcustomizersaud1.md
   - docs/models/operations/listjwtcustomizersaud2.md
-  - docs/models/operations/listjwtcustomizerscontextsample1.md
-  - docs/models/operations/listjwtcustomizerscontextsample2.md
-  - docs/models/operations/listjwtcustomizerscustomdata.md
-  - docs/models/operations/listjwtcustomizersdetail.md
-  - docs/models/operations/listjwtcustomizersdetails.md
+  - docs/models/operations/listjwtcustomizerscontextsample.md
   - docs/models/operations/listjwtcustomizersgrant.md
   - docs/models/operations/listjwtcustomizersidentities.md
   - docs/models/operations/listjwtcustomizersmfaverificationfactor.md
@@ -1335,7 +1291,6 @@ generatedFiles:
   - docs/models/operations/listjwtcustomizersrole.md
   - docs/models/operations/listjwtcustomizersscope.md
   - docs/models/operations/listjwtcustomizersssoidentity.md
-  - docs/models/operations/listjwtcustomizerssubjecttokencontext.md
   - docs/models/operations/listjwtcustomizerstokensample1.md
   - docs/models/operations/listjwtcustomizerstokensample2.md
   - docs/models/operations/listjwtcustomizersuser.md
@@ -1356,7 +1311,6 @@ generatedFiles:
   - docs/models/operations/listorganizationapplicationrolestype.md
   - docs/models/operations/listorganizationapplicationscloudflaredata.md
   - docs/models/operations/listorganizationapplicationscustomclientmetadata.md
-  - docs/models/operations/listorganizationapplicationscustomdata.md
   - docs/models/operations/listorganizationapplicationscustomdomain.md
   - docs/models/operations/listorganizationapplicationsdnsrecord.md
   - docs/models/operations/listorganizationapplicationsoidcclientmetadata.md
@@ -1386,7 +1340,6 @@ generatedFiles:
   - docs/models/operations/listorganizationjitrolesresponsebody.md
   - docs/models/operations/listorganizationjitrolestype.md
   - docs/models/operations/listorganizationjitssoconnectorsbranding.md
-  - docs/models/operations/listorganizationjitssoconnectorsconfig.md
   - docs/models/operations/listorganizationjitssoconnectorsrequest.md
   - docs/models/operations/listorganizationjitssoconnectorsresponse.md
   - docs/models/operations/listorganizationjitssoconnectorsresponsebody.md
@@ -1407,7 +1360,6 @@ generatedFiles:
   - docs/models/operations/listorganizationscopesrequest.md
   - docs/models/operations/listorganizationscopesresponse.md
   - docs/models/operations/listorganizationscopesresponsebody.md
-  - docs/models/operations/listorganizationscustomdata.md
   - docs/models/operations/listorganizationsfeatureduser.md
   - docs/models/operations/listorganizationsrequest.md
   - docs/models/operations/listorganizationsresponse.md
@@ -1420,8 +1372,6 @@ generatedFiles:
   - docs/models/operations/listorganizationuserscopesrequest.md
   - docs/models/operations/listorganizationuserscopesresponse.md
   - docs/models/operations/listorganizationuserscopesresponsebody.md
-  - docs/models/operations/listorganizationuserscustomdata.md
-  - docs/models/operations/listorganizationusersdetails.md
   - docs/models/operations/listorganizationusersidentities.md
   - docs/models/operations/listorganizationusersorganizationrole.md
   - docs/models/operations/listorganizationusersprofile.md
@@ -1437,7 +1387,6 @@ generatedFiles:
   - docs/models/operations/listresourcesscope.md
   - docs/models/operations/listroleapplicationscloudflaredata.md
   - docs/models/operations/listroleapplicationscustomclientmetadata.md
-  - docs/models/operations/listroleapplicationscustomdata.md
   - docs/models/operations/listroleapplicationscustomdomain.md
   - docs/models/operations/listroleapplicationsdnsrecord.md
   - docs/models/operations/listroleapplicationsoidcclientmetadata.md
@@ -1463,9 +1412,6 @@ generatedFiles:
   - docs/models/operations/listrolesresponsebody.md
   - docs/models/operations/listrolestyperesponse.md
   - docs/models/operations/listroleusersaddress.md
-  - docs/models/operations/listroleuserscustomdata.md
-  - docs/models/operations/listroleusersdetail.md
-  - docs/models/operations/listroleusersdetails.md
   - docs/models/operations/listroleusersidentities.md
   - docs/models/operations/listroleusersprofile.md
   - docs/models/operations/listroleusersrequest.md
@@ -1484,7 +1430,6 @@ generatedFiles:
   - docs/models/operations/listssoconnectorprovidersresponse.md
   - docs/models/operations/listssoconnectorprovidersresponsebody.md
   - docs/models/operations/listssoconnectorsbranding.md
-  - docs/models/operations/listssoconnectorsconfig.md
   - docs/models/operations/listssoconnectorsprovidername.md
   - docs/models/operations/listssoconnectorsprovidertype.md
   - docs/models/operations/listssoconnectorsrequest.md
@@ -1492,13 +1437,11 @@ generatedFiles:
   - docs/models/operations/listssoconnectorsresponsebody.md
   - docs/models/operations/listusercustomdatarequest.md
   - docs/models/operations/listusercustomdataresponse.md
-  - docs/models/operations/listusercustomdataresponsebody.md
   - docs/models/operations/listusermfaverificationsrequest.md
   - docs/models/operations/listusermfaverificationsresponse.md
   - docs/models/operations/listusermfaverificationsresponsebody.md
   - docs/models/operations/listusermfaverificationstype.md
   - docs/models/operations/listuserorganizationsbranding.md
-  - docs/models/operations/listuserorganizationscustomdata.md
   - docs/models/operations/listuserorganizationsorganizationrole.md
   - docs/models/operations/listuserorganizationsrequest.md
   - docs/models/operations/listuserorganizationsresponse.md
@@ -1511,9 +1454,6 @@ generatedFiles:
   - docs/models/operations/listuserrolesresponsebody.md
   - docs/models/operations/listuserrolestype.md
   - docs/models/operations/listusersaddress.md
-  - docs/models/operations/listuserscustomdata.md
-  - docs/models/operations/listusersdetail.md
-  - docs/models/operations/listusersdetails.md
   - docs/models/operations/listusersidentities.md
   - docs/models/operations/listusersprofile.md
   - docs/models/operations/listusersrequest.md
@@ -1538,7 +1478,6 @@ generatedFiles:
   - docs/models/operations/passwordalgorithm.md
   - docs/models/operations/passwordpolicyrequest.md
   - docs/models/operations/passwordrequest.md
-  - docs/models/operations/patchapiinteractionidentifiersconnectordata.md
   - docs/models/operations/patchapiinteractionidentifiersrequest.md
   - docs/models/operations/patchapiinteractionidentifiersrequestbody1.md
   - docs/models/operations/patchapiinteractionidentifiersrequestbody2.md
@@ -1607,7 +1546,6 @@ generatedFiles:
   - docs/models/operations/postapiinteractionverificationwebauthnregistrationuser.md
   - docs/models/operations/postapiinteractionverificationwebauthnregistrationuserverification.md
   - docs/models/operations/protectedapps.md
-  - docs/models/operations/putapiinteractionconnectordata.md
   - docs/models/operations/putapiinteractionevent.md
   - docs/models/operations/putapiinteractioneventevent.md
   - docs/models/operations/putapiinteractioneventrequest.md
@@ -1707,9 +1645,7 @@ generatedFiles:
   - docs/models/operations/replaceorganizationusersrequest.md
   - docs/models/operations/replaceorganizationusersrequestbody.md
   - docs/models/operations/replaceorganizationusersresponse.md
-  - docs/models/operations/replaceuseridentitydetailsrequest.md
-  - docs/models/operations/replaceuseridentitydetailsresponse1.md
-  - docs/models/operations/replaceuseridentitydetailsresponse2.md
+  - docs/models/operations/replaceuseridentitydetails.md
   - docs/models/operations/replaceuseridentityrequest.md
   - docs/models/operations/replaceuseridentityrequestbody.md
   - docs/models/operations/replaceuseridentityresponse.md
@@ -1748,9 +1684,6 @@ generatedFiles:
   - docs/models/operations/testjwtcustomizeraud1.md
   - docs/models/operations/testjwtcustomizeraud2.md
   - docs/models/operations/testjwtcustomizercontext.md
-  - docs/models/operations/testjwtcustomizercustomdata.md
-  - docs/models/operations/testjwtcustomizerdetail.md
-  - docs/models/operations/testjwtcustomizerdetails.md
   - docs/models/operations/testjwtcustomizergrant.md
   - docs/models/operations/testjwtcustomizeridentities.md
   - docs/models/operations/testjwtcustomizermfaverificationfactor.md
@@ -1764,11 +1697,9 @@ generatedFiles:
   - docs/models/operations/testjwtcustomizerrequestbody2.md
   - docs/models/operations/testjwtcustomizerresource.md
   - docs/models/operations/testjwtcustomizerresponse.md
-  - docs/models/operations/testjwtcustomizerresponsebody.md
   - docs/models/operations/testjwtcustomizerrole.md
   - docs/models/operations/testjwtcustomizerscope.md
   - docs/models/operations/testjwtcustomizerssoidentity.md
-  - docs/models/operations/testjwtcustomizersubjecttokencontext.md
   - docs/models/operations/testjwtcustomizeruser.md
   - docs/models/operations/today.md
   - docs/models/operations/token1.md
@@ -1800,10 +1731,9 @@ generatedFiles:
   - docs/models/operations/updateapplicationcloudflaredata.md
   - docs/models/operations/updateapplicationcustomclientmetadatarequest.md
   - docs/models/operations/updateapplicationcustomclientmetadataresponse.md
+  - docs/models/operations/updateapplicationcustomdatarequest.md
   - docs/models/operations/updateapplicationcustomdatarequestbody.md
-  - docs/models/operations/updateapplicationcustomdatarequestrequest.md
-  - docs/models/operations/updateapplicationcustomdataresponsebody.md
-  - docs/models/operations/updateapplicationcustomdataresponseresponse.md
+  - docs/models/operations/updateapplicationcustomdataresponse.md
   - docs/models/operations/updateapplicationcustomdomain.md
   - docs/models/operations/updateapplicationdnsrecord.md
   - docs/models/operations/updateapplicationoidcclientmetadatarequest.md
@@ -1837,8 +1767,7 @@ generatedFiles:
   - docs/models/operations/updatecaptchaproviderrequest.md
   - docs/models/operations/updatecaptchaproviderresponse.md
   - docs/models/operations/updatecaptchaproviderresponsebody.md
-  - docs/models/operations/updateconnectorconfigrequest.md
-  - docs/models/operations/updateconnectorconfigresponse.md
+  - docs/models/operations/updateconnectorconfig.md
   - docs/models/operations/updateconnectordescription.md
   - docs/models/operations/updateconnectorformitem1.md
   - docs/models/operations/updateconnectorformitem2.md
@@ -1886,11 +1815,7 @@ generatedFiles:
   - docs/models/operations/updatejwtcustomizeraddress.md
   - docs/models/operations/updatejwtcustomizeraud1.md
   - docs/models/operations/updatejwtcustomizeraud2.md
-  - docs/models/operations/updatejwtcustomizercontextsample1.md
-  - docs/models/operations/updatejwtcustomizercontextsample2.md
-  - docs/models/operations/updatejwtcustomizercustomdata.md
-  - docs/models/operations/updatejwtcustomizerdetail.md
-  - docs/models/operations/updatejwtcustomizerdetails.md
+  - docs/models/operations/updatejwtcustomizercontextsample.md
   - docs/models/operations/updatejwtcustomizergrant.md
   - docs/models/operations/updatejwtcustomizeridentities.md
   - docs/models/operations/updatejwtcustomizermfaverificationfactor.md
@@ -1907,15 +1832,12 @@ generatedFiles:
   - docs/models/operations/updatejwtcustomizerrole.md
   - docs/models/operations/updatejwtcustomizerscope.md
   - docs/models/operations/updatejwtcustomizerssoidentity.md
-  - docs/models/operations/updatejwtcustomizersubjecttokencontext.md
   - docs/models/operations/updatejwtcustomizertokensample1.md
   - docs/models/operations/updatejwtcustomizertokensample2.md
   - docs/models/operations/updatejwtcustomizertokentypepath.md
   - docs/models/operations/updatejwtcustomizeruser.md
   - docs/models/operations/updateorganizationbrandingrequest.md
   - docs/models/operations/updateorganizationbrandingresponse.md
-  - docs/models/operations/updateorganizationcustomdatarequest.md
-  - docs/models/operations/updateorganizationcustomdataresponse.md
   - docs/models/operations/updateorganizationrequest.md
   - docs/models/operations/updateorganizationrequestbody.md
   - docs/models/operations/updateorganizationresponse.md
@@ -1942,9 +1864,6 @@ generatedFiles:
   - docs/models/operations/updateprimaryphonerequest.md
   - docs/models/operations/updateprimaryphoneresponse.md
   - docs/models/operations/updateprofileaddress.md
-  - docs/models/operations/updateprofilecustomdata.md
-  - docs/models/operations/updateprofiledetail.md
-  - docs/models/operations/updateprofiledetails.md
   - docs/models/operations/updateprofileidentities.md
   - docs/models/operations/updateprofileprofile.md
   - docs/models/operations/updateprofilerequest.md
@@ -1972,8 +1891,7 @@ generatedFiles:
   - docs/models/operations/updatesamlapplicationattributemappingrequest.md
   - docs/models/operations/updatesamlapplicationattributemappingresponse.md
   - docs/models/operations/updatesamlapplicationbinding.md
-  - docs/models/operations/updatesamlapplicationcustomdatarequest.md
-  - docs/models/operations/updatesamlapplicationcustomdataresponse.md
+  - docs/models/operations/updatesamlapplicationcustomdata.md
   - docs/models/operations/updatesamlapplicationencryptionrequest.md
   - docs/models/operations/updatesamlapplicationencryptionresponse.md
   - docs/models/operations/updatesamlapplicationnameidformatrequest.md
@@ -2025,8 +1943,6 @@ generatedFiles:
   - docs/models/operations/updatesigninexpsocialsigninresponse.md
   - docs/models/operations/updatessoconnectorbrandingrequest.md
   - docs/models/operations/updatessoconnectorbrandingresponse.md
-  - docs/models/operations/updatessoconnectorconfigrequest.md
-  - docs/models/operations/updatessoconnectorconfigresponse.md
   - docs/models/operations/updatessoconnectorprovidername.md
   - docs/models/operations/updatessoconnectorprovidertype.md
   - docs/models/operations/updatessoconnectorrequest.md
@@ -2035,18 +1951,13 @@ generatedFiles:
   - docs/models/operations/updatessoconnectorresponsebody.md
   - docs/models/operations/updateuseraddressrequest.md
   - docs/models/operations/updateuseraddressresponse.md
+  - docs/models/operations/updateusercustomdata.md
   - docs/models/operations/updateusercustomdatacustomdata.md
+  - docs/models/operations/updateusercustomdatarequest.md
   - docs/models/operations/updateusercustomdatarequestbody.md
-  - docs/models/operations/updateusercustomdatarequestrequest.md
-  - docs/models/operations/updateusercustomdataresponsebody.md
-  - docs/models/operations/updateusercustomdataresponseresponse.md
-  - docs/models/operations/updateuserdetail.md
-  - docs/models/operations/updateuserdetails.md
+  - docs/models/operations/updateusercustomdataresponse.md
   - docs/models/operations/updateuseridentities.md
   - docs/models/operations/updateuserissuspendedaddress.md
-  - docs/models/operations/updateuserissuspendedcustomdata.md
-  - docs/models/operations/updateuserissuspendeddetail.md
-  - docs/models/operations/updateuserissuspendeddetails.md
   - docs/models/operations/updateuserissuspendedidentities.md
   - docs/models/operations/updateuserissuspendedprofile.md
   - docs/models/operations/updateuserissuspendedrequest.md
@@ -2055,9 +1966,6 @@ generatedFiles:
   - docs/models/operations/updateuserissuspendedresponsebody.md
   - docs/models/operations/updateuserissuspendedssoidentity.md
   - docs/models/operations/updateuserpasswordaddress.md
-  - docs/models/operations/updateuserpasswordcustomdata.md
-  - docs/models/operations/updateuserpassworddetail.md
-  - docs/models/operations/updateuserpassworddetails.md
   - docs/models/operations/updateuserpasswordidentities.md
   - docs/models/operations/updateuserpasswordprofile.md
   - docs/models/operations/updateuserpasswordrequest.md
@@ -2092,14 +2000,6 @@ generatedFiles:
   - docs/models/operations/upsertjwtcustomizeraud4.md
   - docs/models/operations/upsertjwtcustomizercontextsample1.md
   - docs/models/operations/upsertjwtcustomizercontextsample2.md
-  - docs/models/operations/upsertjwtcustomizercontextsample3.md
-  - docs/models/operations/upsertjwtcustomizercontextsample4.md
-  - docs/models/operations/upsertjwtcustomizercustomdata1.md
-  - docs/models/operations/upsertjwtcustomizercustomdata2.md
-  - docs/models/operations/upsertjwtcustomizerdetail1.md
-  - docs/models/operations/upsertjwtcustomizerdetail2.md
-  - docs/models/operations/upsertjwtcustomizerdetails1.md
-  - docs/models/operations/upsertjwtcustomizerdetails2.md
   - docs/models/operations/upsertjwtcustomizergrant1.md
   - docs/models/operations/upsertjwtcustomizergrant2.md
   - docs/models/operations/upsertjwtcustomizeridentities1.md
@@ -2129,8 +2029,6 @@ generatedFiles:
   - docs/models/operations/upsertjwtcustomizerscope2.md
   - docs/models/operations/upsertjwtcustomizerssoidentity1.md
   - docs/models/operations/upsertjwtcustomizerssoidentity2.md
-  - docs/models/operations/upsertjwtcustomizersubjecttokencontext1.md
-  - docs/models/operations/upsertjwtcustomizersubjecttokencontext2.md
   - docs/models/operations/upsertjwtcustomizertokensample1.md
   - docs/models/operations/upsertjwtcustomizertokensample2.md
   - docs/models/operations/upsertjwtcustomizertokensample3.md
@@ -2139,8 +2037,6 @@ generatedFiles:
   - docs/models/operations/upsertjwtcustomizeruser1.md
   - docs/models/operations/upsertjwtcustomizeruser2.md
   - docs/models/operations/usernamerequest.md
-  - docs/models/operations/usersupdateusercustomdatarequest.md
-  - docs/models/operations/usersupdateusercustomdataresponse.md
   - docs/models/operations/usersupdateuserprofilerequest.md
   - docs/models/operations/usersupdateuserprofileresponse.md
   - docs/models/operations/value1.md
@@ -2272,15 +2168,12 @@ generatedFiles:
   - interaction.go
   - interactionevents.go
   - interactions.go
-  - internal/hooks/clientcredentials.go
   - internal/hooks/hooks.go
   - internal/utils/contenttype.go
   - internal/utils/env.go
   - internal/utils/form.go
   - internal/utils/headers.go
   - internal/utils/json.go
-  - internal/utils/oauth2_credentials.go
-  - internal/utils/oauth2_sessions.go
   - internal/utils/pathparams.go
   - internal/utils/queryparams.go
   - internal/utils/requestbody.go
@@ -2376,7 +2269,7 @@ examples:
         application/json: {}
       responses:
         "200":
-          application/json: {}
+          application/json: {"key": "<value>"}
   ListApplicationRoles:
     speakeasy-default-list-application-roles:
       parameters:
@@ -2642,7 +2535,7 @@ examples:
         application/json: {"tokenType": "<value>", "script": "<value>", "token": {}, "context": {"user": {}}}
       responses:
         "200":
-          application/json: {}
+          application/json: {"key": "<value>", "key1": "<value>"}
   CreateConnector:
     speakeasy-default-create-connector:
       requestBody:
@@ -2850,7 +2743,7 @@ examples:
           userId: "<id>"
       responses:
         "200":
-          application/json: {}
+          application/json: {"key": "<value>"}
   UpdateUserCustomData:
     speakeasy-default-update-user-custom-data:
       parameters:
@@ -2860,7 +2753,7 @@ examples:
         application/json: {"customData": {}}
       responses:
         "200":
-          application/json: {}
+          application/json: {"key": "<value>"}
   UpdateUserProfile:
     speakeasy-default-update-user-profile:
       parameters:
@@ -4091,7 +3984,7 @@ examples:
         path:
           connectorId: "<id>"
       requestBody:
-        application/json: {}
+        application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   AssertSingleSignOnSaml:
     speakeasy-default-assert-single-sign-on-saml:
       parameters:

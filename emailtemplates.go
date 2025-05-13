@@ -56,7 +56,7 @@ func (s *EmailTemplates) Replace(ctx context.Context, request operations.Replace
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceEmailTemplates",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -278,7 +278,7 @@ func (s *EmailTemplates) List(ctx context.Context, languageTag *string, template
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListEmailTemplates",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -495,7 +495,7 @@ func (s *EmailTemplates) Remove(ctx context.Context, languageTag *string, templa
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteEmailTemplates",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -713,7 +713,7 @@ func (s *EmailTemplates) GetByID(ctx context.Context, id string, opts ...operati
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetEmailTemplate",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -927,7 +927,7 @@ func (s *EmailTemplates) Delete(ctx context.Context, id string, opts ...operatio
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteEmailTemplate",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1122,7 +1122,7 @@ func (s *EmailTemplates) UpdateDetails(ctx context.Context, id string, requestBo
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateEmailTemplateDetails",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

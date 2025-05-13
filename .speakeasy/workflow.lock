@@ -14,7 +14,7 @@ targets:
         sourceRevisionDigest: sha256:a8a39f29dc7cb23c93b034f92cf8d8cae54e6dd22fffc0dcd6ff91bb0c4ea02c
         sourceBlobDigest: sha256:f5ec3d62f6a906ba54f1bcb73c4741cb830d901f494620ec03cd24946c0f5cfb
         codeSamplesNamespace: logto-api-references-go-code-samples
-        codeSamplesRevisionDigest: sha256:22b50fcfabc4d5b1791c49f980f48a3fe851e27e4fb3e32844c45cb728ef086d
+        codeSamplesRevisionDigest: sha256:84bacffb48474378ca2304ffd633907ff7194f36755446632094d7d3440610d1
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

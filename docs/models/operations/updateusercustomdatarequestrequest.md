@@ -1,9 +1,0 @@
-# UpdateUserCustomDataRequestRequest
-
-
-## Fields
-
-| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `UserID`                                                                                                 | *string*                                                                                                 | :heavy_check_mark:                                                                                       | The unique identifier of the user.                                                                       |
-| `RequestBody`                                                                                            | [operations.UpdateUserCustomDataRequestBody](../../models/operations/updateusercustomdatarequestbody.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

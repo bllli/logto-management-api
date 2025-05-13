@@ -57,10 +57,6 @@ func (o *ListApplicationUserConsentOrganizationsRequest) GetPageSize() *int64 {
 	return o.PageSize
 }
 
-// ListApplicationUserConsentOrganizationsCustomData - arbitrary
-type ListApplicationUserConsentOrganizationsCustomData struct {
-}
-
 type ListApplicationUserConsentOrganizationsBranding struct {
 	LogoURL     *string `json:"logoUrl,omitempty"`
 	DarkLogoURL *string `json:"darkLogoUrl,omitempty"`
@@ -102,10 +98,10 @@ type ListApplicationUserConsentOrganizationsOrganization struct {
 	Name        string  `json:"name"`
 	Description *string `json:"description"`
 	// arbitrary
-	CustomData    ListApplicationUserConsentOrganizationsCustomData `json:"customData"`
-	IsMfaRequired bool                                              `json:"isMfaRequired"`
-	Branding      ListApplicationUserConsentOrganizationsBranding   `json:"branding"`
-	CreatedAt     float64                                           `json:"createdAt"`
+	CustomData    map[string]any                                  `json:"customData"`
+	IsMfaRequired bool                                            `json:"isMfaRequired"`
+	Branding      ListApplicationUserConsentOrganizationsBranding `json:"branding"`
+	CreatedAt     float64                                         `json:"createdAt"`
 }
 
 func (o *ListApplicationUserConsentOrganizationsOrganization) GetTenantID() string {
@@ -136,9 +132,9 @@ func (o *ListApplicationUserConsentOrganizationsOrganization) GetDescription() *
 	return o.Description
 }
 
-func (o *ListApplicationUserConsentOrganizationsOrganization) GetCustomData() ListApplicationUserConsentOrganizationsCustomData {
+func (o *ListApplicationUserConsentOrganizationsOrganization) GetCustomData() map[string]any {
 	if o == nil {
-		return ListApplicationUserConsentOrganizationsCustomData{}
+		return map[string]any{}
 	}
 	return o.CustomData
 }

@@ -56,7 +56,7 @@ func (s *WebAuthnVerifications) CreateAuthentication(ctx context.Context, opts .
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateWebAuthnAuthenticationVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
